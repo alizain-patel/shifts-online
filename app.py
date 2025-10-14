@@ -7,7 +7,7 @@ from datetime import datetime
 # DATA_FILE = "user_status_dashboard.json"
 
 # With this:
-DATA_FILE = "https://raw.githubusercontent.com/<your-username>/<repo-name>/main/user_status_dashboard.json"
+DATA_FILE = "https://raw.githubusercontent.com/alizain-patel/shifts-online/main/user_status_dashboard.json"
 ]
 
 # Convert to DataFrame
@@ -43,4 +43,5 @@ st.dataframe(df[["user_display", "name", "date", "event", "time"]].rename(column
     "event": "Event",
     "time": "Time"
 }))
+
 
