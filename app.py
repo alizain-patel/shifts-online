@@ -6,7 +6,8 @@ from datetime import datetime
 DATA_FILE = "https://raw.githubusercontent.com/alizain-patel/shifts-online/refs/heads/main/userstatus.json"
 
 # Convert to DataFrame
-df = pd.DataFrame(data)
+#df = pd.DataFrame(data)
+df = pd.read_json("userstatus.json")
 df["datetime"] = pd.to_datetime(df["datetime"])
 df["date"] = df["datetime"].dt.strftime("%d-%m-%Y")
 df["time"] = df["datetime"].dt.strftime("%H:%M:%S")
@@ -38,4 +39,5 @@ st.dataframe(df[["user_display", "name", "date", "event", "time"]].rename(column
     "event": "Event",
     "time": "Time"
 }))
+
 
