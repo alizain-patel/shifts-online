@@ -28,11 +28,6 @@ def get_status(event):
 latest_df["status"] = latest_df["event"].apply(get_status)
 latest_df["name_status"] = latest_df.apply(lambda row: f"{row['name']} {row['status']}", axis=1)
 
-# Streamlit dashboard
-st.set_page_config(page_title="User Status Dashboard", layout="wide")
-st.title("🟢🔴 Live User Status Dashboard")
-st.caption("Shows only the latest status per user. Refresh manually or set auto-refresh.")
-
 # Display table
 # Streamlit dashboard
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
@@ -50,3 +45,4 @@ st.dataframe(
         }
     )
 )
+
