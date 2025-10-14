@@ -8,7 +8,7 @@ from datetime import datetime
 
 # With this:
 DATA_FILE = "https://raw.githubusercontent.com/alizain-patel/shifts-online/main/user_status_dashboard.json"
-]
+
 
 # Convert to DataFrame
 df = pd.DataFrame(data)
@@ -43,5 +43,6 @@ st.dataframe(df[["user_display", "name", "date", "event", "time"]].rename(column
     "event": "Event",
     "time": "Time"
 }))
+
 
 
