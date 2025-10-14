@@ -16,7 +16,7 @@ latest_df = df.groupby("user_id", as_index=False).last()
 
 # Status logic
 def get_status(event):
-    if event == "Punch In" or event == "Break End":
+    if event in ["Punch In", "Break End"]:
         return "🟢 active"
     elif event == "Break Start":
         return "🔴 on break"
@@ -26,7 +26,7 @@ def get_status(event):
         return "⚪ unknown"
 
 latest_df["status"] = latest_df["event"].apply(get_status)
-latest_df["user_display"] = latest_df.apply(lambda row: f"{row['user_id']} {row['status']}", axis=1)
+latest_df["name_status"] = latest_df.apply(lambda row: f"{row['name']} {row['status']}", axis=1)
 
 # Streamlit dashboard
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
@@ -35,13 +35,11 @@ st.caption("Shows only the latest status per user. Refresh manually or set auto-
 
 # Display table
 st.dataframe(
-    latest_df[["user_display", "name", "date", "event", "time"]].rename(
+    latest_df[["name_status", "date", "event", "time"]].rename(
         columns={
-            "user_display": "User ID & Status",
-            "name": "Name",
+            "name_status": "Name & Status",
             "date": "Date",
             "event": "Event",
             "time": "Time"
         }
     )
-)
