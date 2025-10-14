@@ -4,7 +4,7 @@ from datetime import datetime
 
 # === Load live JSON from GitHub ===
 # Replace with your actual GitHub username and repo name
-DATA_FILE = "https://github.com/alizain-patel/shifts-online/blob/main/user_status_dashboard.json"
+DATA_FILE = "https://raw.githubusercontent.com/alizain-patel/shifts-online/refs/heads/main/user_status_dashboard.json"
 
 # Load the data
 try:
@@ -52,3 +52,4 @@ st.dataframe(df_latest[["user_display", "name", "date", "event", "time"]].rename
     "event": "Event",
     "time": "Time"
 }))
+
