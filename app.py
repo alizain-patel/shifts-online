@@ -4,7 +4,14 @@ from datetime import datetime
 
 # === Load live JSON from GitHub ===
 # Replace with your actual GitHub username and repo name
-DATA_FILE = "https://raw.githubusercontent.com/alizain-patel/shifts-online/refs/heads/main/userstatus.json"
+#DATA_FILE = "https://raw.githubusercontent.com/alizain-patel/shifts-online/refs/heads/main/userstatus.json"
+data = [
+    {"user_id": "U001", "name": "Akash Gitaye", "event": "Punch In", "datetime": "2025-10-14 08:00:00"},
+    {"user_id": "U002", "name": "Priya Sharma", "event": "Break Start", "datetime": "2025-10-14 10:15:00"},
+    {"user_id": "U003", "name": "John Doe", "event": "Punch Out", "datetime": "2025-10-14 17:00:00"},
+    {"user_id": "U004", "name": "Emily Davis", "event": "Punch In", "datetime": "2025-10-14 09:00:00"},
+    {"user_id": "U005", "name": "Raj Patel", "event": "Break End", "datetime": "2025-10-14 11:00:00"},
+]
 
 # Load the data
 try:
@@ -52,5 +59,6 @@ st.dataframe(df_latest[["user_display", "name", "date", "event", "time"]].rename
     "event": "Event",
     "time": "Time"
 }))
+
 
 
