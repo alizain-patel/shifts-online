@@ -1355,6 +1355,13 @@
     "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f"
   },
   {
+    "event": "Punch Out",
+    "name": "Suhas Kesari",
+    "datetime": "12/10/2025 13:20:12 IST",
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "note": ""
+  },
+  {
     "event": "Punch In",
     "name": "Joshua Dsouza",
     "datetime": "10/10/2025 11:16:59 IST",
