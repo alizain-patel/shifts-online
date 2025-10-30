@@ -1,7 +1,7 @@
 {
-  "event": "Punch Out",
   "datetime": "31/10/2025 02:10:25 IST",
+  "event": "Punch Out",
+  "name": "Vinayak Mandlik",
   "note": "User has left for the day",
-  "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
-  "name": "Vinayak Mandlik"
+  "user_id": "cbcded84-e050-4569-98c0-10fddbefd357"
 }
