@@ -1,10 +1,60 @@
 [
   {
     "event": "Punch Out",
-    "name": "priti surve",
-    "datetime": "03/11/2025 11:25:18 IST",
-    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
-    "note": "User has left for the day"
+    "name": "Vinayak Mandlik",
+    "datetime": "31/10/2025 02:10:25 IST",
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "note": ""
+  },
+  {
+    "event": "Punch Out",
+    "name": "Harpreet Singh",
+    "datetime": "31/10/2025 06:16:00 IST",
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "note": ""
+  },
+  {
+    "event": "Punch Out",
+    "name": "Abhishek Arolkar",
+    "datetime": "31/10/2025 06:28:41 IST",
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "note": ""
+  },
+  {
+    "event": "Punch In",
+    "name": "Mayur Divekar",
+    "datetime": "31/10/2025 09:50:23 IST",
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501"
+  },
+  {
+    "event": "Punch In",
+    "name": "Shubham Jadhav",
+    "datetime": "31/10/2025 09:56:36 IST",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
+  },
+  {
+    "event": "Punch In",
+    "name": "Akash Gitaye",
+    "datetime": "31/10/2025 10:07:16 IST",
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e"
+  },
+  {
+    "event": "Punch In",
+    "name": "Joshua Dsouza",
+    "datetime": "31/10/2025 10:48:21 IST",
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3"
+  },
+  {
+    "event": "Punch In",
+    "name": "Manesh Chindarkar",
+    "datetime": "31/10/2025 10:49:44 IST",
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f"
+  },
+  {
+    "event": "Punch In",
+    "name": "Shawn Nadar",
+    "datetime": "31/10/2025 10:59:51 IST",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
   },
   {
     "event": "Punch In",
@@ -13,11 +63,22 @@
     "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8"
   },
   {
-    "event": "Punch Out",
-    "name": "Alizain Patel",
-    "datetime": "31/10/2025 20:16:56 IST",
-    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
-    "note": ""
+    "event": "Punch In",
+    "name": "Gaurav Ghadi",
+    "datetime": "31/10/2025 11:17:11 IST",
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc"
+  },
+  {
+    "event": "Break Start",
+    "name": "Joshua Dsouza",
+    "datetime": "31/10/2025 13:53:22 IST",
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3"
+  },
+  {
+    "event": "Break Start",
+    "name": "Gaurav Ghadi",
+    "datetime": "31/10/2025 13:55:01 IST",
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc"
   },
   {
     "event": "Break Start",
@@ -32,10 +93,70 @@
     "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8"
   },
   {
+    "event": "Break End",
+    "name": "Joshua Dsouza",
+    "datetime": "31/10/2025 14:18:29 IST",
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3"
+  },
+  {
+    "event": "Break Start",
+    "name": "Manesh Chindarkar",
+    "datetime": "31/10/2025 14:25:04 IST",
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f"
+  },
+  {
+    "event": "Break Start",
+    "name": "Akash Gitaye",
+    "datetime": "31/10/2025 14:26:20 IST",
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e"
+  },
+  {
     "event": "Punch In",
+    "name": "Vinayak Mandlik",
+    "datetime": "31/10/2025 14:34:31 IST",
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357"
+  },
+  {
+    "event": "Break Start",
+    "name": "Shubham Jadhav",
+    "datetime": "31/10/2025 14:49:22 IST",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
+  },
+  {
+    "event": "Break End",
+    "name": "Akash Gitaye",
+    "datetime": "31/10/2025 15:14:27 IST",
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e"
+  },
+  {
+    "event": "Break End",
+    "name": "Manesh Chindarkar",
+    "datetime": "31/10/2025 15:16:49 IST",
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f"
+  },
+  {
+    "event": "Break End",
     "name": "Gaurav Ghadi",
-    "datetime": "31/10/2025 11:17:11 IST",
+    "datetime": "31/10/2025 15:21:07 IST",
     "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc"
+  },
+  {
+    "event": "Break Start",
+    "name": "Shawn Nadar",
+    "datetime": "31/10/2025 15:25:07 IST",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
+  },
+  {
+    "event": "Break End",
+    "name": "Shubham Jadhav",
+    "datetime": "31/10/2025 15:39:08 IST",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
+  },
+  {
+    "event": "Break End",
+    "name": "Shawn Nadar",
+    "datetime": "31/10/2025 15:45:05 IST",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
   },
   {
     "event": "Punch Out",
@@ -46,21 +167,43 @@
   },
   {
     "event": "Break Start",
-    "name": "Gaurav Ghadi",
-    "datetime": "31/10/2025 13:55:01 IST",
-    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc"
+    "name": "Shawn Nadar",
+    "datetime": "31/10/2025 18:50:14 IST",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
+  },
+  {
+    "event": "Punch Out",
+    "name": "Mayur Divekar",
+    "datetime": "31/10/2025 19:07:10 IST",
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "note": ""
+  },
+  {
+    "event": "Punch Out",
+    "name": "Shubham Jadhav",
+    "datetime": "31/10/2025 19:12:35 IST",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "note": ""
   },
   {
     "event": "Break End",
-    "name": "Gaurav Ghadi",
-    "datetime": "31/10/2025 15:21:07 IST",
-    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc"
+    "name": "Shawn Nadar",
+    "datetime": "31/10/2025 19:28:18 IST",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
   },
   {
-    "event": "Punch In",
-    "name": "Vinayak Mandlik",
-    "datetime": "31/10/2025 14:34:31 IST",
-    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357"
+    "event": "Punch Out",
+    "name": "Akash Gitaye",
+    "datetime": "31/10/2025 19:31:27 IST",
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "note": ""
+  },
+  {
+    "event": "Punch Out",
+    "name": "Shawn Nadar",
+    "datetime": "31/10/2025 20:01:14 IST",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "note": ""
   },
   {
     "event": "Punch In",
@@ -69,10 +212,31 @@
     "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2"
   },
   {
-    "event": "Break End",
-    "name": "Shawn Nadar",
-    "datetime": "31/10/2025 19:28:18 IST",
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
+    "event": "Punch Out",
+    "name": "Manesh Chindarkar",
+    "datetime": "31/10/2025 20:15:25 IST",
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "note": ""
+  },
+  {
+    "event": "Punch Out",
+    "name": "Joshua Dsouza",
+    "datetime": "31/10/2025 20:15:44 IST",
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "note": ""
+  },
+  {
+    "event": "Punch Out",
+    "name": "Alizain Patel",
+    "datetime": "31/10/2025 20:16:56 IST",
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "note": ""
+  },
+  {
+    "event": "Punch In",
+    "name": "Abhishek Arolkar",
+    "datetime": "31/10/2025 21:17:10 IST",
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c"
   },
   {
     "event": "Punch Out",
@@ -144,175 +308,11 @@
     "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc"
   },
   {
-    "event": "Punch In",
-    "name": "Abhishek Arolkar",
-    "datetime": "31/10/2025 21:17:10 IST",
-    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c"
-  },
-  {
-    "event": "Break Start",
-    "name": "Shawn Nadar",
-    "datetime": "31/10/2025 18:50:14 IST",
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
-  },
-  {
-    "event": "Break End",
-    "name": "Shawn Nadar",
-    "datetime": "31/10/2025 15:45:05 IST",
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
-  },
-  {
-    "event": "Break Start",
-    "name": "Shawn Nadar",
-    "datetime": "31/10/2025 15:25:07 IST",
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
-  },
-  {
     "event": "Punch Out",
-    "name": "Vinayak Mandlik",
-    "datetime": "31/10/2025 02:10:25 IST",
-    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
-    "note": ""
-  },
-  {
-    "event": "Punch Out",
-    "name": "Harpreet Singh",
-    "datetime": "31/10/2025 06:16:00 IST",
-    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
-    "note": ""
-  },
-  {
-    "event": "Punch Out",
-    "name": "Abhishek Arolkar",
-    "datetime": "31/10/2025 06:28:41 IST",
-    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
-    "note": ""
-  },
-  {
-    "event": "Punch In",
-    "name": "Mayur Divekar",
-    "datetime": "31/10/2025 09:50:23 IST",
-    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501"
-  },
-  {
-    "event": "Punch Out",
-    "name": "Mayur Divekar",
-    "datetime": "31/10/2025 19:07:10 IST",
-    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
-    "note": ""
-  },
-  {
-    "event": "Punch In",
-    "name": "Shubham Jadhav",
-    "datetime": "31/10/2025 09:56:36 IST",
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
-  },
-  {
-    "event": "Punch Out",
-    "name": "Shubham Jadhav",
-    "datetime": "31/10/2025 19:12:35 IST",
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "note": ""
-  },
-  {
-    "event": "Break Start",
-    "name": "Shubham Jadhav",
-    "datetime": "31/10/2025 14:49:22 IST",
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
-  },
-  {
-    "event": "Break End",
-    "name": "Shubham Jadhav",
-    "datetime": "31/10/2025 15:39:08 IST",
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
-  },
-  {
-    "event": "Punch In",
-    "name": "Akash Gitaye",
-    "datetime": "31/10/2025 10:07:16 IST",
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e"
-  },
-  {
-    "event": "Punch Out",
-    "name": "Akash Gitaye",
-    "datetime": "31/10/2025 19:31:27 IST",
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
-    "note": ""
-  },
-  {
-    "event": "Break Start",
-    "name": "Akash Gitaye",
-    "datetime": "31/10/2025 14:26:20 IST",
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e"
-  },
-  {
-    "event": "Break End",
-    "name": "Akash Gitaye",
-    "datetime": "31/10/2025 15:14:27 IST",
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e"
-  },
-  {
-    "event": "Punch In",
-    "name": "Joshua Dsouza",
-    "datetime": "31/10/2025 10:48:21 IST",
-    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3"
-  },
-  {
-    "event": "Punch Out",
-    "name": "Joshua Dsouza",
-    "datetime": "31/10/2025 20:15:44 IST",
-    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
-    "note": ""
-  },
-  {
-    "event": "Break Start",
-    "name": "Joshua Dsouza",
-    "datetime": "31/10/2025 13:53:22 IST",
-    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3"
-  },
-  {
-    "event": "Break End",
-    "name": "Joshua Dsouza",
-    "datetime": "31/10/2025 14:18:29 IST",
-    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3"
-  },
-  {
-    "event": "Punch In",
-    "name": "Manesh Chindarkar",
-    "datetime": "31/10/2025 10:49:44 IST",
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f"
-  },
-  {
-    "event": "Punch Out",
-    "name": "Manesh Chindarkar",
-    "datetime": "31/10/2025 20:15:25 IST",
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
-    "note": ""
-  },
-  {
-    "event": "Break Start",
-    "name": "Manesh Chindarkar",
-    "datetime": "31/10/2025 14:25:04 IST",
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f"
-  },
-  {
-    "event": "Break End",
-    "name": "Manesh Chindarkar",
-    "datetime": "31/10/2025 15:16:49 IST",
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f"
-  },
-  {
-    "event": "Punch In",
-    "name": "Shawn Nadar",
-    "datetime": "31/10/2025 10:59:51 IST",
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed"
-  },
-  {
-    "event": "Punch Out",
-    "name": "Shawn Nadar",
-    "datetime": "31/10/2025 20:01:14 IST",
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
-    "note": ""
+    "name": "priti surve",
+    "datetime": "03/11/2025 11:25:18 IST",
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "note": "User has left for the day"
   },
   {
     "event": "Punch In",
