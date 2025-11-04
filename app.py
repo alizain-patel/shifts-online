@@ -1,5 +1,5 @@
-
 import os
+import re
 import pandas as pd
 import streamlit as st
 
@@ -7,7 +7,7 @@ import streamlit as st
 # CONFIG
 # ---------------------------------------------------------------
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
-IST_TZ = "Asia/Kolkata"  # IST = UTC+05:30
+IST_TZ    = "Asia/Kolkata"  # IST = UTC+05:30
 
 @st.cache_data(show_spinner=False)
 def load_json(path: str, mtime: float) -> pd.DataFrame:
@@ -15,61 +15,88 @@ def load_json(path: str, mtime: float) -> pd.DataFrame:
         raise FileNotFoundError(f"JSON not found: {path}")
     return pd.read_json(path)
 
-# ---------------------------------------------------------------
-# ROW-WISE DATETIME BUILD (timezone-aware using per-row 'timezone')
-# ---------------------------------------------------------------
-# For each row, choose the first available field in order and convert to IST:
-#   1) legacy 'datetime' (parse day-first, LOCALIZE IST)
-#   2) 'sort_key'       (if timezone=='IST' -> LOCALIZE IST; else ASSUME UTC -> CONVERT to IST)
-#   3) 'datetime_iso'   (same rule as sort_key)
-#   4) 'date'+'time'    (LOCALIZE IST)
+# ---------- helpers: robust parsing ----------
 
-def build_datetime_rowwise_istaware(df: pd.DataFrame) -> pd.Series:
+_TS_RE = re.compile(r"^Timestamp\\('(.*?)'\\)$")
+
+def _clean_ts_string(s: pd.Series) -> pd.Series:
+    """
+    Accepts a Series that may contain strings like "Timestamp('YYYY-MM-DD HH:MM:SS')"
+    and returns plain "YYYY-MM-DD HH:MM:SS" strings. Non-matching values are unchanged.
+    """
+    if s.dtype == 'O':
+        return s.astype(str).str.replace(_TS_RE, r"\\1", regex=True)
+    return s
+
+def _to_dt_localize_ist(ser: pd.Series) -> pd.Series:
+    """Parse naive strings and localize to IST."""
+    ser = _clean_ts_string(ser)
+    dt  = pd.to_datetime(ser, errors='coerce')
+    # If tz-aware already, convert; else localize to IST
+    return (dt.dt.tz_convert(IST_TZ) if getattr(dt.dt, 'tz', None) is not None
+            else dt.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT'))
+
+def _to_dt_utc_to_ist(ser: pd.Series) -> pd.Series:
+    """Treat strings as UTC and convert to IST."""
+    ser = _clean_ts_string(ser)
+    return pd.to_datetime(ser, errors='coerce', utc=True).dt.tz_convert(IST_TZ)
+
+def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
+    """
+    Row-wise fallback (coalesce) in this order:
+      1) legacy 'datetime' (intended IST)        => localize IST (handles Timestamp(...))
+      2) 'sort_key' with per-row timezone:
+         - timezone == 'IST' => localize IST
+         - else              => UTC -> IST
+      3) 'datetime_iso' with per-row timezone rule (same as sort_key)
+      4) 'date' + 'time' => localize IST (handles Timestamp(...))
+    """
     n = len(df)
     tzcol = df['timezone'].astype(str).str.upper() if 'timezone' in df.columns else None
 
     # 1) legacy 'datetime'
     dt_legacy = pd.Series([pd.NaT]*n)
     if 'datetime' in df.columns:
-        base = df['datetime'].astype(str).str.replace(' IST', '', regex=False)
-        parsed = pd.to_datetime(base, dayfirst=True, errors='coerce')
-        dt_legacy = parsed.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
+        dt_legacy = _to_dt_localize_ist(df['datetime'])
 
-    # Helper: localize vs utc-convert for an ISO-like column
-    def parse_iso_like(colname: str) -> pd.Series:
-        out = pd.Series([pd.NaT]*n)
-        if colname not in df.columns:
-            return out
-        # parse naive ISO
-        naive = pd.to_datetime(df[colname], errors='coerce')
+    # 2) sort_key (IST vs UTC by per-row timezone)
+    dt_sort = pd.Series([pd.NaT]*n)
+    if 'sort_key' in df.columns:
+        naive = _clean_ts_string(df['sort_key'])
+        base  = pd.to_datetime(naive, errors='coerce')
         if tzcol is not None:
-            ist_mask = tzcol.eq('IST') & naive.notna()
-            if ist_mask.any():
-                out.loc[ist_mask] = naive.loc[ist_mask].dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
-            utc_mask = (~ist_mask) & naive.notna()
-            if utc_mask.any():
-                out.loc[utc_mask] = pd.to_datetime(df.loc[utc_mask, colname], errors='coerce', utc=True).dt.tz_convert(IST_TZ)
+            ist_mask = tzcol.eq('IST') & base.notna()
+            utc_mask = (~ist_mask) & base.notna()
+            dt_sort.loc[ist_mask] = _to_dt_localize_ist(naive.loc[ist_mask])
+            dt_sort.loc[utc_mask] = _to_dt_utc_to_ist(naive.loc[utc_mask])
         else:
-            mask = naive.notna()
-            if mask.any():
-                out.loc[mask] = pd.to_datetime(df.loc[mask, colname], errors='coerce', utc=True).dt.tz_convert(IST_TZ)
-        return out
+            dt_sort = _to_dt_utc_to_ist(naive)
 
-    dt_sort = parse_iso_like('sort_key')
-    dt_iso  = parse_iso_like('datetime_iso')
+    # 3) datetime_iso (same rule as sort_key)
+    dt_iso = pd.Series([pd.NaT]*n)
+    if 'datetime_iso' in df.columns:
+        naive = _clean_ts_string(df['datetime_iso'])
+        base  = pd.to_datetime(naive, errors='coerce')
+        if tzcol is not None:
+            ist_mask = tzcol.eq('IST') & base.notna()
+            utc_mask = (~ist_mask) & base.notna()
+            dt_iso.loc[ist_mask] = _to_dt_localize_ist(naive.loc[ist_mask])
+            dt_iso.loc[utc_mask] = _to_dt_utc_to_ist(naive.loc[utc_mask])
+        else:
+            dt_iso = _to_dt_utc_to_ist(naive)
 
+    # 4) date+time (local IST)
     dt_dt = pd.Series([pd.NaT]*n)
     if {'date','time'}.issubset(df.columns):
-        combo = pd.to_datetime(df['date'].astype(str)+' '+df['time'].astype(str), errors='coerce')
-        dt_dt = combo.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
+        combo = (_clean_ts_string(df['date']).astype(str) + " " +
+                 _clean_ts_string(df['time']).astype(str))
+        dt_dt = _to_dt_localize_ist(combo)
 
     # coalesce in order
-    dt = dt_legacy.combine_first(dt_sort).combine_first(dt_iso).combine_first(dt_dt)
-    return dt
+    return dt_legacy.combine_first(dt_sort).combine_first(dt_iso).combine_first(dt_dt)
 
-# ---------------------------------------------------------------
-# APP
-# ---------------------------------------------------------------
+# ---------- app ----------
+
 st.set_page_config(page_title='Live User Status Dashboard — IST', layout='wide')
 
 # Path + mtime
@@ -84,95 +111,83 @@ except FileNotFoundError:
 if st.button('Clear cache & reload'):
     st.cache_data.clear()
 
-# Load raw
+# Load
 raw = load_json(JSON_PATH, mtime)
 
-# Build row-wise IST-aware datetime
-dt = build_datetime_rowwise_istaware(raw)
+# Build per-row IST-aware datetime
+dt = build_datetime_rowwise(raw)
 
-# Compose DF
+# Compose DF and drop unparsed
 df = raw.copy()
 df['datetime'] = dt
-# Drop non-parsed rows
 df = df.dropna(subset=['datetime']).copy()
 
 # Derive IST display
 df = df.sort_values('datetime', ascending=False)
 df['datetime_ist'] = df['datetime'].dt.tz_convert(IST_TZ)
-df['Date'] = df['datetime_ist'].dt.strftime('%d-%m-%Y')
-df['Time'] = df['datetime_ist'].dt.strftime('%H:%M:%S') + ' IST'
+df['Date']         = df['datetime_ist'].dt.strftime('%d-%m-%Y')
+df['Time']         = df['datetime_ist'].dt.strftime('%H:%M:%S') + ' IST'
 
-# --- FIX: Safe per-day counts (avoid duplicate column names) ---
+# Per-day counts (safe names)
 with st.expander('Per-day counts (IST) BEFORE filters'):
-    per_day = df['datetime_ist'].dt.strftime('%d-%m-%Y').value_counts().sort_index()
-    per_day_df = per_day.reset_index()
-    per_day_df.columns = ['Date', 'Count']  # ensure unique column names
+    ser = df['datetime_ist'].dt.strftime('%d-%m-%Y').value_counts().sort_index()
+    per_day_df = ser.reset_index()
+    per_day_df.columns = ['Date', 'Count']
     st.dataframe(per_day_df, use_container_width=True, hide_index=True)
 
 # Status label
 status_map = {
-    'Punch In': '🟢 active',
+    'Punch In':    '🟢 active',
     'Break Start': '🟠 on break',
-    'Break End': '🟢 active',
-    'Punch Out': '🔴 on leave',
-    'On Leave': '🔴 on leave',
+    'Break End':   '🟢 active',
+    'Punch Out':   '🔴 on leave',
+    'On Leave':    '🔴 on leave',
 }
-df['status'] = df['event'].map(lambda e: status_map.get(e, '⚪ unknown')) if 'event' in df.columns else ''
+df['status']        = df['event'].map(lambda e: status_map.get(e, '⚪ unknown')) if 'event' in df.columns else ''
 df['Name & Status'] = df.apply(lambda r: f"{r.get('name','')}  {r.get('status','')}", axis=1)
 
 # Friday→Today window (Mon: Fri→Mon)
 st.sidebar.header('View Options')
-apply_window = st.sidebar.checkbox('Apply Friday → Today window (Mon: Fri → Mon)', value=True)
-view_mode = st.sidebar.radio('Rows to show', ('Latest per user', 'All events'), index=0)
-prefer_today = st.sidebar.checkbox('Prefer today if present (for Latest per user)', value=True)
+apply_window  = st.sidebar.checkbox('Apply Friday → Today window (Mon: Fri → Mon)', value=True)
+view_mode     = st.sidebar.radio('Rows to show', ('Latest per user', 'All events'), index=0)
+prefer_today  = st.sidebar.checkbox('Prefer today if present (for Latest per user)', value=True)
 
-now_ist = pd.Timestamp.now(tz=IST_TZ)
+now_ist   = pd.Timestamp.now(tz=IST_TZ)
 today_ist = now_ist.floor('D')
-weekday = today_ist.weekday()
+weekday   = today_ist.weekday()
 
 win_info = ''
 if apply_window:
-    days_back = (weekday - 4) % 7
+    days_back   = (weekday - 4) % 7
     last_friday = (today_ist - pd.to_timedelta(days_back, unit='D')).floor('D')
     next_monday = (last_friday + pd.to_timedelta(3, unit='D')).floor('D')
-    window_end = next_monday if weekday == 0 else today_ist
-    ist_dates = df['datetime_ist'].dt.floor('D')
-    mask = (ist_dates >= last_friday) & (ist_dates <= window_end)
-    df = df.loc[mask]
-    win_info = f"window: {last_friday.strftime('%d-%m-%Y')} → {window_end.strftime('%d-%m-%Y')}"
+    window_end  = next_monday if weekday == 0 else today_ist
+    ist_dates   = df['datetime_ist'].dt.floor('D')
+    mask        = (ist_dates >= last_friday) & (ist_dates <= window_end)
+    df          = df.loc[mask]
+    win_info    = f"window: {last_friday.strftime('%d-%m-%Y')} → {window_end.strftime('%d-%m-%Y')}"
 
-# Latest per user
+# Latest per user (prefer today if present)
 if view_mode == 'Latest per user' and 'user_id' in df.columns:
     if prefer_today:
-        # Choose latest for today if present; else overall latest in window
         df_today = df[df['datetime_ist'].dt.floor('D') == today_ist]
         df_other = df[df['datetime_ist'].dt.floor('D') != today_ist]
         if not df_today.empty:
-            latest_today = (
-                df_today.sort_values('datetime', ascending=False)
-                        .drop_duplicates(subset=['user_id'], keep='first')
-            )
-            # For users missing today, include latest from other days
+            latest_today = (df_today.sort_values('datetime', ascending=False)
+                                    .drop_duplicates(subset=['user_id'], keep='first'))
             missing_users = set(df['user_id']) - set(latest_today['user_id'])
-            latest_other = (
-                df_other[df_other['user_id'].isin(missing_users)]
-                    .sort_values('datetime', ascending=False)
-                    .drop_duplicates(subset=['user_id'], keep='first')
-            )
-            df = pd.concat([latest_today, latest_other], ignore_index=True)
-            df = df.sort_values('datetime', ascending=False)
+            latest_other  = (df_other[df_other['user_id'].isin(missing_users)]
+                                    .sort_values('datetime', ascending=False)
+                                    .drop_duplicates(subset=['user_id'], keep='first'))
+            df = pd.concat([latest_today, latest_other], ignore_index=True).sort_values('datetime', ascending=False)
         else:
-            df = (
-                df.sort_values('datetime', ascending=False)
-                  .drop_duplicates(subset=['user_id'], keep='first')
-                  .sort_values('datetime', ascending=False)
-            )
+            df = (df.sort_values('datetime', ascending=False)
+                    .drop_duplicates(subset=['user_id'], keep='first')
+                    .sort_values('datetime', ascending=False))
     else:
-        df = (
-            df.sort_values('datetime', ascending=False)
-              .drop_duplicates(subset=['user_id'], keep='first')
-              .sort_values('datetime', ascending=False)
-        )
+        df = (df.sort_values('datetime', ascending=False)
+                .drop_duplicates(subset=['user_id'], keep='first')
+                .sort_values('datetime', ascending=False))
 
 # UI
 st.title('🟢🔴 Live User Status Dashboard — IST')
@@ -190,6 +205,6 @@ st.caption(f"Last event (IST): {last_ist if last_ist is not None else 'N/A'} · 
 
 with st.expander('Diagnostics: raw vs parsed (first 2 rows)'):
     st.write({
-        'raw_sample': raw.head(2).to_dict(orient='records') if len(raw) else [],
+        'raw_sample':    raw.head(2).to_dict(orient='records') if len(raw) else [],
         'display_sample': df.head(2).to_dict(orient='records') if len(df) else []
     })
