@@ -35,6 +35,13 @@
     "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f"
   },
   {
+    "status": "on break",
+    "event": "Break End",
+    "name": "Suhas Kesari",
+    "datetime": "04-11-2025 15:29:53",
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f"
+  },
+  {
     "status": "left for the day",
     "event": "Punch Out",
     "name": "Gaurav Ghadi",
