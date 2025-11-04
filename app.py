@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 # ---------------------------------------------------------------
-# CONFIG (locked to IST view)
+# CONFIG
 # ---------------------------------------------------------------
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 IST_TZ = "Asia/Kolkata"  # IST = UTC+05:30
@@ -19,45 +19,49 @@ def load_json(path: str, mtime: float) -> pd.DataFrame:
     return pd.read_json(path)
 
 # ---------------------------------------------------------------
-# DATETIME BUILD (LOCKED RULE)
+# ROW-WISE DATETIME BUILD (fallback per row)
 # ---------------------------------------------------------------
-# Rule:
-# 1) Use legacy 'datetime' (dd/MM/yyyy HH:mm:ss IST) if present => localize IST (no shift)
-# 2) Otherwise, treat ISO fields ('sort_key' or 'datetime_iso') as **UTC** and convert to IST
-# 3) Otherwise, if 'date'+'time' exist => localize IST
-# This avoids UTC-labelled-as-IST errors.
+# For each row:
+#   dt = legacy 'datetime' (IST)  OR  sort_key (UTC->IST)  OR  datetime_iso (UTC->IST)  OR  (date+time) (IST)
+# This avoids dropping rows when different fields are present for different days.
 
-def build_datetime_locked(df: pd.DataFrame) -> pd.Series:
-    def localize_ist_series(s: pd.Series) -> pd.Series:
-        dt = pd.to_datetime(s, errors='coerce')
-        return dt.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
-
-    def utc_to_ist_series(s: pd.Series) -> pd.Series:
-        dt = pd.to_datetime(s, errors='coerce', utc=True)
-        return dt.dt.tz_convert(IST_TZ)
-
-    if 'datetime' in df.columns:
-        # Legacy display string already intended as IST
+def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
+    def parse_legacy(s: pd.Series) -> pd.Series:
+        if 'datetime' not in df.columns:
+            return pd.Series([pd.NaT]*len(df))
         base = df['datetime'].astype(str).str.replace(' IST', '', regex=False)
         dt = pd.to_datetime(base, dayfirst=True, errors='coerce')
         return dt.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
 
-    if 'sort_key' in df.columns:
-        # Assume sort_key is ISO in UTC and convert to IST
-        return utc_to_ist_series(df['sort_key'])
+    def parse_sortkey_utc(s: pd.Series) -> pd.Series:
+        if 'sort_key' not in df.columns:
+            return pd.Series([pd.NaT]*len(df))
+        dt = pd.to_datetime(df['sort_key'], errors='coerce', utc=True)
+        return dt.dt.tz_convert(IST_TZ)
 
-    if 'datetime_iso' in df.columns:
-        # Assume datetime_iso is ISO in UTC and convert to IST
-        return utc_to_ist_series(df['datetime_iso'])
+    def parse_iso_utc(s: pd.Series) -> pd.Series:
+        if 'datetime_iso' not in df.columns:
+            return pd.Series([pd.NaT]*len(df))
+        dt = pd.to_datetime(df['datetime_iso'], errors='coerce', utc=True)
+        return dt.dt.tz_convert(IST_TZ)
 
-    if {'date', 'time'}.issubset(df.columns):
+    def parse_date_time(s: pd.Series) -> pd.Series:
+        if not {'date','time'}.issubset(df.columns):
+            return pd.Series([pd.NaT]*len(df))
         base = pd.to_datetime(df['date'].astype(str) + ' ' + df['time'].astype(str), errors='coerce')
         return base.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
 
-    raise KeyError("Expected one of: 'datetime', 'sort_key', 'datetime_iso', or both 'date' and 'time'.")
+    dt_legacy = parse_legacy(df)
+    dt_sort   = parse_sortkey_utc(df)
+    dt_iso    = parse_iso_utc(df)
+    dt_dt     = parse_date_time(df)
+
+    # Row-wise fallback: legacy -> sort_key -> iso -> date+time
+    dt = dt_legacy.combine_first(dt_sort).combine_first(dt_iso).combine_first(dt_dt)
+    return dt
 
 # ---------------------------------------------------------------
-# APP (final)
+# APP
 # ---------------------------------------------------------------
 st.set_page_config(page_title='Live User Status Dashboard — IST', layout='wide')
 
@@ -76,17 +80,13 @@ if st.button('Clear cache & reload'):
 # Load raw
 raw = load_json(JSON_PATH, mtime)
 
-# Build locked datetime
-try:
-    dt = build_datetime_locked(raw)
-except Exception as e:
-    st.error(f"Failed to build datetime: {e}")
-    st.stop()
+# Build row-wise datetime
+dt = build_datetime_rowwise(raw)
 
 # Compose DF
 df = raw.copy()
 df['datetime'] = dt
-# Drop non-parsed
+# Drop non-parsed rows
 df = df.dropna(subset=['datetime']).copy()
 
 # Derive IST display
@@ -106,14 +106,14 @@ status_map = {
 df['status'] = df['event'].map(lambda e: status_map.get(e, '⚪ unknown')) if 'event' in df.columns else ''
 df['Name & Status'] = df.apply(lambda r: f"{r.get('name','')}  {r.get('status','')}", axis=1)
 
-# Friday→Today window (Mon: Fri→Mon), with ability to show all
+# Friday→Today window (Mon: Fri→Mon)
 st.sidebar.header('View Options')
 apply_window = st.sidebar.checkbox('Apply Friday → Today window (Mon: Fri → Mon)', value=True)
 view_mode = st.sidebar.radio('Rows to show', ('Latest per user', 'All events'), index=0)
 
 now_ist = pd.Timestamp.now(tz=IST_TZ)
 today_ist = now_ist.floor('D')
-weekday = today_ist.weekday()   # Mon=0, Fri=4
+weekday = today_ist.weekday()
 
 win_info = ''
 if apply_window:
@@ -148,8 +148,8 @@ st.dataframe(
 last_ist = df['datetime_ist'].max() if len(df) else None
 st.caption(f"Last event (IST): {last_ist if last_ist is not None else 'N/A'} · Total rows loaded: {len(df)}")
 
-with st.expander('Diagnostics: raw vs parsed (first row)'):
+with st.expander('Diagnostics: raw vs parsed (first 2 rows)'):
     st.write({
-        'first_raw': raw.head(1).to_dict(orient='records')[0] if len(raw) else {},
-        'first_display': df.head(1).to_dict(orient='records')[0] if len(df) else {}
+        'raw_sample': raw.head(2).to_dict(orient='records') if len(raw) else [],
+        'display_sample': df.head(2).to_dict(orient='records') if len(df) else []
     })
