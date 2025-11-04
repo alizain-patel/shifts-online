@@ -8,7 +8,8 @@ from pandas.api.types import is_datetime64tz_dtype
 # CONFIG
 # ---------------------------------------------------------------
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
-IST_TZ    = "Asia/Kolkata"  # IST = UTC+05:30
+IST_TZ    = "Asia/Kolkata"          # IST = UTC+05:30
+FORCE_ISO_UTC = True                # <— Force ISO ('sort_key','datetime_iso') as UTC → IST
 
 # ---------------------------------------------------------------
 # LOAD
@@ -57,74 +58,45 @@ def _to_dt_utc_to_ist(ser: pd.Series) -> pd.Series:
     ser = _clean_ts_string(ser)
     return pd.to_datetime(ser, errors="coerce", utc=True).dt.tz_convert(IST_TZ)
 
-def _parse_iso_by_timezone(iso: pd.Series, tzcol: pd.Series | None) -> pd.Series:
-    """
-    Parse ISO-like strings per row using timezone column:
-      - timezone == 'IST' -> localize IST (no shift)
-      - else/missing      -> assume UTC -> IST
-    Returns tz-aware IST datetimes.
-    """
-    if iso is None:
-        return pd.Series([], dtype="datetime64[ns, UTC]").rename(None)
-    iso_clean = _clean_ts_string(iso)
-    base      = pd.to_datetime(iso_clean, errors="coerce")
-
-    out = pd.Series([pd.NaT] * len(iso), dtype="object")
-    if tzcol is not None:
-        ist_mask = tzcol.str.upper().eq("IST") & base.notna()
-        utc_mask = (~ist_mask) & base.notna()
-        if ist_mask.any():
-            out.loc[ist_mask] = _to_dt_localize_ist(iso_clean.loc[ist_mask])
-        if utc_mask.any():
-            out.loc[utc_mask] = _to_dt_utc_to_ist(iso_clean.loc[utc_mask])
-    else:
-        mask = base.notna()
-        if mask.any():
-            out.loc[mask] = _to_dt_utc_to_ist(iso_clean.loc[mask])
-
-    # Ensure a consistent tz-aware dtype
-    out = pd.to_datetime(out, errors="coerce")
-    if not is_datetime64tz_dtype(out.dtype):
-        out = out.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
-    return out
-
 def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     """
     Build one tz-aware IST datetime **per row** with ISO-first priority:
 
-      1) 'sort_key' (ISO) — preferred (newer rows usually have ISO)
-         - If per-row timezone == 'IST' -> localize IST (no shift)
-         - Else                         -> assume UTC -> convert to IST
-      2) 'datetime_iso' — same rule as sort_key
-      3) legacy 'datetime' — intended IST -> localize IST (handles Timestamp('...'))
-      4) 'date' + 'time' — localize IST   (handles Timestamp('...'))
+      1) 'sort_key' (ISO)     — forced UTC → IST
+      2) 'datetime_iso' (ISO) — forced UTC → IST
+      3) legacy 'datetime'    — intended IST → localize IST (handles Timestamp('...'))
+      4) 'date' + 'time'      — localize IST   (handles Timestamp('...'))
 
     This keeps newer ISO rows (Nov) and still supports older legacy rows (Oct).
     """
-    tzcol = df["timezone"].astype(str) if "timezone" in df.columns else None
+    n = len(df)
 
-    # 1) sort_key (ISO-first)
-    dt_sort = _parse_iso_by_timezone(df["sort_key"] if "sort_key" in df.columns else None, tzcol)
+    # 1) sort_key
+    dt_sort = pd.Series([pd.NaT] * n, dtype="object")
+    if "sort_key" in df.columns:
+        if FORCE_ISO_UTC:
+            dt_sort = _to_dt_utc_to_ist(df["sort_key"])
+        else:
+            dt_sort = _to_dt_localize_ist(df["sort_key"])
 
     # 2) datetime_iso
-    dt_iso  = _parse_iso_by_timezone(df["datetime_iso"] if "datetime_iso" in df.columns else None, tzcol)
+    dt_iso = pd.Series([pd.NaT] * n, dtype="object")
+    if "datetime_iso" in df.columns:
+        if FORCE_ISO_UTC:
+            dt_iso = _to_dt_utc_to_ist(df["datetime_iso"])
+        else:
+            dt_iso = _to_dt_localize_ist(df["datetime_iso"])
 
     # 3) legacy datetime (fallback)
-    dt_legacy = pd.Series([pd.NaT] * len(df), dtype="object")
+    dt_legacy = pd.Series([pd.NaT] * n, dtype="object")
     if "datetime" in df.columns:
         dt_legacy = _to_dt_localize_ist(df["datetime"])
-        dt_legacy = pd.to_datetime(dt_legacy, errors="coerce")
-        if not is_datetime64tz_dtype(dt_legacy.dtype):
-            dt_legacy = dt_legacy.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     # 4) date + time (fallback)
-    dt_dt = pd.Series([pd.NaT] * len(df), dtype="object")
+    dt_dt = pd.Series([pd.NaT] * n, dtype="object")
     if {"date", "time"}.issubset(df.columns):
         combo = _clean_ts_string(df["date"]).astype(str) + " " + _clean_ts_string(df["time"]).astype(str)
         dt_dt = _to_dt_localize_ist(combo)
-        dt_dt = pd.to_datetime(dt_dt, errors="coerce")
-        if not is_datetime64tz_dtype(dt_dt.dtype):
-            dt_dt = dt_dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     # Coalesce in ISO-first order, then legacy, then date+time
     candidates = pd.concat([dt_sort, dt_iso, dt_legacy, dt_dt], axis=1)
@@ -133,6 +105,7 @@ def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     # Final hardening: ensure tz-aware
     merged = pd.to_datetime(merged, errors="coerce")
     if not is_datetime64tz_dtype(merged.dtype):
+        # If we still got naive values, localize to IST as a last resort
         merged = merged.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     return merged
