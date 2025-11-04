@@ -57,6 +57,37 @@ def _to_dt_utc_to_ist(ser: pd.Series) -> pd.Series:
     ser = _clean_ts_string(ser)
     return pd.to_datetime(ser, errors="coerce", utc=True).dt.tz_convert(IST_TZ)
 
+def _parse_iso_by_timezone(iso: pd.Series, tzcol: pd.Series | None) -> pd.Series:
+    """
+    Parse ISO-like strings per row using timezone column:
+      - timezone == 'IST' -> localize IST (no shift)
+      - else/missing      -> assume UTC -> IST
+    Returns tz-aware IST datetimes.
+    """
+    if iso is None:
+        return pd.Series([], dtype="datetime64[ns, UTC]").rename(None)
+    iso_clean = _clean_ts_string(iso)
+    base      = pd.to_datetime(iso_clean, errors="coerce")
+
+    out = pd.Series([pd.NaT] * len(iso), dtype="object")
+    if tzcol is not None:
+        ist_mask = tzcol.str.upper().eq("IST") & base.notna()
+        utc_mask = (~ist_mask) & base.notna()
+        if ist_mask.any():
+            out.loc[ist_mask] = _to_dt_localize_ist(iso_clean.loc[ist_mask])
+        if utc_mask.any():
+            out.loc[utc_mask] = _to_dt_utc_to_ist(iso_clean.loc[utc_mask])
+    else:
+        mask = base.notna()
+        if mask.any():
+            out.loc[mask] = _to_dt_utc_to_ist(iso_clean.loc[mask])
+
+    # Ensure a consistent tz-aware dtype
+    out = pd.to_datetime(out, errors="coerce")
+    if not is_datetime64tz_dtype(out.dtype):
+        out = out.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
+    return out
+
 def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     """
     Build one tz-aware IST datetime **per row** with ISO-first priority:
@@ -70,57 +101,39 @@ def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
 
     This keeps newer ISO rows (Nov) and still supports older legacy rows (Oct).
     """
-    n = len(df)
-    tzcol = df["timezone"].astype(str).str.upper() if "timezone" in df.columns else None
+    tzcol = df["timezone"].astype(str) if "timezone" in df.columns else None
 
-    # 1) sort_key
-    dt_sort = pd.Series([pd.NaT] * n)
-    if "sort_key" in df.columns:
-        naive = _clean_ts_string(df["sort_key"])
-        base  = pd.to_datetime(naive, errors="coerce")
-        if tzcol is not None:
-            ist_mask = tzcol.eq("IST") & base.notna()
-            utc_mask = (~ist_mask) & base.notna()
-            if ist_mask.any(): dt_sort.loc[ist_mask] = _to_dt_localize_ist(naive.loc[ist_mask])
-            if utc_mask.any(): dt_sort.loc[utc_mask] = _to_dt_utc_to_ist(naive.loc[utc_mask])
-        else:
-            dt_sort = _to_dt_utc_to_ist(naive)
+    # 1) sort_key (ISO-first)
+    dt_sort = _parse_iso_by_timezone(df["sort_key"] if "sort_key" in df.columns else None, tzcol)
 
     # 2) datetime_iso
-    dt_iso = pd.Series([pd.NaT] * n)
-    if "datetime_iso" in df.columns:
-        naive = _clean_ts_string(df["datetime_iso"])
-        base  = pd.to_datetime(naive, errors="coerce")
-        if tzcol is not None:
-            ist_mask = tzcol.eq("IST") & base.notna()
-            utc_mask = (~ist_mask) & base.notna()
-            if ist_mask.any(): dt_iso.loc[ist_mask] = _to_dt_localize_ist(naive.loc[ist_mask])
-            if utc_mask.any(): dt_iso.loc[utc_mask] = _to_dt_utc_to_ist(naive.loc[utc_mask])
-        else:
-            dt_iso = _to_dt_utc_to_ist(naive)
+    dt_iso  = _parse_iso_by_timezone(df["datetime_iso"] if "datetime_iso" in df.columns else None, tzcol)
 
     # 3) legacy datetime (fallback)
-    dt_legacy = pd.Series([pd.NaT] * n)
+    dt_legacy = pd.Series([pd.NaT] * len(df), dtype="object")
     if "datetime" in df.columns:
         dt_legacy = _to_dt_localize_ist(df["datetime"])
+        dt_legacy = pd.to_datetime(dt_legacy, errors="coerce")
+        if not is_datetime64tz_dtype(dt_legacy.dtype):
+            dt_legacy = dt_legacy.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     # 4) date + time (fallback)
-    dt_dt = pd.Series([pd.NaT] * n)
+    dt_dt = pd.Series([pd.NaT] * len(df), dtype="object")
     if {"date", "time"}.issubset(df.columns):
         combo = _clean_ts_string(df["date"]).astype(str) + " " + _clean_ts_string(df["time"]).astype(str)
         dt_dt = _to_dt_localize_ist(combo)
+        dt_dt = pd.to_datetime(dt_dt, errors="coerce")
+        if not is_datetime64tz_dtype(dt_dt.dtype):
+            dt_dt = dt_dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     # Coalesce in ISO-first order, then legacy, then date+time
-    merged = dt_sort.combine_first(dt_iso).combine_first(dt_legacy).combine_first(dt_dt)
+    candidates = pd.concat([dt_sort, dt_iso, dt_legacy, dt_dt], axis=1)
+    merged     = candidates.bfill(axis=1).iloc[:, 0]
 
-    # --- HARDEN: guarantee tz-aware datetime64[ns, tz] to avoid .dt errors ---
-    # If dtype not tz-aware, localize to IST as a last resort.
+    # Final hardening: ensure tz-aware
+    merged = pd.to_datetime(merged, errors="coerce")
     if not is_datetime64tz_dtype(merged.dtype):
-        merged = pd.to_datetime(merged, errors="coerce")
-        if is_datetime64tz_dtype(merged.dtype):
-            merged = merged.dt.tz_convert(IST_TZ)
-        else:
-            merged = merged.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
+        merged = merged.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     return merged
 
@@ -247,3 +260,4 @@ with st.expander("Diagnostics: raw vs parsed (first 2 rows)"):
     st.json({
         "raw_sample":     raw.head(2).to_dict(orient="records") if len(raw) else [],
         "display_sample": df.head(2).to_dict(orient="records") if len(df) else []
+    })
