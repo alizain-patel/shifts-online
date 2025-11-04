@@ -137,15 +137,20 @@ df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"]         = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"]         = df["datetime_ist"].dt.strftime("%H:%M:%S") + " IST"
 
-# ---------- Status / emoji ----------
+# ---------- Status in IST (Punch Out => left for the day) ----------
 status_map = {
     "Punch In":    "🟢 active",
     "Break Start": "🟠 on break",
     "Break End":   "🟢 active",
-    "Punch Out":   "🔴 on leave",
+    # Show "left for the day" instead of "on leave" for Punch Out
+    "Punch Out":   "🔴 left for the day",
+    # Keep "On Leave" unchanged; tell me if you want this label removed too
     "On Leave":    "🔴 on leave",
 }
 df["Status"] = df["event"].map(lambda e: status_map.get(e, "⚪ unknown")) if "event" in df.columns else ""
+
+# Build Name & Status for convenience
+df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')}  {r.get('Status','')}", axis=1)
 
 # ---------- Sidebar controls ----------
 st.sidebar.header("View Options")
@@ -166,16 +171,6 @@ if apply_window:
     ist_dates   = df["datetime_ist"].dt.floor("D")
     mask        = (ist_dates >= last_friday) & (ist_dates <= window_end)
     df          = df.loc[mask]
-
-# ---------- “Left for the day” under Status (if Punch Out today) ----------
-if "event" in df.columns:
-    is_punchout = df["event"].eq("Punch Out")
-    is_today    = df["datetime_ist"].dt.floor("D").eq(today_ist)
-    today_punchout = is_punchout & is_today
-    df.loc[today_punchout, "Status"] = df.loc[today_punchout, "Status"] + " — left for the day"
-
-# Build Name & Status from the final Status for convenience
-df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')}  {r.get('Status','')}", axis=1)
 
 # ---------- Latest per user ----------
 if view_mode == "Latest per user" and "user_id" in df.columns:
