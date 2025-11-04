@@ -2,6 +2,7 @@ import os
 import re
 import pandas as pd
 import streamlit as st
+from pandas.api.types import is_datetime64tz_dtype
 
 # ---------------------------------------------------------------
 # CONFIG
@@ -15,7 +16,8 @@ IST_TZ    = "Asia/Kolkata"  # IST = UTC+05:30
 @st.cache_data(show_spinner=False)
 def load_json(path: str, mtime: float) -> pd.DataFrame:
     """
-    Read the JSON file into a pandas DataFrame, cache keyed by mtime.
+    Read the JSON file into a pandas DataFrame.
+    Cache is keyed by mtime to avoid stale reads.
     """
     if not os.path.exists(path):
         raise FileNotFoundError(f"JSON not found: {path}")
@@ -57,7 +59,7 @@ def _to_dt_utc_to_ist(ser: pd.Series) -> pd.Series:
 
 def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     """
-    Build one tz-aware IST datetime **per row** with this priority:
+    Build one tz-aware IST datetime **per row** with ISO-first priority:
 
       1) 'sort_key' (ISO) — preferred (newer rows usually have ISO)
          - If per-row timezone == 'IST' -> localize IST (no shift)
@@ -111,15 +113,14 @@ def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     # Coalesce in ISO-first order, then legacy, then date+time
     merged = dt_sort.combine_first(dt_iso).combine_first(dt_legacy).combine_first(dt_dt)
 
-    # --- HARDEN: guarantee datetimetz for the series, to avoid .dt errors ---
-    merged = pd.to_datetime(merged, errors="coerce")
-    # If still naive (no tz info), localize to IST (rare but safe fallback)
-    try:
-        tz_present = merged.dt.tz is not None
-    except Exception:
-        tz_present = False
-    if not tz_present:
-        merged = merged.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
+    # --- HARDEN: guarantee tz-aware datetime64[ns, tz] to avoid .dt errors ---
+    # If dtype not tz-aware, localize to IST as a last resort.
+    if not is_datetime64tz_dtype(merged.dtype):
+        merged = pd.to_datetime(merged, errors="coerce")
+        if is_datetime64tz_dtype(merged.dtype):
+            merged = merged.dt.tz_convert(IST_TZ)
+        else:
+            merged = merged.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     return merged
 
@@ -153,7 +154,6 @@ df = df.dropna(subset=["datetime"]).copy()
 
 # Derive IST display fields
 df = df.sort_values("datetime", ascending=False)
-# After hardening above, this is safe:
 df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"]         = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"]         = df["datetime_ist"].dt.strftime("%H:%M:%S") + " IST"
@@ -247,4 +247,3 @@ with st.expander("Diagnostics: raw vs parsed (first 2 rows)"):
     st.json({
         "raw_sample":     raw.head(2).to_dict(orient="records") if len(raw) else [],
         "display_sample": df.head(2).to_dict(orient="records") if len(df) else []
-    })
