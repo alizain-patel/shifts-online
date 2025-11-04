@@ -137,7 +137,7 @@ df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"]         = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"]         = df["datetime_ist"].dt.strftime("%H:%M:%S") + " IST"
 
-# ---------- Status/Display ----------
+# ---------- Status / emoji ----------
 status_map = {
     "Punch In":    "🟢 active",
     "Break Start": "🟠 on break",
@@ -145,8 +145,7 @@ status_map = {
     "Punch Out":   "🔴 on leave",
     "On Leave":    "🔴 on leave",
 }
-df["status"]         = df["event"].map(lambda e: status_map.get(e, "⚪ unknown")) if "event" in df.columns else ""
-df["Name & Status"]  = df.apply(lambda r: f"{r.get('name','')}  {r.get('status','')}", axis=1)
+df["Status"] = df["event"].map(lambda e: status_map.get(e, "⚪ unknown")) if "event" in df.columns else ""
 
 # ---------- Sidebar controls ----------
 st.sidebar.header("View Options")
@@ -168,13 +167,15 @@ if apply_window:
     mask        = (ist_dates >= last_friday) & (ist_dates <= window_end)
     df          = df.loc[mask]
 
-# ---------- “Left for the day” note on same-day Punch Out ----------
-df["EventDisplay"] = df["event"] if "event" in df.columns else ""
+# ---------- “Left for the day” under Status (if Punch Out today) ----------
 if "event" in df.columns:
     is_punchout = df["event"].eq("Punch Out")
     is_today    = df["datetime_ist"].dt.floor("D").eq(today_ist)
-    is_today_punchout = is_punchout & is_today
-    df.loc[is_today_punchout, "EventDisplay"] = df.loc[is_today_punchout, "event"] + " — left for the day"
+    today_punchout = is_punchout & is_today
+    df.loc[today_punchout, "Status"] = df.loc[today_punchout, "Status"] + " — left for the day"
+
+# Build Name & Status from the final Status for convenience
+df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')}  {r.get('Status','')}", axis=1)
 
 # ---------- Latest per user ----------
 if view_mode == "Latest per user" and "user_id" in df.columns:
@@ -212,8 +213,8 @@ st.title("🟢🔴 Live User Status Dashboard — IST")
 st.caption("Shows latest status per user or all events in **IST (Asia/Kolkata)**.")
 
 st.dataframe(
-    df[[c for c in ["Name & Status", "Date", "EventDisplay", "Time"] if c in df.columns]]
-      .rename(columns={"EventDisplay": "Event"}),
+    df[[c for c in ["Name & Status", "Date", "event", "Status", "Time"] if c in df.columns]]
+      .rename(columns={"event": "Event"}),
     use_container_width=True,
     hide_index=True,
 )
