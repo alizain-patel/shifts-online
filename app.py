@@ -1,6 +1,5 @@
 
 import os
-from datetime import timedelta
 import pandas as pd
 import streamlit as st
 
@@ -31,25 +30,22 @@ def parse_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
     We will localize/convert everything to IST to guarantee display in IST.
     """
     if "datetime_iso" in df.columns:
-        # Assume ISO strings represent IST local time (no tz offset in the string)
+        # Assume ISO strings represent local time (script writes IST). If naive, localize to IST.
         dt = pd.to_datetime(df["datetime_iso"], errors="coerce")
         if dt.dt.tz is None:
-            # Naive timestamps -> localize to IST
             dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         else:
-            # If tz-aware, convert to IST
             dt = dt.dt.tz_convert(IST_TZ)
         df["datetime"] = dt
     elif "datetime" in df.columns:
-        # Legacy string: strip trailing " IST" and parse day-first
+        # Legacy string: strip trailing " IST" and parse day-first, then localize IST
         dt_legacy = df["datetime"].astype(str).str.replace(" IST", "", regex=False)
         dt = pd.to_datetime(dt_legacy, dayfirst=True, errors="coerce")
-        # Legacy values are intended as IST local times -> localize IST
         dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         df["datetime"] = dt
     elif {"date", "time"}.issubset(df.columns):
+        # Combine and localize to IST
         dt = pd.to_datetime(df["date"].astype(str) + " " + df["time"].astype(str), errors="coerce")
-        # Treat combined as IST local
         dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         df["datetime"] = dt
     else:
@@ -123,10 +119,10 @@ except Exception as e:
 # Sort by true datetimes (IST-aware)
 df = df.sort_values("datetime", ascending=False).copy()
 
-# Derive display fields explicitly in IST
+# Derive display fields explicitly in IST (and append " IST")
 df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
-df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
+df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S") + " IST"
 
 # Status + display name
 df["status"] = df["event"].astype(str).map(map_status)
@@ -158,7 +154,7 @@ else:
 # UI
 # -------------------------------------------------------------------
 st.title("🟢🔴 Live User Status Dashboard")
-st.caption("Shows the latest status per user in — **IST (Asia/Kolkata)**." + window_info)
+st.caption("Shows the latest status per user — **IST (Asia/Kolkata)**." + window_info)
 
 columns_to_show = ["Name & Status", "Date", "event", "Time"]
 rename_map = {"event": "Event"}
@@ -171,8 +167,11 @@ st.dataframe(
 
 # Footer: last event time in IST
 if "sort_key" in raw_df.columns:
-    last_iso = pd.to_datetime(raw_df["sort_key"]).max()
-    last_ist = pd.Timestamp(last_iso, tz=IST_TZ)
+    last_iso = pd.to_datetime(raw_df["sort_key"], errors="coerce").max()
+    if pd.notna(last_iso) and last_iso.tzinfo is None:
+        last_ist = pd.Timestamp(last_iso, tz=IST_TZ)
+    else:
+        last_ist = pd.Timestamp(last_iso).tz_convert(IST_TZ)
 else:
     last_ist = df["datetime_ist"].max()
 
