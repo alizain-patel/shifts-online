@@ -7,10 +7,17 @@
     "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c"
   },
   {
-    "status": "active",
+    "status": "on break",
     "event": "Punch In",
     "name": "Shubham Jadhav",
     "datetime": "04-11-2025 09:59:00",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
+  },
+  {
+    "status": "on break",
+    "event": "Break Start",
+    "name": "Shubham Jadhav",
+    "datetime": "04-11-2025 14:49:28",
     "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402"
   },
   {
