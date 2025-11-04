@@ -1,110 +1,92 @@
 [
   {
-    "date": "03-11-2025",
     "name": "priti surve",
-    "event": "Punch Out",
-    "time": "11:25:18"
+    "datetime": "03-11-2025 11:25:18",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Alizain Patel",
-    "event": "Punch Out",
-    "time": "16:07:33"
+    "datetime": "03-11-2025 16:07:33",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Akash Gitaye",
-    "event": "Punch Out",
-    "time": "17:23:44"
+    "datetime": "03-11-2025 17:23:44",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Shubham Jadhav",
-    "event": "Punch Out",
-    "time": "19:28:11"
+    "datetime": "03-11-2025 19:28:11",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Joshua Dsouza",
-    "event": "Punch Out",
-    "time": "19:59:43"
+    "datetime": "03-11-2025 19:59:43",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Suhas Kesari",
-    "event": "Punch Out",
-    "time": "20:02:34"
+    "datetime": "03-11-2025 20:02:34",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Shawn Nadar",
-    "event": "Punch Out",
-    "time": "20:31:59"
+    "datetime": "03-11-2025 20:31:59",
+    "event": "Punch Out"
   },
   {
-    "date": "03-11-2025",
     "name": "Mayur Divekar",
-    "event": "Punch Out",
-    "time": "21:33:18"
+    "datetime": "03-11-2025 21:33:18",
+    "event": "Punch Out"
   },
   {
-    "date": "04-11-2025",
     "name": "Akash Gitaye",
-    "event": "On Leave",
-    "time": "00:00:00"
+    "datetime": "04-11-2025 00:00:00",
+    "event": "On Leave"
   },
   {
-    "date": "04-11-2025",
     "name": "priti surve",
-    "event": "On Leave",
-    "time": "00:00:00"
+    "datetime": "04-11-2025 00:00:00",
+    "event": "On Leave"
   },
   {
-    "date": "04-11-2025",
     "name": "Shubham Jadhav",
-    "event": "Punch In",
-    "time": "09:59:00"
+    "datetime": "04-11-2025 09:59:00",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Mayur Divekar",
-    "event": "Punch In",
-    "time": "10:00:24"
+    "datetime": "04-11-2025 10:00:24",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Joshua Dsouza",
-    "event": "Punch In",
-    "time": "10:52:21"
+    "datetime": "04-11-2025 10:52:21",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Gaurav Ghadi",
-    "event": "Punch In",
-    "time": "10:53:36"
+    "datetime": "04-11-2025 10:53:36",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Manesh Chindarkar",
-    "event": "Punch In",
-    "time": "10:54:57"
+    "datetime": "04-11-2025 10:54:57",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Suhas Kesari",
-    "event": "Punch In",
-    "time": "10:56:05"
+    "datetime": "04-11-2025 10:56:05",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Alizain Patel",
-    "event": "Punch In",
-    "time": "10:56:34"
+    "datetime": "04-11-2025 10:56:34",
+    "event": "Punch In"
   },
   {
-    "date": "04-11-2025",
     "name": "Shawn Nadar",
-    "event": "Punch In",
-    "time": "11:29:55"
+    "datetime": "04-11-2025 11:29:55",
+    "event": "Punch In"
   }
 ]
