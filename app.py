@@ -8,7 +8,6 @@ import streamlit as st
 # ---------------------------------------------------------------
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 IST_TZ = "Asia/Kolkata"
-TOP_N = 100
 
 # ---------------------------------------------------------------
 # HELPERS
@@ -20,8 +19,8 @@ def load_json(path: str, mtime: float) -> pd.DataFrame:
     return pd.read_json(path)
 
 def parse_datetime_ist(df: pd.DataFrame) -> pd.DataFrame:
-    """Build IST-aware 'datetime' column with robust precedence.
-    1) 'sort_key' (preferred; IST local ISO from PS script)
+    """Build IST-aware 'datetime' with robust precedence:
+    1) 'sort_key' (IST local ISO from PS compat script)
     2) legacy 'datetime' (dd/MM/yyyy HH:mm:ss IST)
     3) 'datetime_iso' + timezone=='IST' (localize IST)
     4) 'datetime_iso' (assume UTC -> convert IST)
@@ -29,7 +28,6 @@ def parse_datetime_ist(df: pd.DataFrame) -> pd.DataFrame:
     """
     if "sort_key" in df.columns:
         dt = pd.to_datetime(df["sort_key"], errors="coerce")
-        # sort_key is IST local without tz, so localize
         df["datetime"] = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
     elif "datetime" in df.columns:
         base = df["datetime"].astype(str).str.replace(" IST", "", regex=False)
@@ -51,12 +49,48 @@ def parse_datetime_ist(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.dropna(subset=["datetime"]).copy()
 
-# ---------------------------------------------------------------
-# APP
-# ---------------------------------------------------------------
-st.set_page_config(page_title="Shifts — Latest Events (IST)", layout="wide")
 
-# Path + mtime
+def apply_friday_window(df: pd.DataFrame, today_only: bool) -> tuple[pd.DataFrame, str]:
+    """Apply Friday->Today (or Friday->Monday if today is Monday) in IST.
+       If today_only is True, restrict to today IST only.
+    """
+    now_ist = pd.Timestamp.now(tz=IST_TZ)
+    today_ist = now_ist.floor("D")
+    weekday = today_ist.weekday()  # Mon=0, Fri=4
+
+    if today_only:
+        ist_dates = df["datetime"].dt.tz_convert(IST_TZ).dt.floor("D")
+        mask = ist_dates == today_ist
+        df2 = df.loc[mask].copy()
+        info = f"window: {today_ist.strftime('%d-%m-%Y')} (today)"
+        return df2, info
+
+    # Friday anchor
+    days_back_to_friday = (weekday - 4) % 7
+    last_friday = (today_ist - pd.to_timedelta(days_back_to_friday, unit="D")).floor("D")
+    next_monday = (last_friday + pd.to_timedelta(3, unit="D")).floor("D")
+    window_end = next_monday if weekday == 0 else today_ist
+
+    ist_dates = df["datetime"].dt.tz_convert(IST_TZ).dt.floor("D")
+    mask = (ist_dates >= last_friday) & (ist_dates <= window_end)
+    df2 = df.loc[mask].copy()
+    info = f"window: {last_friday.strftime('%d-%m-%Y')} → {window_end.strftime('%d-%m-%Y')}"
+    return df2, info
+
+
+def latest_per_user(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.sort_values("datetime", ascending=False)
+          .drop_duplicates(subset=["user_id"], keep="first")
+          .sort_values("datetime", ascending=False)
+    )
+
+# ---------------------------------------------------------------
+# APP (Final dashboard as earlier)
+# ---------------------------------------------------------------
+st.set_page_config(page_title="Live User Status Dashboard — IST", layout="wide")
+
+# Show source path + mtime
 try:
     mtime = os.path.getmtime(JSON_PATH)
     st.caption(f"Reading JSON from: `{JSON_PATH}` (mtime: {pd.to_datetime(mtime, unit='s')})")
@@ -64,23 +98,16 @@ except FileNotFoundError:
     st.error(f"JSON file not found: `{JSON_PATH}`. Set SHIFTS_JSON_PATH or place the file next to app.py.")
     st.stop()
 
-cols = st.columns(3)
-with cols[0]:
-    if st.button("Clear cache & reload"):
-        st.cache_data.clear()
-with cols[1]:
-    if st.button("Reset session state"):
-        for k in list(st.session_state.keys()):
-            del st.session_state[k]
-        st.experimental_rerun()
-with cols[2]:
-    st.write(" ")
+# --- Keep: Clear cache & reload button ---
+if st.button("Clear cache & reload"):
+    st.cache_data.clear()
 
+# Load + parse
 raw = load_json(JSON_PATH, mtime)
 
 df = parse_datetime_ist(raw)
 
-# Build IST fields
+# Prepare IST display fields
 df = df.sort_values("datetime", ascending=False).copy()
 df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
@@ -96,34 +123,33 @@ status_map = {
 df["status"] = df["event"].map(lambda e: status_map.get(e, "⚪ unknown"))
 df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')}  {r['status']}", axis=1)
 
-st.title("🟢🔴 Latest Events — IST")
+# Sidebar controls (as earlier intent)
+st.sidebar.header("View Options")
+view_mode = st.sidebar.radio("Rows to show", ("Latest per user", "All events"), index=0)
+apply_window = st.sidebar.checkbox("Apply Friday → Today window (Mon: Fri → Mon)", value=True)
+today_only = st.sidebar.checkbox("Today only (IST)", value=False)
 
-# NEWEST N EVENTS (no filters)
-st.subheader(f"Newest {TOP_N} events (no filters)")
+# Apply window/today filter
+win_info = ""
+df_view = df
+if apply_window or today_only:
+    df_view, win_info = apply_friday_window(df_view, today_only=today_only)
+
+# Apply view mode
+if view_mode == "Latest per user":
+    df_view = latest_per_user(df_view)
+
+# Title & caption
+st.title("🟢🔴 Live User Status Dashboard — IST")
+st.caption("Shows latest status per user or all events in **IST (Asia/Kolkata)**. " + win_info)
+
+# Table
 st.dataframe(
-    df[["Name & Status", "Date", "event", "Time"]].rename(columns={"event": "Event"}).head(TOP_N),
-    use_container_width=True, hide_index=True
+    df_view[["Name & Status", "Date", "event", "Time"]].rename(columns={"event": "Event"}),
+    use_container_width=True,
+    hide_index=True,
 )
 
-# PER-DAY COUNTS with safe naming to avoid duplicate column error
-st.subheader("Per-day counts (IST)")
-per_day = df["datetime_ist"].dt.strftime("%d-%m-%Y").value_counts().sort_index()
-per_day.index.name = "Date"   # ensure index has a distinct name
-per_day.name = "count"        # ensure series column has a distinct name
-per_day_df = per_day.reset_index()
-st.dataframe(per_day_df, use_container_width=True, hide_index=True)
-
-# Day picker (defaults to latest day)
-latest_day = df["datetime_ist"].dt.floor("D").max().date()
-all_days = sorted(df["datetime_ist"].dt.date.unique().tolist())
-sel_idx = all_days.index(latest_day) if latest_day in all_days else len(all_days)-1
-picked = st.selectbox("Pick a day (IST)", options=all_days, index=sel_idx, format_func=lambda d: d.strftime("%d-%m-%Y"))
-
-st.subheader(f"Events on {picked.strftime('%d-%m-%Y')} (IST)")
-day_df = df[df["datetime_ist"].dt.date == picked]
-st.dataframe(
-    day_df[["Name & Status", "Date", "event", "Time"]].rename(columns={"event":"Event"}),
-    use_container_width=True, hide_index=True
-)
-
-st.caption(f"Data min/max (IST): {df['datetime_ist'].min()}  →  {df['datetime_ist'].max()}  · Total rows: {len(df)}")
+# Footer with last event time (IST)
+last_ist = df["datetime_ist"].max()
+st.caption(f"Last event (IST): **{last_ist}** · Total rows loaded: {len(df)}")
