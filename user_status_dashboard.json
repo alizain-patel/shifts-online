@@ -1330,5 +1330,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-04T15:10:44",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "04/11/2025 15:19:25 IST",
+    "date": "2025-11-04",
+    "time": "15:19:25",
+    "datetime_iso": "2025-11-04T15:19:25",
+    "timezone": "IST",
+    "sort_key": "2025-11-04T15:19:25",
+    "note": "User has left for the day"
   }
 ]
