@@ -169,14 +169,12 @@ if apply_window:
     df          = df.loc[mask]
 
 # ---------- “Left for the day” note on same-day Punch Out ----------
-is_today_punchout = (
-    ("event" in df.columns)
-    and (df["event"] == "Punch Out")
-    and (df["datetime_ist"].dt.floor("D") == today_ist)
-)
-# Build Event label with note when applicable
-df["EventDisplay"] = df["event"]
-df.loc[is_today_punchout, "EventDisplay"] = df.loc[is_today_punchout, "event"] + " — left for the day"
+df["EventDisplay"] = df["event"] if "event" in df.columns else ""
+if "event" in df.columns:
+    is_punchout = df["event"].eq("Punch Out")
+    is_today    = df["datetime_ist"].dt.floor("D").eq(today_ist)
+    is_today_punchout = is_punchout & is_today
+    df.loc[is_today_punchout, "EventDisplay"] = df.loc[is_today_punchout, "event"] + " — left for the day"
 
 # ---------- Latest per user ----------
 if view_mode == "Latest per user" and "user_id" in df.columns:
