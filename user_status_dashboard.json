@@ -1270,5 +1270,29 @@
     "timezone": "IST",
     "sort_key": "2025-11-04T14:33:05",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "04/11/2025 14:41:44 IST",
+    "date": "2025-11-04",
+    "time": "14:41:44",
+    "datetime_iso": "2025-11-04T14:41:44",
+    "timezone": "IST",
+    "sort_key": "2025-11-04T14:41:44",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "04/11/2025 14:44:45 IST",
+    "date": "2025-11-04",
+    "time": "14:44:45",
+    "datetime_iso": "2025-11-04T14:44:45",
+    "timezone": "IST",
+    "sort_key": "2025-11-04T14:44:45",
+    "note": ""
   }
 ]
