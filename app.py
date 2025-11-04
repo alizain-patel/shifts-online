@@ -9,9 +9,6 @@ import streamlit as st
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 IST_TZ = "Asia/Kolkata"  # IST = UTC+05:30
 
-# ---------------------------------------------------------------
-# LOAD
-# ---------------------------------------------------------------
 @st.cache_data(show_spinner=False)
 def load_json(path: str, mtime: float) -> pd.DataFrame:
     if not os.path.exists(path):
@@ -19,44 +16,61 @@ def load_json(path: str, mtime: float) -> pd.DataFrame:
     return pd.read_json(path)
 
 # ---------------------------------------------------------------
-# ROW-WISE DATETIME BUILD (fallback per row)
+# ROW-WISE DATETIME BUILD (timezone-aware using per-row 'timezone')
 # ---------------------------------------------------------------
-# For each row:
-#   dt = legacy 'datetime' (IST)  OR  sort_key (UTC->IST)  OR  datetime_iso (UTC->IST)  OR  (date+time) (IST)
-# This avoids dropping rows when different fields are present for different days.
+# For each row, choose the first available field in order and convert to IST:
+#   1) legacy 'datetime' (parse day-first, LOCALIZE IST)
+#   2) 'sort_key'       (if timezone=='IST' -> LOCALIZE IST; else ASSUME UTC -> CONVERT to IST)
+#   3) 'datetime_iso'   (same rule as sort_key)
+#   4) 'date'+'time'    (LOCALIZE IST)
 
-def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
-    def parse_legacy(s: pd.Series) -> pd.Series:
-        if 'datetime' not in df.columns:
-            return pd.Series([pd.NaT]*len(df))
+def build_datetime_rowwise_istaware(df: pd.DataFrame) -> pd.Series:
+    n = len(df)
+    tzcol = None
+    if 'timezone' in df.columns:
+        tzcol = df['timezone'].astype(str).str.upper()
+
+    # 1) legacy 'datetime'
+    dt_legacy = pd.Series([pd.NaT]*n)
+    if 'datetime' in df.columns:
         base = df['datetime'].astype(str).str.replace(' IST', '', regex=False)
-        dt = pd.to_datetime(base, dayfirst=True, errors='coerce')
-        return dt.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
+        parsed = pd.to_datetime(base, dayfirst=True, errors='coerce')
+        dt_legacy = parsed.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
 
-    def parse_sortkey_utc(s: pd.Series) -> pd.Series:
-        if 'sort_key' not in df.columns:
-            return pd.Series([pd.NaT]*len(df))
-        dt = pd.to_datetime(df['sort_key'], errors='coerce', utc=True)
-        return dt.dt.tz_convert(IST_TZ)
+    # Helper: localize vs utc-convert for an ISO-like column
+    def parse_iso_like(colname: str) -> pd.Series:
+        if colname not in df.columns:
+            return pd.Series([pd.NaT]*n)
+        # Series parse (naive)
+        naive = pd.to_datetime(df[colname], errors='coerce')
+        out = pd.Series([pd.NaT]*n)
+        if tzcol is not None:
+            ist_mask = tzcol.eq('IST') & naive.notna()
+            if ist_mask.any():
+                out.loc[ist_mask] = naive.loc[ist_mask].dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
+            utc_mask = (~ist_mask) & naive.notna()
+            if utc_mask.any():
+                out.loc[utc_mask] = pd.to_datetime(df.loc[utc_mask, colname], errors='coerce', utc=True).dt.tz_convert(IST_TZ)
+        else:
+            # No timezone column -> assume UTC
+            mask = naive.notna()
+            if mask.any():
+                out.loc[mask] = pd.to_datetime(df.loc[mask, colname], errors='coerce', utc=True).dt.tz_convert(IST_TZ)
+        return out
 
-    def parse_iso_utc(s: pd.Series) -> pd.Series:
-        if 'datetime_iso' not in df.columns:
-            return pd.Series([pd.NaT]*len(df))
-        dt = pd.to_datetime(df['datetime_iso'], errors='coerce', utc=True)
-        return dt.dt.tz_convert(IST_TZ)
+    # 2) sort_key
+    dt_sort = parse_iso_like('sort_key')
 
-    def parse_date_time(s: pd.Series) -> pd.Series:
-        if not {'date','time'}.issubset(df.columns):
-            return pd.Series([pd.NaT]*len(df))
-        base = pd.to_datetime(df['date'].astype(str) + ' ' + df['time'].astype(str), errors='coerce')
-        return base.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
+    # 3) datetime_iso
+    dt_iso  = parse_iso_like('datetime_iso')
 
-    dt_legacy = parse_legacy(df)
-    dt_sort   = parse_sortkey_utc(df)
-    dt_iso    = parse_iso_utc(df)
-    dt_dt     = parse_date_time(df)
+    # 4) date+time
+    dt_dt = pd.Series([pd.NaT]*n)
+    if {'date','time'}.issubset(df.columns):
+        combo = pd.to_datetime(df['date'].astype(str)+' '+df['time'].astype(str), errors='coerce')
+        dt_dt = combo.dt.tz_localize(IST_TZ, nonexistent='shift_forward', ambiguous='NaT')
 
-    # Row-wise fallback: legacy -> sort_key -> iso -> date+time
+    # coalesce in order
     dt = dt_legacy.combine_first(dt_sort).combine_first(dt_iso).combine_first(dt_dt)
     return dt
 
@@ -80,8 +94,8 @@ if st.button('Clear cache & reload'):
 # Load raw
 raw = load_json(JSON_PATH, mtime)
 
-# Build row-wise datetime
-dt = build_datetime_rowwise(raw)
+# Build row-wise IST-aware datetime
+dt = build_datetime_rowwise_istaware(raw)
 
 # Compose DF
 df = raw.copy()
@@ -94,6 +108,11 @@ df = df.sort_values('datetime', ascending=False)
 df['datetime_ist'] = df['datetime'].dt.tz_convert(IST_TZ)
 df['Date'] = df['datetime_ist'].dt.strftime('%d-%m-%Y')
 df['Time'] = df['datetime_ist'].dt.strftime('%H:%M:%S') + ' IST'
+
+# Show per-day counts BEFORE window to verify availability
+with st.expander('Per-day counts (IST) BEFORE filters'):
+    per_day = df['datetime_ist'].dt.strftime('%d-%m-%Y').value_counts().sort_index()
+    st.dataframe(per_day.reset_index().rename(columns={'index':'Date','datetime_ist':'count'}), use_container_width=True, hide_index=True)
 
 # Status label
 status_map = {
