@@ -9,7 +9,7 @@ from pandas.api.types import is_datetime64tz_dtype
 # ---------------------------------------------------------------
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 IST_TZ    = "Asia/Kolkata"          # IST = UTC+05:30
-FORCE_ISO_UTC = True                # <— Force ISO ('sort_key','datetime_iso') as UTC → IST
+FORCE_ISO_UTC = True                # Force ISO ('sort_key','datetime_iso') as UTC → IST
 
 # ---------------------------------------------------------------
 # LOAD
@@ -74,18 +74,12 @@ def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     # 1) sort_key
     dt_sort = pd.Series([pd.NaT] * n, dtype="object")
     if "sort_key" in df.columns:
-        if FORCE_ISO_UTC:
-            dt_sort = _to_dt_utc_to_ist(df["sort_key"])
-        else:
-            dt_sort = _to_dt_localize_ist(df["sort_key"])
+        dt_sort = _to_dt_utc_to_ist(df["sort_key"]) if FORCE_ISO_UTC else _to_dt_localize_ist(df["sort_key"])
 
     # 2) datetime_iso
     dt_iso = pd.Series([pd.NaT] * n, dtype="object")
     if "datetime_iso" in df.columns:
-        if FORCE_ISO_UTC:
-            dt_iso = _to_dt_utc_to_ist(df["datetime_iso"])
-        else:
-            dt_iso = _to_dt_localize_ist(df["datetime_iso"])
+        dt_iso = _to_dt_utc_to_ist(df["datetime_iso"]) if FORCE_ISO_UTC else _to_dt_localize_ist(df["datetime_iso"])
 
     # 3) legacy datetime (fallback)
     dt_legacy = pd.Series([pd.NaT] * n, dtype="object")
@@ -105,7 +99,6 @@ def build_datetime_rowwise(df: pd.DataFrame) -> pd.Series:
     # Final hardening: ensure tz-aware
     merged = pd.to_datetime(merged, errors="coerce")
     if not is_datetime64tz_dtype(merged.dtype):
-        # If we still got naive values, localize to IST as a last resort
         merged = merged.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
 
     return merged
@@ -144,13 +137,6 @@ df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"]         = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"]         = df["datetime_ist"].dt.strftime("%H:%M:%S") + " IST"
 
-# ---------- Per-day counts (IST) BEFORE filters ----------
-with st.expander("Per-day counts (IST) BEFORE filters"):
-    ser = df["datetime_ist"].dt.strftime("%d-%m-%Y").value_counts().sort_index()
-    per_day_df = ser.reset_index()
-    per_day_df.columns = ["Date", "Count"]  # unique names (avoid PyArrow duplicate error)
-    st.dataframe(per_day_df, use_container_width=True, hide_index=True)
-
 # ---------- Status/Display ----------
 status_map = {
     "Punch In":    "🟢 active",
@@ -173,7 +159,6 @@ now_ist   = pd.Timestamp.now(tz=IST_TZ)
 today_ist = now_ist.floor("D")
 weekday   = today_ist.weekday()  # Mon=0, Fri=4
 
-win_info = ""
 if apply_window:
     days_back   = (weekday - 4) % 7
     last_friday = (today_ist - pd.to_timedelta(days_back, unit="D")).floor("D")
@@ -182,9 +167,18 @@ if apply_window:
     ist_dates   = df["datetime_ist"].dt.floor("D")
     mask        = (ist_dates >= last_friday) & (ist_dates <= window_end)
     df          = df.loc[mask]
-    win_info    = f"window: {last_friday.strftime('%d-%m-%Y')} → {window_end.strftime('%d-%m-%Y')}"
 
-# Latest per user (prefer today if present)
+# ---------- “Left for the day” note on same-day Punch Out ----------
+is_today_punchout = (
+    ("event" in df.columns)
+    and (df["event"] == "Punch Out")
+    and (df["datetime_ist"].dt.floor("D") == today_ist)
+)
+# Build Event label with note when applicable
+df["EventDisplay"] = df["event"]
+df.loc[is_today_punchout, "EventDisplay"] = df.loc[is_today_punchout, "event"] + " — left for the day"
+
+# ---------- Latest per user ----------
 if view_mode == "Latest per user" and "user_id" in df.columns:
     if prefer_today:
         df_today = df[df["datetime_ist"].dt.floor("D") == today_ist]
@@ -217,20 +211,11 @@ if view_mode == "Latest per user" and "user_id" in df.columns:
 
 # ---------- UI ----------
 st.title("🟢🔴 Live User Status Dashboard — IST")
-st.caption("Shows latest status per user or all events in **IST (Asia/Kolkata)**. " + win_info)
+st.caption("Shows latest status per user or all events in **IST (Asia/Kolkata)**.")
 
 st.dataframe(
-    df[[c for c in ["Name & Status", "Date", "event", "Time"] if c in df.columns]].rename(columns={"event": "Event"}),
+    df[[c for c in ["Name & Status", "Date", "EventDisplay", "Time"] if c in df.columns]]
+      .rename(columns={"EventDisplay": "Event"}),
     use_container_width=True,
     hide_index=True,
 )
-
-# Footer & diagnostics
-last_ist = df["datetime_ist"].max() if len(df) else None
-st.caption(f"Last event (IST): {last_ist if last_ist is not None else 'N/A'} · Total rows loaded: {len(df)}")
-
-with st.expander("Diagnostics: raw vs parsed (first 2 rows)"):
-    st.json({
-        "raw_sample":     raw.head(2).to_dict(orient="records") if len(raw) else [],
-        "display_sample": df.head(2).to_dict(orient="records") if len(df) else []
-    })
