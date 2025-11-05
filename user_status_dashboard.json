@@ -1488,6 +1488,18 @@
     "note": ""
   },
   {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break End",
+    "datetime": "05/11/2025 10:48:00 IST",
+    "date": "2025-11-05",
+    "time": "10:48:00",
+    "datetime_iso": "2025-11-05T10:48:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T10:48:00",
+    "note": ""
+  },
+  {
     "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
     "name": "Vinayak Mandlik",
     "event": "Punch In",
