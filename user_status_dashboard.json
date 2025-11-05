@@ -1582,5 +1582,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T14:43:41",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "05/11/2025 14:49:11 IST",
+    "date": "2025-11-05",
+    "time": "14:49:11",
+    "datetime_iso": "2025-11-05T14:49:11",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T14:49:11",
+    "note": ""
   }
 ]
