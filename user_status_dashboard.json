@@ -1570,5 +1570,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T14:30:40",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch Out",
+    "datetime": "05/11/2025 14:43:41 IST",
+    "date": "2025-11-05",
+    "time": "14:43:41",
+    "datetime_iso": "2025-11-05T14:43:41",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T14:43:41",
+    "note": "User has left for the day"
   }
 ]
