@@ -1462,5 +1462,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T05:59:52",
     "note": ""
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break Start",
+    "datetime": "05/11/2025 08:11:08 IST",
+    "date": "2025-11-05",
+    "time": "08:11:08",
+    "datetime_iso": "2025-11-05T08:11:08",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T08:11:08",
+    "note": ""
   }
 ]
