@@ -1606,5 +1606,29 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T15:01:06",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch Out",
+    "datetime": "05/11/2025 15:13:29 IST",
+    "date": "2025-11-05",
+    "time": "15:13:29",
+    "datetime_iso": "2025-11-05T15:13:29",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T15:13:29",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch In",
+    "datetime": "05/11/2025 15:13:34 IST",
+    "date": "2025-11-05",
+    "time": "15:13:34",
+    "datetime_iso": "2025-11-05T15:13:34",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T15:13:34",
+    "note": ""
   }
 ]
