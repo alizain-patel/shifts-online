@@ -1438,5 +1438,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T05:10:40",
     "note": ""
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch In",
+    "datetime": "05/11/2025 05:33:03 IST",
+    "date": "2025-11-05",
+    "time": "05:33:03",
+    "datetime_iso": "2025-11-05T05:33:03",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T05:33:03",
+    "note": ""
   }
 ]
