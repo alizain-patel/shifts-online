@@ -1630,5 +1630,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T15:13:34",
     "note": ""
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch Out",
+    "datetime": "05/11/2025 21:59:29 IST",
+    "date": "2025-11-05",
+    "time": "21:59:29",
+    "datetime_iso": "2025-11-05T21:59:29",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T21:59:29",
+    "note": ""
   }
 ]
