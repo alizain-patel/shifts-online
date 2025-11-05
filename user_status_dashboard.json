@@ -1476,6 +1476,18 @@
     "note": ""
   },
   {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break End",
+    "datetime": "05/11/2025 08:58:00 IST",
+    "date": "2025-11-05",
+    "time": "08:58:00",
+    "datetime_iso": "2025-11-05T08:58:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T08:58:00",
+    "note": ""
+  },
+  {
     "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
     "name": "Gaurav Ghadi",
     "event": "Break Start",
@@ -1510,6 +1522,18 @@
     "timezone": "IST",
     "sort_key": "2025-11-05T11:34:53",
     "note": ""
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "05/11/2025 11:58:00 IST",
+    "date": "2025-11-05",
+    "time": "11:58:00",
+    "datetime_iso": "2025-11-05T11:58:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-05T11:58:00",
+    "note": "User has left for the day"
   },
   {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
