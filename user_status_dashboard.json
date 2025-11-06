@@ -1942,5 +1942,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T15:14:09",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch In",
+    "datetime": "06/11/2025 15:55:57 IST",
+    "date": "2025-11-06",
+    "time": "15:55:57",
+    "datetime_iso": "2025-11-06T15:55:57",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T15:55:57",
+    "note": ""
   }
 ]
