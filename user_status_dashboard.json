@@ -1918,5 +1918,29 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T14:40:25",
     "note": ""
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch Out",
+    "datetime": "06/11/2025 15:10:15 IST",
+    "date": "2025-11-06",
+    "time": "15:10:15",
+    "datetime_iso": "2025-11-06T15:10:15",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T15:10:15",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "06/11/2025 15:14:09 IST",
+    "date": "2025-11-06",
+    "time": "15:14:09",
+    "datetime_iso": "2025-11-06T15:14:09",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T15:14:09",
+    "note": "User has left for the day"
   }
 ]
