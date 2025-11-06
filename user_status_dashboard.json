@@ -1666,5 +1666,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T04:32:03",
     "note": ""
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch In",
+    "datetime": "06/11/2025 04:52:25 IST",
+    "date": "2025-11-06",
+    "time": "04:52:25",
+    "datetime_iso": "2025-11-06T04:52:25",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T04:52:25",
+    "note": ""
   }
 ]
