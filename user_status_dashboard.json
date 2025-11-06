@@ -1810,5 +1810,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T11:55:30",
     "note": ""
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "06/11/2025 13:00:48 IST",
+    "date": "2025-11-06",
+    "time": "13:00:48",
+    "datetime_iso": "2025-11-06T13:00:48",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T13:00:48",
+    "note": ""
   }
 ]
