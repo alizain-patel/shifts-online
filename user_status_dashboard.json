@@ -1750,5 +1750,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T08:16:00",
     "note": ""
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "06/11/2025 08:42:31 IST",
+    "date": "2025-11-06",
+    "time": "08:42:31",
+    "datetime_iso": "2025-11-06T08:42:31",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T08:42:31",
+    "note": ""
   }
 ]
