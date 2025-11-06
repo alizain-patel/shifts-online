@@ -1846,5 +1846,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T13:45:37",
     "note": ""
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch Out",
+    "datetime": "06/11/2025 14:10:41 IST",
+    "date": "2025-11-06",
+    "time": "14:10:41",
+    "datetime_iso": "2025-11-06T14:10:41",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T14:10:41",
+    "note": "User has left for the day"
   }
 ]
