@@ -1690,5 +1690,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-06T05:23:01",
     "note": ""
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "06/11/2025 05:27:42 IST",
+    "date": "2025-11-06",
+    "time": "05:27:42",
+    "datetime_iso": "2025-11-06T05:27:42",
+    "timezone": "IST",
+    "sort_key": "2025-11-06T05:27:42",
+    "note": ""
   }
 ]
