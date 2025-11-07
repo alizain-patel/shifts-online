@@ -154,5 +154,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-07T10:26:23",
     "note": ""
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break End",
+    "datetime": "07/11/2025 10:35:03 IST",
+    "date": "2025-11-07",
+    "time": "10:35:03",
+    "datetime_iso": "2025-11-07T10:35:03",
+    "timezone": "IST",
+    "sort_key": "2025-11-07T10:35:03",
+    "note": ""
   }
 ]
