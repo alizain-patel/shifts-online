@@ -166,5 +166,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-07T10:35:03",
     "note": ""
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break Start",
+    "datetime": "07/11/2025 10:39:38 IST",
+    "date": "2025-11-07",
+    "time": "10:39:38",
+    "datetime_iso": "2025-11-07T10:39:38",
+    "timezone": "IST",
+    "sort_key": "2025-11-07T10:39:38",
+    "note": ""
   }
 ]
