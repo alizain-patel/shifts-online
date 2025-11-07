@@ -9,7 +9,7 @@
     "datetime_iso": "2025-11-07T00:52:50",
     "timezone": "IST",
     "sort_key": "2025-11-07T00:52:50",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
@@ -21,7 +21,7 @@
     "datetime_iso": "2025-11-07T01:06:43",
     "timezone": "IST",
     "sort_key": "2025-11-07T01:06:43",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
@@ -225,7 +225,7 @@
     "datetime_iso": "2025-11-07T12:43:23",
     "timezone": "IST",
     "sort_key": "2025-11-07T12:43:23",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
@@ -261,7 +261,7 @@
     "datetime_iso": "2025-11-07T13:51:03",
     "timezone": "IST",
     "sort_key": "2025-11-07T13:51:03",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
@@ -273,7 +273,7 @@
     "datetime_iso": "2025-11-07T14:18:37",
     "timezone": "IST",
     "sort_key": "2025-11-07T14:18:37",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
@@ -297,7 +297,7 @@
     "datetime_iso": "2025-11-07T14:38:50",
     "timezone": "IST",
     "sort_key": "2025-11-07T14:38:50",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
@@ -309,7 +309,7 @@
     "datetime_iso": "2025-11-07T15:01:30",
     "timezone": "IST",
     "sort_key": "2025-11-07T15:01:30",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
@@ -321,7 +321,7 @@
     "datetime_iso": "2025-11-07T15:02:08",
     "timezone": "IST",
     "sort_key": "2025-11-07T15:02:08",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
@@ -333,7 +333,7 @@
     "datetime_iso": "2025-11-07T15:07:10",
     "timezone": "IST",
     "sort_key": "2025-11-07T15:07:10",
-    "note": "User has left for the day"
+    "note": ""
   },
   {
     "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
