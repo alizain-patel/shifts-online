@@ -286,5 +286,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-07T14:33:35",
     "note": ""
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "07/11/2025 14:38:50 IST",
+    "date": "2025-11-07",
+    "time": "14:38:50",
+    "datetime_iso": "2025-11-07T14:38:50",
+    "timezone": "IST",
+    "sort_key": "2025-11-07T14:38:50",
+    "note": "User has left for the day"
   }
 ]
