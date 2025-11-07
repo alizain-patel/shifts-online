@@ -178,5 +178,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-07T10:39:38",
     "note": ""
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "07/11/2025 10:44:31 IST",
+    "date": "2025-11-07",
+    "time": "10:44:31",
+    "datetime_iso": "2025-11-07T10:44:31",
+    "timezone": "IST",
+    "sort_key": "2025-11-07T10:44:31",
+    "note": ""
   }
 ]
