@@ -418,5 +418,29 @@
     "timezone": "IST",
     "sort_key": "2025-11-10T05:21:31",
     "note": ""
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "10/11/2025 05:38:22 IST",
+    "date": "2025-11-10",
+    "time": "05:38:22",
+    "datetime_iso": "2025-11-10T05:38:22",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T05:38:22",
+    "note": ""
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch In",
+    "datetime": "10/11/2025 05:41:12 IST",
+    "date": "2025-11-10",
+    "time": "05:41:12",
+    "datetime_iso": "2025-11-10T05:41:12",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T05:41:12",
+    "note": ""
   }
 ]
