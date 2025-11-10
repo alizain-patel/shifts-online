@@ -492,8 +492,8 @@
     "note": ""
   },
   {
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
-    "name": "Manesh Chindarkar",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
     "event": "Break Start",
     "datetime": "10/11/2025 08:41:34 IST",
     "date": "2025-11-10",
@@ -504,8 +504,8 @@
     "note": ""
   },
   {
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "name": "Shubham Jadhav",
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
     "event": "Break Start",
     "datetime": "10/11/2025 08:41:34 IST",
     "date": "2025-11-10",
@@ -741,6 +741,18 @@
     "datetime_iso": "2025-11-10T14:57:03",
     "timezone": "IST",
     "sort_key": "2025-11-10T14:57:03",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "10/11/2025 15:16:58 IST",
+    "date": "2025-11-10",
+    "time": "15:16:58",
+    "datetime_iso": "2025-11-10T15:16:58",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T15:16:58",
     "note": "User has left for the day"
   }
 ]
