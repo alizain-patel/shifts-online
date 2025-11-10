@@ -682,5 +682,29 @@
     "timezone": "IST",
     "sort_key": "2025-11-10T13:40:00",
     "note": ""
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "10/11/2025 14:01:52 IST",
+    "date": "2025-11-10",
+    "time": "14:01:52",
+    "datetime_iso": "2025-11-10T14:01:52",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T14:01:52",
+    "note": ""
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch Out",
+    "datetime": "10/11/2025 14:04:06 IST",
+    "date": "2025-11-10",
+    "time": "14:04:06",
+    "datetime_iso": "2025-11-10T14:04:06",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T14:04:06",
+    "note": "User has left for the day"
   }
 ]
