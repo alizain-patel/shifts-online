@@ -360,6 +360,18 @@
     "note": ""
   },
   {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "On Leave",
+    "datetime": "10/11/2025 00:00:00 IST",
+    "date": "2025-11-10",
+    "time": "00:00:00",
+    "datetime_iso": "2025-11-10T00:00:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T00:00:00",
+    "note": "No punch in on Monday after Friday punch out"
+  },
+  {
     "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
     "name": "Abhishek Arolkar",
     "event": "On Leave",
@@ -374,18 +386,6 @@
   {
     "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
     "name": "Harpreet Singh",
-    "event": "On Leave",
-    "datetime": "10/11/2025 00:00:00 IST",
-    "date": "2025-11-10",
-    "time": "00:00:00",
-    "datetime_iso": "2025-11-10T00:00:00",
-    "timezone": "IST",
-    "sort_key": "2025-11-10T00:00:00",
-    "note": "No punch in on Monday after Friday punch out"
-  },
-  {
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
-    "name": "Akash Gitaye",
     "event": "On Leave",
     "datetime": "10/11/2025 00:00:00 IST",
     "date": "2025-11-10",
@@ -537,6 +537,30 @@
     "datetime_iso": "2025-11-10T09:03:15",
     "timezone": "IST",
     "sort_key": "2025-11-10T09:03:15",
+    "note": ""
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "10/11/2025 09:40:55 IST",
+    "date": "2025-11-10",
+    "time": "09:40:55",
+    "datetime_iso": "2025-11-10T09:40:55",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T09:40:55",
+    "note": ""
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break End",
+    "datetime": "10/11/2025 09:41:13 IST",
+    "date": "2025-11-10",
+    "time": "09:41:13",
+    "datetime_iso": "2025-11-10T09:41:13",
+    "timezone": "IST",
+    "sort_key": "2025-11-10T09:41:13",
     "note": ""
   }
 ]
