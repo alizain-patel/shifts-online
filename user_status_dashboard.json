@@ -1032,6 +1032,18 @@
     "note": "User has left for the day"
   },
   {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "11/11/2025 14:01:00 IST",
+    "date": "2025-11-11",
+    "time": "14:01:00",
+    "datetime_iso": "2025-11-11T14:01:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-11T14:01:00",
+    "note": "User has left for the day"
+  },
+  {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
     "name": "Joshua Dsouza",
     "event": "Punch Out",
