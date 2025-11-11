@@ -1018,5 +1018,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-11T13:18:27",
     "note": ""
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "11/11/2025 13:55:43 IST",
+    "date": "2025-11-11",
+    "time": "13:55:43",
+    "datetime_iso": "2025-11-11T13:55:43",
+    "timezone": "IST",
+    "sort_key": "2025-11-11T13:55:43",
+    "note": "User has left for the day"
   }
 ]
