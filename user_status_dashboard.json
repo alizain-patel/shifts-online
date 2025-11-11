@@ -910,5 +910,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-11T09:32:40",
     "note": ""
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "11/11/2025 09:57:29 IST",
+    "date": "2025-11-11",
+    "time": "09:57:29",
+    "datetime_iso": "2025-11-11T09:57:29",
+    "timezone": "IST",
+    "sort_key": "2025-11-11T09:57:29",
+    "note": ""
   }
 ]
