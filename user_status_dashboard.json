@@ -802,5 +802,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-11T02:32:51",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "11/11/2025 04:39:20 IST",
+    "date": "2025-11-11",
+    "time": "04:39:20",
+    "datetime_iso": "2025-11-11T04:39:20",
+    "timezone": "IST",
+    "sort_key": "2025-11-11T04:39:20",
+    "note": ""
   }
 ]
