@@ -1450,5 +1450,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-12T14:03:11",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch In",
+    "datetime": "12/11/2025 14:29:56 IST",
+    "date": "2025-11-12",
+    "time": "14:29:56",
+    "datetime_iso": "2025-11-12T14:29:56",
+    "timezone": "IST",
+    "sort_key": "2025-11-12T14:29:56",
+    "note": ""
   }
 ]
