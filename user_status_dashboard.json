@@ -1402,5 +1402,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-12T10:23:09",
     "note": ""
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break Start",
+    "datetime": "12/11/2025 11:27:58 IST",
+    "date": "2025-11-12",
+    "time": "11:27:58",
+    "datetime_iso": "2025-11-12T11:27:58",
+    "timezone": "IST",
+    "sort_key": "2025-11-12T11:27:58",
+    "note": ""
   }
 ]
