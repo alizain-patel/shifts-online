@@ -1320,6 +1320,18 @@
     "note": ""
   },
   {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "12/11/2025 09:22:00 IST",
+    "date": "2025-11-12",
+    "time": "09:22:00",
+    "datetime_iso": "2025-11-12T09:22:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-12T09:22:00",
+    "note": ""
+  },
+  {
     "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
     "name": "Manesh Chindarkar",
     "event": "Break End",
@@ -1365,18 +1377,6 @@
     "datetime_iso": "2025-11-12T09:45:08",
     "timezone": "IST",
     "sort_key": "2025-11-12T09:45:08",
-    "note": ""
-  },
-  {
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
-    "name": "Akash Gitaye",
-    "event": "Break End",
-    "datetime": "12/11/2025 10:00:47 IST",
-    "date": "2025-11-12",
-    "time": "10:00:47",
-    "datetime_iso": "2025-11-12T10:00:47",
-    "timezone": "IST",
-    "sort_key": "2025-11-12T10:00:47",
     "note": ""
   },
   {
@@ -1437,6 +1437,18 @@
     "datetime_iso": "2025-11-12T13:36:38",
     "timezone": "IST",
     "sort_key": "2025-11-12T13:36:38",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "12/11/2025 14:03:11 IST",
+    "date": "2025-11-12",
+    "time": "14:03:11",
+    "datetime_iso": "2025-11-12T14:03:11",
+    "timezone": "IST",
+    "sort_key": "2025-11-12T14:03:11",
     "note": "User has left for the day"
   }
 ]
