@@ -1596,6 +1596,18 @@
     "note": ""
   },
   {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "13/11/2025 05:30:00 IST",
+    "date": "2025-11-13",
+    "time": "05:30:00",
+    "datetime_iso": "2025-11-13T05:30:00",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T05:30:00",
+    "note": ""
+  },
+  {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
     "event": "Punch In",
@@ -1689,18 +1701,6 @@
     "datetime_iso": "2025-11-13T09:09:38",
     "timezone": "IST",
     "sort_key": "2025-11-13T09:09:38",
-    "note": ""
-  },
-  {
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
-    "name": "Manesh Chindarkar",
-    "event": "Punch In",
-    "datetime": "13/11/2025 09:16:29 IST",
-    "date": "2025-11-13",
-    "time": "09:16:29",
-    "datetime_iso": "2025-11-13T09:16:29",
-    "timezone": "IST",
-    "sort_key": "2025-11-13T09:16:29",
     "note": ""
   },
   {
@@ -1894,5 +1894,41 @@
     "timezone": "IST",
     "sort_key": "2025-11-13T14:31:17",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "13/11/2025 14:35:17 IST",
+    "date": "2025-11-13",
+    "time": "14:35:17",
+    "datetime_iso": "2025-11-13T14:35:17",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T14:35:17",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "13/11/2025 14:36:13 IST",
+    "date": "2025-11-13",
+    "time": "14:36:13",
+    "datetime_iso": "2025-11-13T14:36:13",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T14:36:13",
+    "note": "User has left for the day"
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch In",
+    "datetime": "13/11/2025 14:36:16 IST",
+    "date": "2025-11-13",
+    "time": "14:36:16",
+    "datetime_iso": "2025-11-13T14:36:16",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T14:36:16",
+    "note": ""
   }
 ]
