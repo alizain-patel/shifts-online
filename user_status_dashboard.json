@@ -1798,5 +1798,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-13T10:52:03",
     "note": ""
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Break Start",
+    "datetime": "13/11/2025 12:01:05 IST",
+    "date": "2025-11-13",
+    "time": "12:01:05",
+    "datetime_iso": "2025-11-13T12:01:05",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T12:01:05",
+    "note": ""
   }
 ]
