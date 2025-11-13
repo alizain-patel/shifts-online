@@ -1594,5 +1594,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-13T05:21:57",
     "note": ""
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch In",
+    "datetime": "13/11/2025 05:40:56 IST",
+    "date": "2025-11-13",
+    "time": "05:40:56",
+    "datetime_iso": "2025-11-13T05:40:56",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T05:40:56",
+    "note": ""
   }
 ]
