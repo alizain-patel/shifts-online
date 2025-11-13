@@ -1954,5 +1954,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-13T14:56:38",
     "note": "User has left for the day"
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch Out",
+    "datetime": "13/11/2025 15:33:34 IST",
+    "date": "2025-11-13",
+    "time": "15:33:34",
+    "datetime_iso": "2025-11-13T15:33:34",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T15:33:34",
+    "note": "User has left for the day"
   }
 ]
