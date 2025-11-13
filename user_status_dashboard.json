@@ -1738,5 +1738,41 @@
     "timezone": "IST",
     "sort_key": "2025-11-13T09:17:00",
     "note": ""
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "13/11/2025 10:03:53 IST",
+    "date": "2025-11-13",
+    "time": "10:03:53",
+    "datetime_iso": "2025-11-13T10:03:53",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T10:03:53",
+    "note": ""
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break Start",
+    "datetime": "13/11/2025 10:04:32 IST",
+    "date": "2025-11-13",
+    "time": "10:04:32",
+    "datetime_iso": "2025-11-13T10:04:32",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T10:04:32",
+    "note": ""
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "13/11/2025 10:05:42 IST",
+    "date": "2025-11-13",
+    "time": "10:05:42",
+    "datetime_iso": "2025-11-13T10:05:42",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T10:05:42",
+    "note": ""
   }
 ]
