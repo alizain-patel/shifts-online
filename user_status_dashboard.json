@@ -1666,5 +1666,17 @@
     "timezone": "IST",
     "sort_key": "2025-11-13T08:17:44",
     "note": ""
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break Start",
+    "datetime": "13/11/2025 08:30:27 IST",
+    "date": "2025-11-13",
+    "time": "08:30:27",
+    "datetime_iso": "2025-11-13T08:30:27",
+    "timezone": "IST",
+    "sort_key": "2025-11-13T08:30:27",
+    "note": ""
   }
 ]
