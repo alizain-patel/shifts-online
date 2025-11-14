@@ -7,7 +7,7 @@ import streamlit as st
 # ---------------------------------------------
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 IST_TZ = "Asia/Kolkata"  # IANA timezone for IST (UTC+05:30)
-SHOW_WINDOW = True  # Friday -> Today (or Friday -> Monday if today is Monday)
+SHOW_WINDOW = True       # Friday -> Today (or Friday -> Monday if today is Monday)
 
 # ---------------------------------------------
 # HELPERS
@@ -20,26 +20,34 @@ def load_json(path: str, file_mtime: float) -> pd.DataFrame:
     return pd.read_json(path)
 
 def parse_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
-    """Normalize to a single timezone-aware 'datetime' column in IST.
-    Supports: 'datetime_iso' (preferred), legacy 'datetime' string, or 'date' + 'time'."""
+    """
+    Normalize to a single timezone-aware 'datetime' column in IST.
+    Supports: 'datetime_iso' (preferred), legacy 'datetime' string, or 'date' + 'time'.
+    """
     if "datetime_iso" in df.columns:
+        # Prefer ISO with offset (+05:30). If naive, localize to IST; if aware, convert to IST.
         dt = pd.to_datetime(df["datetime_iso"], errors="coerce")
         if dt.dt.tz is None:
             dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         else:
             dt = dt.dt.tz_convert(IST_TZ)
         df["datetime"] = dt
+
     elif "datetime" in df.columns:
+        # Legacy text like "dd/MM/yyyy HH:mm:ss IST"
         dt_legacy = df["datetime"].astype(str).str.replace(" IST", "", regex=False)
         dt = pd.to_datetime(dt_legacy, dayfirst=True, errors="coerce")
         dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         df["datetime"] = dt
+
     elif {"date", "time"}.issubset(df.columns):
         dt = pd.to_datetime(df["date"].astype(str) + " " + df["time"].astype(str), errors="coerce")
         dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         df["datetime"] = dt
+
     else:
         raise KeyError("Expected 'datetime_iso' or 'datetime' or both 'date' and 'time' columns")
+
     return df.dropna(subset=["datetime"]).copy()
 
 def apply_window(df: pd.DataFrame):
@@ -61,9 +69,18 @@ def apply_window(df: pd.DataFrame):
     return df.loc[mask], last_friday.date(), window_end.date()
 
 # ---------------------------------------------
-# LOAD & PREPARE
+# PAGE LAYOUT & CACHE CONTROL
 # ---------------------------------------------
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
+
+# Sidebar: manual reload to ensure no stale cache is used
+if st.sidebar.button("Reload data"):
+    st.cache_data.clear()
+    st.experimental_rerun()
+
+# ---------------------------------------------
+# LOAD
+# ---------------------------------------------
 try:
     file_mtime = os.path.getmtime(JSON_PATH)
 except FileNotFoundError:
@@ -76,6 +93,9 @@ except Exception as e:
     st.error(f"Failed to read JSON: {e}")
     st.stop()
 
+# ---------------------------------------------
+# TRANSFORM
+# ---------------------------------------------
 try:
     df = parse_datetime_columns(raw_df)
 except Exception as e:
@@ -90,11 +110,11 @@ df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
 
-# ---------------------------------------------
-# Status + display name (left-for-the-day logic)
-# ---------------------------------------------
-today_ist_date = pd.Timestamp.now(tz=IST_TZ).floor("D").date()
+# DEBUG: quickly verify parsed range is IST
+st.caption(f"DEBUG · rows={len(df)} · earliest={df['datetime_ist'].min()} · latest={df['datetime_ist'].max()}")
 
+# Status + display name (left-for-the-day logic)
+today_ist_date = pd.Timestamp.now(tz=IST_TZ).floor("D").date()
 def map_display_status(row) -> str:
     evt = str(row.get("event", ""))
     note = str(row.get("note", "")).lower()
@@ -116,15 +136,12 @@ def map_display_status(row) -> str:
 
     if evt == "On Leave":
         return "🔴 on leave"
-
     return "⚪ unknown"
 
 df["status"] = df.apply(map_display_status, axis=1)
 df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')} {r['status']}", axis=1)
 
-# ---------------------------------------------
 # Work mode (In Office / Work from home / Unknown)
-# ---------------------------------------------
 if "is_at_approved_location" not in df.columns:
     df["is_at_approved_location"] = None
 
@@ -136,12 +153,13 @@ def map_work_mode(val):
 df["Work mode"] = df["is_at_approved_location"].apply(map_work_mode)
 
 # ---------------------------------------------
-# Window filter
+# WINDOW FILTER
 # ---------------------------------------------
 window_info = ""
 if SHOW_WINDOW:
     df, start_d, end_d = apply_window(df)
     window_info = f" (window: {start_d.strftime('%d-%m-%Y')} → {end_d.strftime('%d-%m-%Y')})"
+    st.caption(f"DEBUG · rows in window: {len(df)}")
 
 # ---------------------------------------------
 # SIDEBAR & VIEW MODE
@@ -177,6 +195,7 @@ if work_mode_filter:
 # ---------------------------------------------
 st.title("🟢🔴 Live User Status Dashboard")
 st.caption("Shows the latest status per user in — **IST (Asia/Kolkata)**." + window_info)
+
 columns_to_show = ["Name & Status", "Work mode", "Date", "event", "Time"]
 rename_map = {"event": "Event"}
 st.dataframe(
