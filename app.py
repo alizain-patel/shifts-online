@@ -91,7 +91,7 @@ df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
 
 # ---------------------------------------------
-# Status + display name
+# Status + display name (left-for-the-day logic)
 # ---------------------------------------------
 today_ist_date = pd.Timestamp.now(tz=IST_TZ).floor("D").date()
 
@@ -136,7 +136,7 @@ def map_work_mode(val):
 df["Work mode"] = df["is_at_approved_location"].apply(map_work_mode)
 
 # ---------------------------------------------
-# Window filter (previous Friday->Today or previous Friday->Monday)
+# Window filter
 # ---------------------------------------------
 window_info = ""
 if SHOW_WINDOW:
@@ -154,7 +154,6 @@ view_mode = st.sidebar.radio(
     help="Latest per user shows only the most recent event for each user."
 )
 
-# Optional filter by work mode
 work_mode_filter = st.sidebar.multiselect(
     "Work mode filter",
     options=["In Office", "Work from home", "Unknown"],
@@ -186,10 +185,15 @@ st.dataframe(
     hide_index=True,
 )
 
-# Footer: last event time in IST
+# Footer: last event time in IST (robust to naive/aware strings)
 if "sort_key" in raw_df.columns:
-    last_iso = pd.to_datetime(raw_df["sort_key"]).max()
-    last_ist = pd.Timestamp(last_iso, tz=IST_TZ)
+    last_series = pd.to_datetime(raw_df["sort_key"], errors="coerce")
+    if getattr(last_series.dt, "tz", None) is None:
+        last_series = last_series.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
+    else:
+        last_series = last_series.dt.tz_convert(IST_TZ)
+    last_ist = last_series.max()
 else:
-    last_ist = df["datetime_ist"].max()
+    last_ist = df["datetime"].dt.tz_convert(IST_TZ).max()
+
 st.caption(f"Data last event time (IST): **{last_ist}** · Source: `{os.path.basename(JSON_PATH)}`")
