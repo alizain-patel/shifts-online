@@ -74,23 +74,6 @@ def apply_window(df: pd.DataFrame):
     mask = (ist_dates >= last_friday) & (ist_dates <= window_end)
     return df.loc[mask], last_friday.date(), window_end.date()
 
-def map_status(event: str) -> str:
-    if event == "Punch In":
-        return "🟢 active"  # green circle
-    if event == "Break Start":
-        return "🟠 on break"  # orange circle
-    if event == "Break End":
-        return "🟢 active"
-    if event in ("Punch Out", "On Leave"):
-        return "🔴 on leave"  # red circle
-    return "⚪ unknown"  # white circle
-
-def latest_per_user(df: pd.DataFrame) -> pd.DataFrame:
-    return (
-        df.sort_values("datetime", ascending=False)
-          .drop_duplicates(subset=["user_id"], keep="first")
-          .sort_values("datetime", ascending=False)
-    )
 # ---------------------------------------------
 # LOAD & PREPARE
 # ---------------------------------------------
@@ -116,10 +99,45 @@ df = df.sort_values("datetime", ascending=False).copy()
 df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
-# Status + display name
-df["status"] = df["event"].astype(str).map(map_status)
+
+# ---------------------------------------------
+# Status + display name (use note + IST date awareness to distinguish)
+# ---------------------------------------------
+today_ist_date = pd.Timestamp.now(tz=IST_TZ).floor("D").date()
+
+def map_display_status(row) -> str:
+    evt  = str(row.get("event", ""))
+    note = str(row.get("note", "")).lower()
+    dt   = row.get("datetime_ist")
+
+    # Defensive: dt may be NaT if parsing failed (we already dropped NaT earlier)
+    dt_date = dt.date() if pd.notna(dt) else None
+
+    if evt == "Punch In":
+        return "🟢 active"
+    if evt == "Break Start":
+        return "🟠 on break"
+    if evt == "Break End":
+        return "🟢 active"
+
+    if evt == "Punch Out":
+        # Prefer explicit note from the JSON emitted by the PowerShell script
+        if "left for the day" in note or (dt_date is not None and dt_date == today_ist_date):
+            return "🟡 left for the day"   # distinct icon from 'on leave'
+        else:
+            return "🔴 on leave"           # historical punch-out → treated as away
+
+    if evt == "On Leave":
+        return "🔴 on leave"
+
+    return "⚪ unknown"
+
+df["status"] = df.apply(map_display_status, axis=1)
 df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')} {r['status']}", axis=1)
+
+# ---------------------------------------------
 # Window filter (previous Friday->Today or previous Friday->Monday)
+# ---------------------------------------------
 window_info = ""
 if SHOW_WINDOW:
     df, start_d, end_d = apply_window(df)
@@ -135,7 +153,11 @@ view_mode = st.sidebar.radio(
     help="Latest per user shows only the most recent event for each user."
 )
 if view_mode == "Latest per user":
-    df_view = latest_per_user(df)
+    df_view = (
+        df.sort_values("datetime", ascending=False)
+          .drop_duplicates(subset=["user_id"], keep="first")
+          .sort_values("datetime", ascending=False)
+    )
 else:
     df_view = df
 # ---------------------------------------------
