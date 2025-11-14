@@ -22,23 +22,26 @@ def load_json(path: str, file_mtime: float) -> pd.DataFrame:
 def parse_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
     Normalize to a single timezone-aware 'datetime' column in IST.
-    Prefer 'datetime_iso' (with offset or Z). Fall back to legacy only if needed.
+    Supports: 'datetime_iso' (preferred), legacy 'datetime' string, or 'date' + 'time'.
     """
     if "datetime_iso" in df.columns:
-        # Force tz-aware parsing (works for '+05:30' and 'Z'), then convert to IST.
+        # Force tz-aware parsing (handles '+05:30' and 'Z'), then convert to IST.
         dt = pd.to_datetime(df["datetime_iso"], errors="coerce", utc=True)
         dt = dt.dt.tz_convert(IST_TZ)
         df["datetime"] = dt
+
     elif "datetime" in df.columns:
-        # Legacy text like "dd/MM/yyyy HH:mm:ss IST" (avoid if ISO exists)
+        # Legacy text like "dd/MM/yyyy HH:mm:ss IST"
         dt_legacy = df["datetime"].astype(str).str.replace(" IST", "", regex=False)
         dt = pd.to_datetime(dt_legacy, dayfirst=True, errors="coerce")
         dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         df["datetime"] = dt
+
     elif {"date", "time"}.issubset(df.columns):
         dt = pd.to_datetime(df["date"].astype(str) + " " + df["time"].astype(str), errors="coerce")
         dt = dt.dt.tz_localize(IST_TZ, nonexistent="shift_forward", ambiguous="NaT")
         df["datetime"] = dt
+
     else:
         raise KeyError("Expected 'datetime_iso' or 'datetime' or both 'date' and 'time' columns")
 
@@ -66,7 +69,6 @@ def apply_window(df: pd.DataFrame):
 # PAGE LAYOUT & CACHE CONTROL
 # ---------------------------------------------
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
-st.caption(f"Reading JSON from: `{JSON_PATH}`")
 
 # Sidebar: manual reload to ensure no stale cache is used
 if st.sidebar.button("Reload data"):
@@ -105,28 +107,8 @@ df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
 
-# DEBUG: quickly verify parsed range is IST
-st.caption(f"DEBUG · rows={len(df)} · earliest={df['datetime_ist'].min()} · latest={df['datetime_ist'].max()}")
-
-# ---------------------------------------------
-# PROBE: raw vs parsed vs displayed (find mismatches instantly)
-# ---------------------------------------------
-if "datetime_iso" in raw_df.columns:
-    expected_from_iso = pd.to_datetime(raw_df["datetime_iso"], errors="coerce", utc=True).dt.tz_convert(IST_TZ)
-    # Align order with df after parsing/sort
-    tmp = df[["name","event","datetime_ist","Date","Time"]].copy()
-    tmp["datetime_iso"] = raw_df.loc[tmp.index, "datetime_iso"]
-    tmp["expected_from_iso_IST"] = expected_from_iso.loc[tmp.index]
-    # show delta (seconds) between what we display and what parsing ISO->IST yields
-    tmp["Δ_seconds"] = (tmp["datetime_ist"] - tmp["expected_from_iso_IST"]).dt.total_seconds()
-    st.subheader("Probe: raw vs parsed vs displayed (first 50 rows)")
-    st.dataframe(tmp.head(50), use_container_width=True)
-
-# ---------------------------------------------
-# STATUS + NAME
-# ---------------------------------------------
+# Status + display name (left-for-the-day logic)
 today_ist_date = pd.Timestamp.now(tz=IST_TZ).floor("D").date()
-
 def map_display_status(row) -> str:
     evt = str(row.get("event", ""))
     note = str(row.get("note", "")).lower()
@@ -171,7 +153,6 @@ window_info = ""
 if SHOW_WINDOW:
     df, start_d, end_d = apply_window(df)
     window_info = f" (window: {start_d.strftime('%d-%m-%Y')} → {end_d.strftime('%d-%m-%Y')})"
-    st.caption(f"DEBUG · rows in window: {len(df)}")
 
 # ---------------------------------------------
 # SIDEBAR & VIEW MODE
