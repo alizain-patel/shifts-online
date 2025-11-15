@@ -347,7 +347,7 @@
     "datetime_iso": "2025-11-15T05:31:20+05:30",
     "timezone": "IST",
     "sort_key": "2025-11-15T05:31:20+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -360,7 +360,7 @@
     "datetime_iso": "2025-11-15T06:39:31+05:30",
     "timezone": "IST",
     "sort_key": "2025-11-15T06:39:31+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   }
 ]
