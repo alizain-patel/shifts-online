@@ -440,5 +440,18 @@
     "sort_key": "2025-11-17T11:20:29+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch In",
+    "datetime": "17/11/2025 11:29:49 IST",
+    "date": "2025-11-17",
+    "time": "11:29:49",
+    "datetime_iso": "2025-11-17T11:29:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-17T11:29:49+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
