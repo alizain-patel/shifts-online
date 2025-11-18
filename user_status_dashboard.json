@@ -1077,5 +1077,18 @@
     "sort_key": "2025-11-18T15:48:58+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch In",
+    "datetime": "18/11/2025 16:14:13 IST",
+    "date": "2025-11-18",
+    "time": "16:14:13",
+    "datetime_iso": "2025-11-18T16:14:13+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-18T16:14:13+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
