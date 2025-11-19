@@ -1584,5 +1584,18 @@
     "sort_key": "2025-11-19T16:09:21+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break Start",
+    "datetime": "19/11/2025 17:17:49 IST",
+    "date": "2025-11-19",
+    "time": "17:17:49",
+    "datetime_iso": "2025-11-19T17:17:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-19T17:17:49+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
