@@ -1337,5 +1337,18 @@
     "sort_key": "2025-11-19T09:59:03+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch In",
+    "datetime": "19/11/2025 10:08:58 IST",
+    "date": "2025-11-19",
+    "time": "10:08:58",
+    "datetime_iso": "2025-11-19T10:08:58+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-19T10:08:58+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
