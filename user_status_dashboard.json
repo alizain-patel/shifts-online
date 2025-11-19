@@ -1597,5 +1597,44 @@
     "sort_key": "2025-11-19T17:17:49+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break Start",
+    "datetime": "19/11/2025 19:02:21 IST",
+    "date": "2025-11-19",
+    "time": "19:02:21",
+    "datetime_iso": "2025-11-19T19:02:21+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-19T19:02:21+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break End",
+    "datetime": "19/11/2025 19:06:34 IST",
+    "date": "2025-11-19",
+    "time": "19:06:34",
+    "datetime_iso": "2025-11-19T19:06:34+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-19T19:06:34+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "19/11/2025 19:07:03 IST",
+    "date": "2025-11-19",
+    "time": "19:07:03",
+    "datetime_iso": "2025-11-19T19:07:03+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-19T19:07:03+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
