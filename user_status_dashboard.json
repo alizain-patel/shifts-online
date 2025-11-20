@@ -2247,5 +2247,18 @@
     "sort_key": "2025-11-20T20:08:42+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "20/11/2025 20:31:49 IST",
+    "date": "2025-11-20",
+    "time": "20:31:49",
+    "datetime_iso": "2025-11-20T20:31:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-20T20:31:49+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
   }
 ]
