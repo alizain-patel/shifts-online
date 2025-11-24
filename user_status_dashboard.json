@@ -479,5 +479,44 @@
     "sort_key": "2025-11-24T10:07:24+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "24/11/2025 10:47:49 IST",
+    "date": "2025-11-24",
+    "time": "10:47:49",
+    "datetime_iso": "2025-11-24T10:47:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-24T10:47:49+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch In",
+    "datetime": "24/11/2025 10:48:29 IST",
+    "date": "2025-11-24",
+    "time": "10:48:29",
+    "datetime_iso": "2025-11-24T10:48:29+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-24T10:48:29+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch In",
+    "datetime": "24/11/2025 10:52:49 IST",
+    "date": "2025-11-24",
+    "time": "10:52:49",
+    "datetime_iso": "2025-11-24T10:52:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-24T10:52:49+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
