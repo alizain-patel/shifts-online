@@ -921,5 +921,18 @@
     "sort_key": "2025-11-24T21:00:37+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break Start",
+    "datetime": "24/11/2025 21:17:33 IST",
+    "date": "2025-11-24",
+    "time": "21:17:33",
+    "datetime_iso": "2025-11-24T21:17:33+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-24T21:17:33+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
