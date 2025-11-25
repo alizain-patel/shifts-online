@@ -1506,5 +1506,18 @@
     "sort_key": "2025-11-25T21:19:50+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "25/11/2025 22:13:37 IST",
+    "date": "2025-11-25",
+    "time": "22:13:37",
+    "datetime_iso": "2025-11-25T22:13:37+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-25T22:13:37+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
