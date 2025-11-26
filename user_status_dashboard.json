@@ -1766,5 +1766,18 @@
     "sort_key": "2025-11-26T14:30:33+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "26/11/2025 14:40:41 IST",
+    "date": "2025-11-26",
+    "time": "14:40:41",
+    "datetime_iso": "2025-11-26T14:40:41+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-26T14:40:41+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
