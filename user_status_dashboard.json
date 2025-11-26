@@ -1558,5 +1558,31 @@
     "sort_key": "2025-11-26T09:18:09+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch In",
+    "datetime": "26/11/2025 09:56:22 IST",
+    "date": "2025-11-26",
+    "time": "09:56:22",
+    "datetime_iso": "2025-11-26T09:56:22+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-26T09:56:22+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "26/11/2025 09:56:42 IST",
+    "date": "2025-11-26",
+    "time": "09:56:42",
+    "datetime_iso": "2025-11-26T09:56:42+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-11-26T09:56:42+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
