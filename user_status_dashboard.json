@@ -1207,5 +1207,18 @@
     "sort_key": "2025-12-02T15:35:36+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "02/12/2025 15:58:49 IST",
+    "date": "2025-12-02",
+    "time": "15:58:49",
+    "datetime_iso": "2025-12-02T15:58:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-02T15:58:49+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
