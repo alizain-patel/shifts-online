@@ -1506,5 +1506,31 @@
     "sort_key": "2025-12-03T10:43:19+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch In",
+    "datetime": "03/12/2025 10:50:34 IST",
+    "date": "2025-12-03",
+    "time": "10:50:34",
+    "datetime_iso": "2025-12-03T10:50:34+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-03T10:50:34+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch In",
+    "datetime": "03/12/2025 10:52:46 IST",
+    "date": "2025-12-03",
+    "time": "10:52:46",
+    "datetime_iso": "2025-12-03T10:52:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-03T10:52:46+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
