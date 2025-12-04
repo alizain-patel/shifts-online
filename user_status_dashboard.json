@@ -2182,5 +2182,31 @@
     "sort_key": "2025-12-04T14:11:38+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break Start",
+    "datetime": "04/12/2025 14:16:54 IST",
+    "date": "2025-12-04",
+    "time": "14:16:54",
+    "datetime_iso": "2025-12-04T14:16:54+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-04T14:16:54+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break Start",
+    "datetime": "04/12/2025 14:16:56 IST",
+    "date": "2025-12-04",
+    "time": "14:16:56",
+    "datetime_iso": "2025-12-04T14:16:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-04T14:16:56+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
