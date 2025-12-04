@@ -2377,5 +2377,31 @@
     "sort_key": "2025-12-04T19:31:57+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "04/12/2025 19:51:02 IST",
+    "date": "2025-12-04",
+    "time": "19:51:02",
+    "datetime_iso": "2025-12-04T19:51:02+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-04T19:51:02+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "04/12/2025 19:54:40 IST",
+    "date": "2025-12-04",
+    "time": "19:54:40",
+    "datetime_iso": "2025-12-04T19:54:40+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-04T19:54:40+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
