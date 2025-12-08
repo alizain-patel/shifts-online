@@ -1025,5 +1025,18 @@
     "sort_key": "2025-12-08T16:27:06+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Break End",
+    "datetime": "08/12/2025 17:10:44 IST",
+    "date": "2025-12-08",
+    "time": "17:10:44",
+    "datetime_iso": "2025-12-08T17:10:44+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-08T17:10:44+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
