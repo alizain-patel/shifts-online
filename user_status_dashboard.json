@@ -1298,5 +1298,57 @@
     "sort_key": "2025-12-09T10:23:07+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch In",
+    "datetime": "09/12/2025 10:55:21 IST",
+    "date": "2025-12-09",
+    "time": "10:55:21",
+    "datetime_iso": "2025-12-09T10:55:21+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-09T10:55:21+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "09/12/2025 10:55:37 IST",
+    "date": "2025-12-09",
+    "time": "10:55:37",
+    "datetime_iso": "2025-12-09T10:55:37+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-09T10:55:37+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch In",
+    "datetime": "09/12/2025 10:55:53 IST",
+    "date": "2025-12-09",
+    "time": "10:55:53",
+    "datetime_iso": "2025-12-09T10:55:53+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-09T10:55:53+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch In",
+    "datetime": "09/12/2025 10:59:47 IST",
+    "date": "2025-12-09",
+    "time": "10:59:47",
+    "datetime_iso": "2025-12-09T10:59:47+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-09T10:59:47+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
