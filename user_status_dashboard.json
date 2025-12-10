@@ -2156,5 +2156,31 @@
     "sort_key": "2025-12-10T18:20:36+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break Start",
+    "datetime": "10/12/2025 18:55:27 IST",
+    "date": "2025-12-10",
+    "time": "18:55:27",
+    "datetime_iso": "2025-12-10T18:55:27+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-10T18:55:27+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "10/12/2025 19:00:40 IST",
+    "date": "2025-12-10",
+    "time": "19:00:40",
+    "datetime_iso": "2025-12-10T19:00:40+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-10T19:00:40+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
