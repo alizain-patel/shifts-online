@@ -2507,5 +2507,18 @@
     "sort_key": "2025-12-11T11:14:29+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch In",
+    "datetime": "11/12/2025 11:29:09 IST",
+    "date": "2025-12-11",
+    "time": "11:29:09",
+    "datetime_iso": "2025-12-11T11:29:09+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-11T11:29:09+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
