@@ -2650,5 +2650,31 @@
     "sort_key": "2025-12-11T15:03:00+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break Start",
+    "datetime": "11/12/2025 15:13:06 IST",
+    "date": "2025-12-11",
+    "time": "15:13:06",
+    "datetime_iso": "2025-12-11T15:13:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-11T15:13:06+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "11/12/2025 15:15:17 IST",
+    "date": "2025-12-11",
+    "time": "15:15:17",
+    "datetime_iso": "2025-12-11T15:15:17+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-11T15:15:17+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
