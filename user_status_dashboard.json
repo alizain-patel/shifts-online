@@ -1896,5 +1896,18 @@
     "sort_key": "2025-12-17T20:06:56+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch Out",
+    "datetime": "17/12/2025 20:35:31 IST",
+    "date": "2025-12-17",
+    "time": "20:35:31",
+    "datetime_iso": "2025-12-17T20:35:31+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-17T20:35:31+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
