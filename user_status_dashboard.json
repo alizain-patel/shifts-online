@@ -1831,5 +1831,18 @@
     "sort_key": "2025-12-17T19:36:01+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break End",
+    "datetime": "17/12/2025 19:44:30 IST",
+    "date": "2025-12-17",
+    "time": "19:44:30",
+    "datetime_iso": "2025-12-17T19:44:30+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-17T19:44:30+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
