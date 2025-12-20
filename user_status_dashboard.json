@@ -360,7 +360,7 @@
     "datetime_iso": "2025-12-20T02:15:52+05:30",
     "timezone": "IST",
     "sort_key": "2025-12-20T02:15:52+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -373,7 +373,7 @@
     "datetime_iso": "2025-12-20T05:38:40+05:30",
     "timezone": "IST",
     "sort_key": "2025-12-20T05:38:40+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -386,7 +386,7 @@
     "datetime_iso": "2025-12-20T06:37:13+05:30",
     "timezone": "IST",
     "sort_key": "2025-12-20T06:37:13+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   }
 ]
