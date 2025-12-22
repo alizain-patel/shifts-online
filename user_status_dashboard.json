@@ -427,5 +427,18 @@
     "sort_key": "2025-12-22T10:55:13+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch In",
+    "datetime": "22/12/2025 11:26:22 IST",
+    "date": "2025-12-22",
+    "time": "11:26:22",
+    "datetime_iso": "2025-12-22T11:26:22+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-22T11:26:22+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
