@@ -73,7 +73,7 @@ st.set_page_config(page_title="User Status Dashboard", layout="wide")
 # Sidebar: manual reload to ensure no stale cache is used
 if st.sidebar.button("Reload data"):
     st.cache_data.clear()
-    st.experimental_rerun()
+    st.rerun()
 
 # ---------------------------------------------
 # LOAD
@@ -205,3 +205,4 @@ else:
     last_ist = df["datetime"].dt.tz_convert(IST_TZ).max()
 
 st.caption(f"Data last event time (IST): **{last_ist}** · Source: `{os.path.basename(JSON_PATH)}`")
+
