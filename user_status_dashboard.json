@@ -947,5 +947,57 @@
     "sort_key": "2025-12-30T13:47:26+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "30/12/2025 14:29:46 IST",
+    "date": "2025-12-30",
+    "time": "14:29:46",
+    "datetime_iso": "2025-12-30T14:29:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-30T14:29:46+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "30/12/2025 14:32:20 IST",
+    "date": "2025-12-30",
+    "time": "14:32:20",
+    "datetime_iso": "2025-12-30T14:32:20+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-30T14:32:20+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "30/12/2025 14:32:23 IST",
+    "date": "2025-12-30",
+    "time": "14:32:23",
+    "datetime_iso": "2025-12-30T14:32:23+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-30T14:32:23+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break End",
+    "datetime": "30/12/2025 14:34:06 IST",
+    "date": "2025-12-30",
+    "time": "14:34:06",
+    "datetime_iso": "2025-12-30T14:34:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-30T14:34:06+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
