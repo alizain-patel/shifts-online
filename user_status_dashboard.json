@@ -1376,5 +1376,57 @@
     "sort_key": "2025-12-31T15:29:26+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch Out",
+    "datetime": "31/12/2025 16:29:34 IST",
+    "date": "2025-12-31",
+    "time": "16:29:34",
+    "datetime_iso": "2025-12-31T16:29:34+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-31T16:29:34+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch In",
+    "datetime": "31/12/2025 16:29:39 IST",
+    "date": "2025-12-31",
+    "time": "16:29:39",
+    "datetime_iso": "2025-12-31T16:29:39+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-31T16:29:39+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break Start",
+    "datetime": "31/12/2025 16:29:48 IST",
+    "date": "2025-12-31",
+    "time": "16:29:48",
+    "datetime_iso": "2025-12-31T16:29:48+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-31T16:29:48+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break End",
+    "datetime": "31/12/2025 16:29:54 IST",
+    "date": "2025-12-31",
+    "time": "16:29:54",
+    "datetime_iso": "2025-12-31T16:29:54+05:30",
+    "timezone": "IST",
+    "sort_key": "2025-12-31T16:29:54+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
