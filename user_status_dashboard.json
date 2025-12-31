@@ -1558,5 +1558,18 @@
     "sort_key": "2025-12-31T21:56:09+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch Out",
+    "datetime": "01/01/2026 03:27:20 IST",
+    "date": "2026-01-01",
+    "time": "03:27:20",
+    "datetime_iso": "2026-01-01T03:27:20+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-01T03:27:20+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
