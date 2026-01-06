@@ -6,6 +6,7 @@ import os
 import requests
 import pandas as pd
 import streamlit as st
+from streamlit import st_autorefresh
 from time import time
 from datetime import datetime
 
@@ -226,5 +227,6 @@ st.caption(
 
 # Optional: debug line to confirm path/URL in prod (comment out after verifying)
 # st.write("DEBUG → Using:", data_source_desc)
+
 
 
