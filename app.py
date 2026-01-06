@@ -1,5 +1,5 @@
 
-# app.py — Live User Status Dashboard (GitHub Raw + TTL cache + Work mode from location)
+# app.py — Live User Status Dashboard (GitHub Raw + TTL cache + Work mode fix)
 # Date: 2026-01-06 (IST)
 
 import os
@@ -158,41 +158,31 @@ df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
 
 # =========================================================
-# WORK MODE (from is_at_approved_location)
+# WORK MODE (from is_at_approved_location) — simplified robust mapping
 # =========================================================
-def _to_bool_or_none(x):
-    """Normalize True/False/None, handling strings like 'true'/'false'/'null'."""
-    if pd.isna(x):
-        return None
-    if isinstance(x, bool):
-        return x
-    s = str(x).strip().lower()
-    if s in ("true", "1", "yes"):
-        return True
-    if s in ("false", "0", "no"):
-        return False
-    return None
-
-def _work_mode(flag):
-    if flag is True:
-        return "In Office"
-    if flag is False:
-        return "Work from home"
-    return "Unknown"
-
-if "is_at_approved_location" in df.columns:
-    loc_flag = df["is_at_approved_location"].map(_to_bool_or_none)
-    df["work_mode"] = loc_flag.map(_work_mode)
+flag_col = "is_at_approved_location"
+if flag_col in df.columns:
+    # Map True/False/NaN (and strings) directly to work mode
+    def map_flag_to_mode(x):
+        if pd.isna(x):
+            return "Unknown"
+        if isinstance(x, bool):
+            return "In Office" if x else "Work from home"
+        s = str(x).strip().lower()
+        if s in ("true", "1", "yes"):  return "In Office"
+        if s in ("false", "0", "no"):  return "Work from home"
+        return "Unknown"
+    df["work_mode"] = df[flag_col].map(map_flag_to_mode)
 else:
     df["work_mode"] = "Unknown"
 
-# OPTIONAL: pretty label with icon
+# Pretty label with icon
 def work_mode_icon(mode: str) -> str:
     if mode == "In Office":
-        return "🏢 In Office"
+        return "🏢 In Office"  # 🏢
     if mode == "Work from home":
-        return "🏠 Work from home"
-    return "❓ Unknown"
+        return "🏠 Work from home"  # 🏠
+    return "❓ Unknown"  # ❓
 
 df["Work mode"] = df["work_mode"].map(work_mode_icon)
 
