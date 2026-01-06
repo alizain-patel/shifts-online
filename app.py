@@ -1,4 +1,3 @@
-st.write("✅ Using GitHub Raw URL:", GITHUB_RAW_URL)
 # app.py — Live User Status Dashboard (GitHub Raw + TTL cache + Auto-refresh)
 # Author: Alizain's M365 Copilot
 # Date: 2026-01-06 (IST)
@@ -10,6 +9,7 @@ import streamlit as st
 from time import time
 from datetime import datetime
 
+st.write("✅ Using GitHub Raw URL:", GITHUB_RAW_URL)
 # =========================================================
 # CONFIG
 # =========================================================
@@ -227,3 +227,4 @@ st.caption(
 
 # Optional: debug line to confirm path/URL in prod (comment out after verifying)
 # st.write("DEBUG → Using:", data_source_desc)
+
