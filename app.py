@@ -41,7 +41,7 @@ JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 # PAGE SETUP + AUTO REFRESH
 # =========================================================
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
-st.autorefresh(interval=AUTO_REFRESH_MS, key="auto_refresh")  # periodic re-run
+st_autorefresh(interval=AUTO_REFRESH_MS, key="auto_refresh")  # periodic re-run
 
 # =========================================================
 # DATA FETCHERS
@@ -227,6 +227,7 @@ st.caption(
 
 # Optional: debug line to confirm path/URL in prod (comment out after verifying)
 # st.write("DEBUG → Using:", data_source_desc)
+
 
 
 
