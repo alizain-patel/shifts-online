@@ -23,7 +23,7 @@ GITHUB_RAW_URL = None
 try:
     # Streamlit Community Cloud exposes secrets via st.secrets (preferred)
     if "GITHUB_RAW_URL" in st.secrets:
-        GITHUB_RAW_URL = st.secrets["GITHUB_RAW_URL"]
+        GITHUB_RAW_URL = st.secrets["https://raw.githubusercontent.com/alizain-patel/shifts-online/master/user_status_dashboard.json"]
 except Exception:
     pass
 
@@ -228,3 +228,4 @@ st.caption(
 # Optional: debug line to confirm path/URL in prod (comment out after verifying)
 # st.write("DEBUG → Using:", data_source_desc)
 ``
+
