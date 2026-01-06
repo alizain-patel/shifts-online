@@ -1298,5 +1298,18 @@
     "sort_key": "2026-01-06T11:01:09+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch In",
+    "datetime": "06/01/2026 11:12:02 IST",
+    "date": "2026-01-06",
+    "time": "11:12:02",
+    "datetime_iso": "2026-01-06T11:12:02+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-06T11:12:02+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
