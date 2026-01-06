@@ -1,74 +1,53 @@
-# app.py — Live User Status Dashboard (GitHub Raw + TTL cache + Auto-refresh)
-# Author: Alizain's M365 Copilot
+
+# app.py — Live User Status Dashboard (GitHub Raw + TTL cache)
 # Date: 2026-01-06 (IST)
 
 import os
+import io
 import requests
 import pandas as pd
 import streamlit as st
-from streamlit import st_autorefresh
 from time import time
 from datetime import datetime
 
 # =========================================================
 # CONFIG
 # =========================================================
-IST_TZ = "Asia/Kolkata"              # IANA timezone for IST
-SHOW_WINDOW = True                   # Friday -> Today (or Friday -> Monday if today is Monday)
-AUTO_REFRESH_MS = 300_000            # 5 minutes; triggers re-run
-CACHE_TTL_SEC  = 600                 # 10 minutes; data cache TTL
+IST_TZ = "Asia/Kolkata"            # IANA timezone for IST
+SHOW_WINDOW = True                 # Friday -> Today (or Friday -> Monday if today is Monday)
+CACHE_TTL_SEC = int(os.getenv("CACHE_TTL_SEC", "600"))  # 10 minutes
 
-# Prefer Streamlit Secrets for cloud; fallback to env; finally to local file.
-GITHUB_RAW_URL = None
+# Prefer Streamlit Secrets (Community Cloud)
 try:
-    # Streamlit Community Cloud exposes secrets via st.secrets (preferred)
-    if "GITHUB_RAW_URL" in st.secrets:
-        GITHUB_RAW_URL = st.secrets["https://raw.githubusercontent.com/alizain-patel/shifts-online/master/user_status_dashboard.json"]
+    GITHUB_RAW_URL = st.secrets["GITHUB_RAW_URL"]
 except Exception:
-    pass
+    GITHUB_RAW_URL = os.getenv("GITHUB_RAW_URL", "")
 
-# Fallback: environment variable (useful for local/dev)
-if not GITHUB_RAW_URL:
-    GITHUB_RAW_URL = os.getenv(
-        "GITHUB_RAW_URL",
-        ""  # empty means we'll read from local file
-    )
-
-# Final fallback: local file (for on-prem runs)
+# Fallback local path for on-prem/dev runs
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 
-# =========================================================
-# PAGE SETUP + AUTO REFRESH
-# =========================================================
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
-st_autorefresh(interval=AUTO_REFRESH_MS, key="auto_refresh")  # periodic re-run
 
 # =========================================================
-# DATA FETCHERS
+# DATA LOADERS (TTL-cached)
 # =========================================================
 @st.cache_data(ttl=CACHE_TTL_SEC, show_spinner=False)
 def fetch_json_from_github(url: str, bucket: int) -> pd.DataFrame:
-    """
-    Fetch latest JSON from GitHub Raw.
-    'bucket' changes every TTL seconds to bust CDN caches and participate in Streamlit cache key.
-    """
+    """Fetch latest JSON from GitHub Raw. 'bucket' changes every TTL seconds to bust CDN caches and participate in Streamlit cache key."""
     headers = {
         "Cache-Control": "no-cache",
         "Pragma": "no-cache",
         "Accept": "application/json",
         "User-Agent": "streamlit-app",
     }
-    full_url = f"{url}?v={bucket}"  # cache-busting param
+    full_url = f"{url}?v={bucket}"
     r = requests.get(full_url, headers=headers, timeout=30)
     r.raise_for_status()
-    # pd.read_json can read from string content via io, but simplest is to let pandas parse the text directly.
-    return pd.read_json(r.text)
+    return pd.read_json(io.StringIO(r.text))
 
 @st.cache_data(ttl=CACHE_TTL_SEC, show_spinner=False)
 def load_local_json(path: str) -> pd.DataFrame:
-    """
-    Load JSON from local filesystem (on-prem/dev).
-    """
+    """Load JSON from local filesystem (on-prem/dev)."""
     if not os.path.exists(path):
         raise FileNotFoundError(f"JSON not found: {path}")
     return pd.read_json(path)
@@ -79,7 +58,7 @@ def load_local_json(path: str) -> pd.DataFrame:
 def parse_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
     Normalize to a single timezone-aware 'datetime' column in IST, supporting:
-    - 'datetime_iso' (preferred, produced by your PowerShell in IST with +05:30),
+    - 'datetime_iso' (preferred, produced by your PowerShell with +05:30),
     - 'datetime' legacy string like 'dd/MM/yyyy HH:mm:ss IST',
     - 'date' + 'time' columns.
     """
@@ -107,9 +86,7 @@ def parse_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def apply_window(df: pd.DataFrame):
-    """
-    Filter rows to Friday->Today (or Friday->Monday if today is Monday) using IST dates.
-    """
+    """Filter rows to Friday->Today (or Friday->Monday if today is Monday) using IST dates."""
     now_ist = pd.Timestamp.now(tz=IST_TZ)
     today_ist = now_ist.floor("D")
     weekday = today_ist.weekday()  # Mon=0, Fri=4
@@ -124,14 +101,14 @@ def apply_window(df: pd.DataFrame):
 
 def map_status(event: str) -> str:
     if event == "Punch In":
-        return "🟢 active"
+        return "🟢 active"  # green circle
     if event == "Break Start":
-        return "🟠 on break"
+        return "🟠 on break"  # orange circle
     if event == "Break End":
         return "🟢 active"
     if event in ("Punch Out", "On Leave"):
-        return "🔴 on leave"
-    return "⚪ unknown"
+        return "🔴 on leave"  # red circle
+    return "⚪ unknown"  # white circle
 
 def latest_per_user(df: pd.DataFrame) -> pd.DataFrame:
     return (
@@ -151,7 +128,6 @@ try:
         data_source_desc = f"GitHub Raw → {GITHUB_RAW_URL}"
         file_mtime_txt = "N/A (remote fetch)"
     else:
-        # Local file mode (on-prem/dev runs)
         raw_df = load_local_json(JSON_PATH)
         data_source_desc = f"Local file → {os.path.abspath(JSON_PATH)}"
         try:
@@ -177,6 +153,12 @@ df = df.sort_values("datetime", ascending=False).copy()
 df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
+
+# Optional 'work_mode' column: fill if missing
+if "work_mode" not in df.columns:
+    df["work_mode"] = "Unknown"
+
+# Status + display name
 df["status"] = df["event"].astype(str).map(map_status)
 df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')} {r['status']}", axis=1)
 
@@ -212,22 +194,15 @@ st.dataframe(
     hide_index=True,
 )
 
-# Footer: last event time (IST). Prefer raw_df's sort_key if present.
+# Footer: last event time in IST (prefer raw_df's sort_key if present)
 if "sort_key" in raw_df.columns:
     last_iso = pd.to_datetime(raw_df["sort_key"]).max()
-    last_ist = pd.Timestamp(last_iso, tz=IST_TZ)
+    # last_iso may be naive or tz-aware; normalize to IST
+    last_ist = pd.to_datetime(last_iso).tz_localize(IST_TZ) if pd.Timestamp(last_iso).tz is None else pd.Timestamp(last_iso).tz_convert(IST_TZ)
 else:
     last_ist = df["datetime_ist"].max()
 
 st.caption(
-    f"Data last event time (IST): **{last_ist}** · Source: "
-    f"`user_status_dashboard.json` · Data source: {data_source_desc} · "
-    f"File last updated (IST): **{file_mtime_txt}**"
+    f"Data last event time (IST): **{last_ist}** · Source: `user_status_dashboard.json` · "
+    f"Data source: {data_source_desc} · File last updated (IST): **{file_mtime_txt}**"
 )
-
-# Optional: debug line to confirm path/URL in prod (comment out after verifying)
-# st.write("DEBUG → Using:", data_source_desc)
-
-
-
-
