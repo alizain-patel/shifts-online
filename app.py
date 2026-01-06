@@ -9,7 +9,6 @@ import streamlit as st
 from time import time
 from datetime import datetime
 
-st.write("✅ Using GitHub Raw URL:", GITHUB_RAW_URL)
 # =========================================================
 # CONFIG
 # =========================================================
@@ -227,4 +226,5 @@ st.caption(
 
 # Optional: debug line to confirm path/URL in prod (comment out after verifying)
 # st.write("DEBUG → Using:", data_source_desc)
+
 
