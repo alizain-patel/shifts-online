@@ -1,5 +1,5 @@
 
-# app.py — Live User Status Dashboard (GitHub Raw + TTL cache)
+# app.py — Live User Status Dashboard (GitHub Raw + TTL cache + Work mode from location)
 # Date: 2026-01-06 (IST)
 
 import os
@@ -13,15 +13,15 @@ from datetime import datetime
 # =========================================================
 # CONFIG
 # =========================================================
-IST_TZ = "Asia/Kolkata"            # IANA timezone for IST
-SHOW_WINDOW = True                 # Friday -> Today (or Friday -> Monday if today is Monday)
+IST_TZ = "Asia/Kolkata"                 # IANA timezone for IST
+SHOW_WINDOW = True                      # Friday -> Today (or Friday -> Monday if today is Monday)
 CACHE_TTL_SEC = int(os.getenv("CACHE_TTL_SEC", "600"))  # 10 minutes
 
 # Prefer Streamlit Secrets (Community Cloud)
 try:
     GITHUB_RAW_URL = st.secrets["GITHUB_RAW_URL"]
 except Exception:
-    GITHUB_RAW_URL = os.getenv("GITHUB_RAW_URL", "")
+    GITHUB_RAW_URL = os.getenv("GITHUB_RAW_URL", "")  # fallback for local/dev
 
 # Fallback local path for on-prem/dev runs
 JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
@@ -33,14 +33,17 @@ st.set_page_config(page_title="User Status Dashboard", layout="wide")
 # =========================================================
 @st.cache_data(ttl=CACHE_TTL_SEC, show_spinner=False)
 def fetch_json_from_github(url: str, bucket: int) -> pd.DataFrame:
-    """Fetch latest JSON from GitHub Raw. 'bucket' changes every TTL seconds to bust CDN caches and participate in Streamlit cache key."""
+    """
+    Fetch latest JSON from GitHub Raw.
+    'bucket' changes every TTL seconds to bust CDN caches and participate in Streamlit cache key.
+    """
     headers = {
         "Cache-Control": "no-cache",
         "Pragma": "no-cache",
         "Accept": "application/json",
         "User-Agent": "streamlit-app",
     }
-    full_url = f"{url}?v={bucket}"
+    full_url = f"{url}?v={bucket}"  # cache-busting param
     r = requests.get(full_url, headers=headers, timeout=30)
     r.raise_for_status()
     return pd.read_json(io.StringIO(r.text))
@@ -154,15 +157,54 @@ df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
 
-# Optional 'work_mode' column: fill if missing
-if "work_mode" not in df.columns:
+# =========================================================
+# WORK MODE (from is_at_approved_location)
+# =========================================================
+def _to_bool_or_none(x):
+    """Normalize True/False/None, handling strings like 'true'/'false'/'null'."""
+    if pd.isna(x):
+        return None
+    if isinstance(x, bool):
+        return x
+    s = str(x).strip().lower()
+    if s in ("true", "1", "yes"):
+        return True
+    if s in ("false", "0", "no"):
+        return False
+    return None
+
+def _work_mode(flag):
+    if flag is True:
+        return "In Office"
+    if flag is False:
+        return "Work from home"
+    return "Unknown"
+
+if "is_at_approved_location" in df.columns:
+    loc_flag = df["is_at_approved_location"].map(_to_bool_or_none)
+    df["work_mode"] = loc_flag.map(_work_mode)
+else:
     df["work_mode"] = "Unknown"
 
-# Status + display name
+# OPTIONAL: pretty label with icon
+def work_mode_icon(mode: str) -> str:
+    if mode == "In Office":
+        return "🏢 In Office"
+    if mode == "Work from home":
+        return "🏠 Work from home"
+    return "❓ Unknown"
+
+df["Work mode"] = df["work_mode"].map(work_mode_icon)
+
+# =========================================================
+# STATUS + DISPLAY NAME
+# =========================================================
 df["status"] = df["event"].astype(str).map(map_status)
 df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')} {r['status']}", axis=1)
 
-# Window filter (Friday->Today or Friday->Monday)
+# =========================================================
+# WINDOW FILTER (Friday->Today or Friday->Monday)
+# =========================================================
 window_info = ""
 if SHOW_WINDOW:
     df_view_base, start_d, end_d = apply_window(df)
@@ -186,19 +228,22 @@ view_mode = st.sidebar.radio(
 
 df_view = latest_per_user(df_view_base) if view_mode == "Latest per user" else df_view_base
 
-columns_to_show = ["Name & Status", "Date", "work_mode", "event", "Time"]
-rename_map = {"event": "Event", "work_mode": "Work mode"}
+columns_to_show = ["Name & Status", "Date", "Work mode", "event", "Time"]
+rename_map = {"event": "Event"}
+
 st.dataframe(
     df_view[columns_to_show].rename(columns=rename_map),
     use_container_width=True,
     hide_index=True,
 )
 
-# Footer: last event time in IST (prefer raw_df's sort_key if present)
+# =========================================================
+# FOOTER: Last event time (IST)
+# =========================================================
 if "sort_key" in raw_df.columns:
     last_iso = pd.to_datetime(raw_df["sort_key"]).max()
-    # last_iso may be naive or tz-aware; normalize to IST
-    last_ist = pd.to_datetime(last_iso).tz_localize(IST_TZ) if pd.Timestamp(last_iso).tz is None else pd.Timestamp(last_iso).tz_convert(IST_TZ)
+    last_ts = pd.Timestamp(last_iso)
+    last_ist = last_ts.tz_localize(IST_TZ) if last_ts.tz is None else last_ts.tz_convert(IST_TZ)
 else:
     last_ist = df["datetime_ist"].max()
 
