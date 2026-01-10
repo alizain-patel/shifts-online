@@ -466,5 +466,18 @@
     "sort_key": "2026-01-10T06:16:17+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "10/01/2026 06:32:40 IST",
+    "date": "2026-01-10",
+    "time": "06:32:40",
+    "datetime_iso": "2026-01-10T06:32:40+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-10T06:32:40+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
