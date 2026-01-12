@@ -804,5 +804,18 @@
     "sort_key": "2026-01-12T15:57:02+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break End",
+    "datetime": "12/01/2026 16:02:31 IST",
+    "date": "2026-01-12",
+    "time": "16:02:31",
+    "datetime_iso": "2026-01-12T16:02:31+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-12T16:02:31+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
