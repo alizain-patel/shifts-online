@@ -1649,5 +1649,18 @@
     "sort_key": "2026-01-13T21:51:26+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break End",
+    "datetime": "13/01/2026 22:33:06 IST",
+    "date": "2026-01-13",
+    "time": "22:33:06",
+    "datetime_iso": "2026-01-13T22:33:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-13T22:33:06+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
