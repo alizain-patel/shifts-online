@@ -1101,7 +1101,7 @@
     "datetime_iso": "2026-01-13T06:07:17+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T06:07:17+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -1114,7 +1114,7 @@
     "datetime_iso": "2026-01-13T08:09:17+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T08:09:17+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -1452,7 +1452,7 @@
     "datetime_iso": "2026-01-13T18:58:47+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T18:58:47+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1478,7 +1478,7 @@
     "datetime_iso": "2026-01-13T19:34:48+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T19:34:48+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1517,7 +1517,7 @@
     "datetime_iso": "2026-01-13T20:02:10+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:02:10+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1543,7 +1543,7 @@
     "datetime_iso": "2026-01-13T20:10:36+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:10:36+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1556,7 +1556,7 @@
     "datetime_iso": "2026-01-13T20:13:04+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:13:04+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1569,7 +1569,7 @@
     "datetime_iso": "2026-01-13T20:13:14+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:13:14+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -1582,7 +1582,7 @@
     "datetime_iso": "2026-01-13T20:30:51+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:30:51+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1595,7 +1595,7 @@
     "datetime_iso": "2026-01-13T20:32:39+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:32:39+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -1608,7 +1608,7 @@
     "datetime_iso": "2026-01-13T20:46:11+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:46:11+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -1621,7 +1621,7 @@
     "datetime_iso": "2026-01-13T20:56:48+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-13T20:56:48+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
