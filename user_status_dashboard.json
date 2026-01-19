@@ -611,8 +611,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
-    "name": "Abhishek Arolkar",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
     "event": "On Leave",
     "datetime": "19/01/2026 00:00:00 IST",
     "date": "2026-01-19",
@@ -624,8 +624,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "name": "Shubham Jadhav",
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
     "event": "On Leave",
     "datetime": "19/01/2026 00:00:00 IST",
     "date": "2026-01-19",
@@ -1077,5 +1077,57 @@
     "sort_key": "2026-01-19T20:12:20+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "19/01/2026 20:21:24 IST",
+    "date": "2026-01-19",
+    "time": "20:21:24",
+    "datetime_iso": "2026-01-19T20:21:24+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-19T20:21:24+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "19/01/2026 20:23:35 IST",
+    "date": "2026-01-19",
+    "time": "20:23:35",
+    "datetime_iso": "2026-01-19T20:23:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-19T20:23:35+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break Start",
+    "datetime": "19/01/2026 20:29:56 IST",
+    "date": "2026-01-19",
+    "time": "20:29:56",
+    "datetime_iso": "2026-01-19T20:29:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-19T20:29:56+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch Out",
+    "datetime": "19/01/2026 20:30:41 IST",
+    "date": "2026-01-19",
+    "time": "20:30:41",
+    "datetime_iso": "2026-01-19T20:30:41+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-19T20:30:41+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
