@@ -611,8 +611,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
-    "name": "Abhishek Arolkar",
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
     "event": "On Leave",
     "datetime": "19/01/2026 00:00:00 IST",
     "date": "2026-01-19",
@@ -624,8 +624,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
-    "name": "Vinayak Mandlik",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
     "event": "On Leave",
     "datetime": "19/01/2026 00:00:00 IST",
     "date": "2026-01-19",
@@ -650,8 +650,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "name": "Shubham Jadhav",
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
     "event": "On Leave",
     "datetime": "19/01/2026 00:00:00 IST",
     "date": "2026-01-19",
@@ -884,6 +884,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break End",
+    "datetime": "19/01/2026 14:39:00 IST",
+    "date": "2026-01-19",
+    "time": "14:39:00",
+    "datetime_iso": "2026-01-19T14:39:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-19T14:39:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
     "name": "Alizain Patel",
     "event": "Break End",
@@ -971,19 +984,6 @@
     "datetime_iso": "2026-01-19T15:36:14+05:30",
     "timezone": "IST",
     "sort_key": "2026-01-19T15:36:14+05:30",
-    "note": "",
-    "is_at_approved_location": true
-  },
-  {
-    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
-    "name": "Gaurav Ghadi",
-    "event": "Break End",
-    "datetime": "19/01/2026 15:45:05 IST",
-    "date": "2026-01-19",
-    "time": "15:45:05",
-    "datetime_iso": "2026-01-19T15:45:05+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-01-19T15:45:05+05:30",
     "note": "",
     "is_at_approved_location": true
   }
