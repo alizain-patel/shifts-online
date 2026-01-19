@@ -520,6 +520,19 @@
     "is_at_approved_location": null
   },
   {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "16/01/2026 20:35:00 IST",
+    "date": "2026-01-16",
+    "time": "20:35:00",
+    "datetime_iso": "2026-01-16T20:35:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-16T20:35:00+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
     "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
     "name": "Vinayak Mandlik",
     "event": "Break Start",
