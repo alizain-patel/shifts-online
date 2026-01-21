@@ -2143,5 +2143,44 @@
     "sort_key": "2026-01-21T20:11:26+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break Start",
+    "datetime": "21/01/2026 20:19:23 IST",
+    "date": "2026-01-21",
+    "time": "20:19:23",
+    "datetime_iso": "2026-01-21T20:19:23+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-21T20:19:23+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break End",
+    "datetime": "21/01/2026 20:19:28 IST",
+    "date": "2026-01-21",
+    "time": "20:19:28",
+    "datetime_iso": "2026-01-21T20:19:28+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-21T20:19:28+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch Out",
+    "datetime": "21/01/2026 20:19:35 IST",
+    "date": "2026-01-21",
+    "time": "20:19:35",
+    "datetime_iso": "2026-01-21T20:19:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-21T20:19:35+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
