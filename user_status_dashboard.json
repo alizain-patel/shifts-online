@@ -1935,5 +1935,31 @@
     "sort_key": "2026-01-21T15:19:23+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break Start",
+    "datetime": "21/01/2026 17:45:10 IST",
+    "date": "2026-01-21",
+    "time": "17:45:10",
+    "datetime_iso": "2026-01-21T17:45:10+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-21T17:45:10+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break End",
+    "datetime": "21/01/2026 17:57:51 IST",
+    "date": "2026-01-21",
+    "time": "17:57:51",
+    "datetime_iso": "2026-01-21T17:57:51+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-21T17:57:51+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
