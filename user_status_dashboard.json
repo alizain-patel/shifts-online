@@ -2494,5 +2494,18 @@
     "sort_key": "2026-01-22T15:03:41+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "22/01/2026 15:30:16 IST",
+    "date": "2026-01-22",
+    "time": "15:30:16",
+    "datetime_iso": "2026-01-22T15:30:16+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-22T15:30:16+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
