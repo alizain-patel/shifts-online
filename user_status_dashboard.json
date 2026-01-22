@@ -2312,5 +2312,31 @@
     "sort_key": "2026-01-22T11:18:44+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch In",
+    "datetime": "22/01/2026 11:29:55 IST",
+    "date": "2026-01-22",
+    "time": "11:29:55",
+    "datetime_iso": "2026-01-22T11:29:55+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-22T11:29:55+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch In",
+    "datetime": "22/01/2026 11:34:15 IST",
+    "date": "2026-01-22",
+    "time": "11:34:15",
+    "datetime_iso": "2026-01-22T11:34:15+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-22T11:34:15+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
