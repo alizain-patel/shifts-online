@@ -2624,5 +2624,18 @@
     "sort_key": "2026-01-22T19:07:54+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break Start",
+    "datetime": "22/01/2026 19:33:55 IST",
+    "date": "2026-01-22",
+    "time": "19:33:55",
+    "datetime_iso": "2026-01-22T19:33:55+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-22T19:33:55+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
