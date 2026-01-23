@@ -3027,5 +3027,18 @@
     "sort_key": "2026-01-23T14:32:30+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch Out",
+    "datetime": "23/01/2026 15:36:06 IST",
+    "date": "2026-01-23",
+    "time": "15:36:06",
+    "datetime_iso": "2026-01-23T15:36:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-23T15:36:06+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
