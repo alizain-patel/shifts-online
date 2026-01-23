@@ -3053,5 +3053,31 @@
     "sort_key": "2026-01-23T17:51:15+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "23/01/2026 18:27:56 IST",
+    "date": "2026-01-23",
+    "time": "18:27:56",
+    "datetime_iso": "2026-01-23T18:27:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-23T18:27:56+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break Start",
+    "datetime": "23/01/2026 18:29:35 IST",
+    "date": "2026-01-23",
+    "time": "18:29:35",
+    "datetime_iso": "2026-01-23T18:29:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-23T18:29:35+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
