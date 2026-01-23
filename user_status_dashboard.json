@@ -2988,5 +2988,18 @@
     "sort_key": "2026-01-23T13:44:54+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "23/01/2026 14:20:32 IST",
+    "date": "2026-01-23",
+    "time": "14:20:32",
+    "datetime_iso": "2026-01-23T14:20:32+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-23T14:20:32+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
