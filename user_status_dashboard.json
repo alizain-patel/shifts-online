@@ -637,6 +637,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "27/01/2026 10:50:00 IST",
+    "date": "2026-01-27",
+    "time": "10:50:00",
+    "datetime_iso": "2026-01-27T10:50:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-27T10:50:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
     "event": "Punch In",
@@ -674,5 +687,31 @@
     "sort_key": "2026-01-27T11:12:39+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch In",
+    "datetime": "27/01/2026 11:18:02 IST",
+    "date": "2026-01-27",
+    "time": "11:18:02",
+    "datetime_iso": "2026-01-27T11:18:02+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-27T11:18:02+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch In",
+    "datetime": "27/01/2026 11:19:20 IST",
+    "date": "2026-01-27",
+    "time": "11:19:20",
+    "datetime_iso": "2026-01-27T11:19:20+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-27T11:19:20+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
