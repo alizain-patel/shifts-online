@@ -1428,5 +1428,70 @@
     "sort_key": "2026-01-28T14:41:54+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "28/01/2026 15:25:06 IST",
+    "date": "2026-01-28",
+    "time": "15:25:06",
+    "datetime_iso": "2026-01-28T15:25:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-28T15:25:06+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break Start",
+    "datetime": "28/01/2026 15:27:57 IST",
+    "date": "2026-01-28",
+    "time": "15:27:57",
+    "datetime_iso": "2026-01-28T15:27:57+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-28T15:27:57+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "28/01/2026 15:28:12 IST",
+    "date": "2026-01-28",
+    "time": "15:28:12",
+    "datetime_iso": "2026-01-28T15:28:12+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-28T15:28:12+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "28/01/2026 15:28:50 IST",
+    "date": "2026-01-28",
+    "time": "15:28:50",
+    "datetime_iso": "2026-01-28T15:28:50+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-28T15:28:50+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break End",
+    "datetime": "28/01/2026 15:29:06 IST",
+    "date": "2026-01-28",
+    "time": "15:29:06",
+    "datetime_iso": "2026-01-28T15:29:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-28T15:29:06+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
