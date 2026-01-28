@@ -1688,5 +1688,18 @@
     "sort_key": "2026-01-28T20:17:33+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "28/01/2026 20:21:47 IST",
+    "date": "2026-01-28",
+    "time": "20:21:47",
+    "datetime_iso": "2026-01-28T20:21:47+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-28T20:21:47+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
