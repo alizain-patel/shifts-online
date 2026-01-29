@@ -2130,5 +2130,31 @@
     "sort_key": "2026-01-29T15:24:27+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break End",
+    "datetime": "29/01/2026 17:58:46 IST",
+    "date": "2026-01-29",
+    "time": "17:58:46",
+    "datetime_iso": "2026-01-29T17:58:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-29T17:58:46+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break Start",
+    "datetime": "29/01/2026 18:04:50 IST",
+    "date": "2026-01-29",
+    "time": "18:04:50",
+    "datetime_iso": "2026-01-29T18:04:50+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-29T18:04:50+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
