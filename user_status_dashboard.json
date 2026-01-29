@@ -2013,5 +2013,31 @@
     "sort_key": "2026-01-29T14:23:26+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break Start",
+    "datetime": "29/01/2026 14:29:38 IST",
+    "date": "2026-01-29",
+    "time": "14:29:38",
+    "datetime_iso": "2026-01-29T14:29:38+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-29T14:29:38+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "29/01/2026 14:30:25 IST",
+    "date": "2026-01-29",
+    "time": "14:30:25",
+    "datetime_iso": "2026-01-29T14:30:25+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-29T14:30:25+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
