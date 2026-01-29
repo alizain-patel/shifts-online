@@ -2325,5 +2325,31 @@
     "sort_key": "2026-01-29T20:30:54+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch Out",
+    "datetime": "29/01/2026 20:44:03 IST",
+    "date": "2026-01-29",
+    "time": "20:44:03",
+    "datetime_iso": "2026-01-29T20:44:03+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-29T20:44:03+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Break Start",
+    "datetime": "29/01/2026 20:52:06 IST",
+    "date": "2026-01-29",
+    "time": "20:52:06",
+    "datetime_iso": "2026-01-29T20:52:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-29T20:52:06+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
