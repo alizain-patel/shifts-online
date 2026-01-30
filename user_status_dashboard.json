@@ -2728,5 +2728,70 @@
     "sort_key": "2026-01-30T20:15:55+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch Out",
+    "datetime": "30/01/2026 20:20:17 IST",
+    "date": "2026-01-30",
+    "time": "20:20:17",
+    "datetime_iso": "2026-01-30T20:20:17+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-30T20:20:17+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "30/01/2026 20:29:04 IST",
+    "date": "2026-01-30",
+    "time": "20:29:04",
+    "datetime_iso": "2026-01-30T20:29:04+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-30T20:29:04+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch Out",
+    "datetime": "30/01/2026 20:30:26 IST",
+    "date": "2026-01-30",
+    "time": "20:30:26",
+    "datetime_iso": "2026-01-30T20:30:26+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-30T20:30:26+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "30/01/2026 20:31:21 IST",
+    "date": "2026-01-30",
+    "time": "20:31:21",
+    "datetime_iso": "2026-01-30T20:31:21+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-30T20:31:21+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "30/01/2026 20:31:26 IST",
+    "date": "2026-01-30",
+    "time": "20:31:26",
+    "datetime_iso": "2026-01-30T20:31:26+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-30T20:31:26+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
