@@ -505,5 +505,18 @@
     "sort_key": "2026-01-31T05:47:42+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch Out",
+    "datetime": "31/01/2026 06:32:01 IST",
+    "date": "2026-01-31",
+    "time": "06:32:01",
+    "datetime_iso": "2026-01-31T06:32:01+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-01-31T06:32:01+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
   }
 ]
