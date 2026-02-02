@@ -674,5 +674,31 @@
     "sort_key": "2026-02-02T11:32:34+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "02/02/2026 11:42:32 IST",
+    "date": "2026-02-02",
+    "time": "11:42:32",
+    "datetime_iso": "2026-02-02T11:42:32+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-02T11:42:32+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "02/02/2026 11:47:51 IST",
+    "date": "2026-02-02",
+    "time": "11:47:51",
+    "datetime_iso": "2026-02-02T11:47:51+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-02T11:47:51+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
