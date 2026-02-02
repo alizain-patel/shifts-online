@@ -559,8 +559,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
-    "name": "Shawn Nadar",
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
     "event": "On Leave",
     "datetime": "02/02/2026 00:00:00 IST",
     "date": "2026-02-02",
@@ -585,8 +585,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
-    "name": "Vinayak Mandlik",
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
     "event": "On Leave",
     "datetime": "02/02/2026 00:00:00 IST",
     "date": "2026-02-02",
@@ -611,8 +611,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
-    "name": "Harpreet Singh",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
     "event": "On Leave",
     "datetime": "02/02/2026 00:00:00 IST",
     "date": "2026-02-02",
@@ -763,6 +763,32 @@
     "datetime_iso": "2026-02-02T11:47:51+05:30",
     "timezone": "IST",
     "sort_key": "2026-02-02T11:47:51+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break Start",
+    "datetime": "02/02/2026 14:08:36 IST",
+    "date": "2026-02-02",
+    "time": "14:08:36",
+    "datetime_iso": "2026-02-02T14:08:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-02T14:08:36+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "02/02/2026 14:10:28 IST",
+    "date": "2026-02-02",
+    "time": "14:10:28",
+    "datetime_iso": "2026-02-02T14:10:28+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-02T14:10:28+05:30",
     "note": "",
     "is_at_approved_location": true
   }
