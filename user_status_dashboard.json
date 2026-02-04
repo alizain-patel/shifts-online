@@ -1131,8 +1131,8 @@
     "is_at_approved_location": false
   },
   {
-    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
-    "name": "Suhas Kesari",
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
     "event": "Break Start",
     "datetime": "03/02/2026 13:14:19 IST",
     "date": "2026-02-03",
@@ -1144,8 +1144,8 @@
     "is_at_approved_location": true
   },
   {
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
-    "name": "Akash Gitaye",
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
     "event": "Break Start",
     "datetime": "03/02/2026 13:14:19 IST",
     "date": "2026-02-03",
@@ -1556,6 +1556,19 @@
     "datetime_iso": "2026-02-04T06:04:55+05:30",
     "timezone": "IST",
     "sort_key": "2026-02-04T06:04:55+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch Out",
+    "datetime": "04/02/2026 06:24:24 IST",
+    "date": "2026-02-04",
+    "time": "06:24:24",
+    "datetime_iso": "2026-02-04T06:24:24+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-04T06:24:24+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
   }
