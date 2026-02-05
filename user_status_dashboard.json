@@ -2598,5 +2598,31 @@
     "sort_key": "2026-02-05T20:14:43+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "05/02/2026 20:33:26 IST",
+    "date": "2026-02-05",
+    "time": "20:33:26",
+    "datetime_iso": "2026-02-05T20:33:26+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-05T20:33:26+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "05/02/2026 20:38:20 IST",
+    "date": "2026-02-05",
+    "time": "20:38:20",
+    "datetime_iso": "2026-02-05T20:38:20+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-05T20:38:20+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
