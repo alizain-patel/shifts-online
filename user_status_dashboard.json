@@ -1415,5 +1415,44 @@
     "sort_key": "2026-02-10T13:39:44+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break Start",
+    "datetime": "10/02/2026 14:27:55 IST",
+    "date": "2026-02-10",
+    "time": "14:27:55",
+    "datetime_iso": "2026-02-10T14:27:55+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-10T14:27:55+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break End",
+    "datetime": "10/02/2026 14:29:50 IST",
+    "date": "2026-02-10",
+    "time": "14:29:50",
+    "datetime_iso": "2026-02-10T14:29:50+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-10T14:29:50+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "10/02/2026 14:37:18 IST",
+    "date": "2026-02-10",
+    "time": "14:37:18",
+    "datetime_iso": "2026-02-10T14:37:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-10T14:37:18+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
