@@ -1467,5 +1467,18 @@
     "sort_key": "2026-02-10T17:51:20+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Break Start",
+    "datetime": "10/02/2026 18:03:36 IST",
+    "date": "2026-02-10",
+    "time": "18:03:36",
+    "datetime_iso": "2026-02-10T18:03:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-10T18:03:36+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
