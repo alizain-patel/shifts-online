@@ -1714,5 +1714,18 @@
     "sort_key": "2026-02-10T20:44:04+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch In",
+    "datetime": "10/02/2026 21:08:22 IST",
+    "date": "2026-02-10",
+    "time": "21:08:22",
+    "datetime_iso": "2026-02-10T21:08:22+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-10T21:08:22+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
