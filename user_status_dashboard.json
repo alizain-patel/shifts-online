@@ -1729,6 +1729,19 @@
     "is_at_approved_location": null
   },
   {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch Out",
+    "datetime": "10/02/2026 21:16:00 IST",
+    "date": "2026-02-10",
+    "time": "21:16:00",
+    "datetime_iso": "2026-02-10T21:16:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-10T21:16:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
     "name": "Vinayak Mandlik",
     "event": "Punch Out",
@@ -1881,6 +1894,19 @@
     "datetime_iso": "2026-02-11T11:11:40+05:30",
     "timezone": "IST",
     "sort_key": "2026-02-11T11:11:40+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch In",
+    "datetime": "11/02/2026 11:16:00 IST",
+    "date": "2026-02-11",
+    "time": "11:16:00",
+    "datetime_iso": "2026-02-11T11:16:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-11T11:16:00+05:30",
     "note": "",
     "is_at_approved_location": true
   }
