@@ -1844,5 +1844,44 @@
     "sort_key": "2026-02-11T10:59:15+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "11/02/2026 11:10:18 IST",
+    "date": "2026-02-11",
+    "time": "11:10:18",
+    "datetime_iso": "2026-02-11T11:10:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-11T11:10:18+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "11/02/2026 11:10:25 IST",
+    "date": "2026-02-11",
+    "time": "11:10:25",
+    "datetime_iso": "2026-02-11T11:10:25+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-11T11:10:25+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch In",
+    "datetime": "11/02/2026 11:11:40 IST",
+    "date": "2026-02-11",
+    "time": "11:11:40",
+    "datetime_iso": "2026-02-11T11:11:40+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-11T11:11:40+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
