@@ -3209,5 +3209,83 @@
     "sort_key": "2026-02-13T13:46:57+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "13/02/2026 14:21:39 IST",
+    "date": "2026-02-13",
+    "time": "14:21:39",
+    "datetime_iso": "2026-02-13T14:21:39+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T14:21:39+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break Start",
+    "datetime": "13/02/2026 14:25:10 IST",
+    "date": "2026-02-13",
+    "time": "14:25:10",
+    "datetime_iso": "2026-02-13T14:25:10+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T14:25:10+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break Start",
+    "datetime": "13/02/2026 14:25:26 IST",
+    "date": "2026-02-13",
+    "time": "14:25:26",
+    "datetime_iso": "2026-02-13T14:25:26+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T14:25:26+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break Start",
+    "datetime": "13/02/2026 14:26:31 IST",
+    "date": "2026-02-13",
+    "time": "14:26:31",
+    "datetime_iso": "2026-02-13T14:26:31+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T14:26:31+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break Start",
+    "datetime": "13/02/2026 14:26:35 IST",
+    "date": "2026-02-13",
+    "time": "14:26:35",
+    "datetime_iso": "2026-02-13T14:26:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T14:26:35+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "13/02/2026 14:28:11 IST",
+    "date": "2026-02-13",
+    "time": "14:28:11",
+    "datetime_iso": "2026-02-13T14:28:11+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T14:28:11+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
