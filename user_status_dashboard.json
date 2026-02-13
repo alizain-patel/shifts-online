@@ -3027,5 +3027,18 @@
     "sort_key": "2026-02-13T10:13:01+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "13/02/2026 10:38:56 IST",
+    "date": "2026-02-13",
+    "time": "10:38:56",
+    "datetime_iso": "2026-02-13T10:38:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-13T10:38:56+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
