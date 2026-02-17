@@ -1573,6 +1573,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "17/02/2026 18:34:00 IST",
+    "date": "2026-02-17",
+    "time": "18:34:00",
+    "datetime_iso": "2026-02-17T18:34:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-17T18:34:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
     "name": "Joshua Dsouza",
     "event": "Break Start",
@@ -1609,6 +1622,19 @@
     "timezone": "IST",
     "sort_key": "2026-02-17T19:03:42+05:30",
     "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "17/02/2026 19:20:59 IST",
+    "date": "2026-02-17",
+    "time": "19:20:59",
+    "datetime_iso": "2026-02-17T19:20:59+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-17T19:20:59+05:30",
+    "note": "User has left for the day",
     "is_at_approved_location": true
   }
 ]
