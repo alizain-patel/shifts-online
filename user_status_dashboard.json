@@ -1194,5 +1194,18 @@
     "sort_key": "2026-02-17T10:00:19+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch In",
+    "datetime": "17/02/2026 10:45:47 IST",
+    "date": "2026-02-17",
+    "time": "10:45:47",
+    "datetime_iso": "2026-02-17T10:45:47+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-17T10:45:47+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
