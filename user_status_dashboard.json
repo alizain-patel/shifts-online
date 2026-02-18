@@ -2119,19 +2119,6 @@
     "is_at_approved_location": true
   },
   {
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
-    "name": "Manesh Chindarkar",
-    "event": "Break End",
-    "datetime": "18/02/2026 14:59:07 IST",
-    "date": "2026-02-18",
-    "time": "14:59:07",
-    "datetime_iso": "2026-02-18T14:59:07+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-02-18T14:59:07+05:30",
-    "note": "",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "Break End",
@@ -2145,6 +2132,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "18/02/2026 14:59:07 IST",
+    "date": "2026-02-18",
+    "time": "14:59:07",
+    "datetime_iso": "2026-02-18T14:59:07+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-18T14:59:07+05:30",
+    "note": "",
+    "is_at_approved_location": null
+  },
+  {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
     "name": "Joshua Dsouza",
     "event": "Break End",
@@ -2156,5 +2156,18 @@
     "sort_key": "2026-02-18T15:24:20+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Break Start",
+    "datetime": "18/02/2026 16:45:07 IST",
+    "date": "2026-02-18",
+    "time": "16:45:07",
+    "datetime_iso": "2026-02-18T16:45:07+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-18T16:45:07+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
