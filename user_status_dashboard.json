@@ -2689,5 +2689,18 @@
     "sort_key": "2026-02-19T15:08:53+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break Start",
+    "datetime": "19/02/2026 18:38:22 IST",
+    "date": "2026-02-19",
+    "time": "18:38:22",
+    "datetime_iso": "2026-02-19T18:38:22+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-19T18:38:22+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
