@@ -2119,19 +2119,6 @@
     "is_at_approved_location": true
   },
   {
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
-    "name": "Manesh Chindarkar",
-    "event": "Break End",
-    "datetime": "18/02/2026 14:59:07 IST",
-    "date": "2026-02-18",
-    "time": "14:59:07",
-    "datetime_iso": "2026-02-18T14:59:07+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-02-18T14:59:07+05:30",
-    "note": "",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "Break End",
@@ -2143,6 +2130,19 @@
     "sort_key": "2026-02-18T14:59:07+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "18/02/2026 14:59:07 IST",
+    "date": "2026-02-18",
+    "time": "14:59:07",
+    "datetime_iso": "2026-02-18T14:59:07+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-18T14:59:07+05:30",
+    "note": "",
+    "is_at_approved_location": null
   },
   {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
@@ -2832,5 +2832,18 @@
     "sort_key": "2026-02-19T21:08:53+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "19/02/2026 22:20:18 IST",
+    "date": "2026-02-19",
+    "time": "22:20:18",
+    "datetime_iso": "2026-02-19T22:20:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-19T22:20:18+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
