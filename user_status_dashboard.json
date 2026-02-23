@@ -494,19 +494,6 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
-    "name": "Vinayak Mandlik",
-    "event": "On Leave",
-    "datetime": "23/02/2026 00:00:00 IST",
-    "date": "2026-02-23",
-    "time": "00:00:00",
-    "datetime_iso": "2026-02-23T00:00:00+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-02-23T00:00:00+05:30",
-    "note": "No punch in on Monday after Friday punch out",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
     "name": "Abhishek Arolkar",
     "event": "On Leave",
@@ -522,6 +509,19 @@
   {
     "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
     "name": "Harpreet Singh",
+    "event": "On Leave",
+    "datetime": "23/02/2026 00:00:00 IST",
+    "date": "2026-02-23",
+    "time": "00:00:00",
+    "datetime_iso": "2026-02-23T00:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-23T00:00:00+05:30",
+    "note": "No punch in on Monday after Friday punch out",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
     "event": "On Leave",
     "datetime": "23/02/2026 00:00:00 IST",
     "date": "2026-02-23",
@@ -763,6 +763,19 @@
     "datetime_iso": "2026-02-23T15:03:40+05:30",
     "timezone": "IST",
     "sort_key": "2026-02-23T15:03:40+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break Start",
+    "datetime": "23/02/2026 15:16:43 IST",
+    "date": "2026-02-23",
+    "time": "15:16:43",
+    "datetime_iso": "2026-02-23T15:16:43+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-23T15:16:43+05:30",
     "note": "",
     "is_at_approved_location": true
   }
