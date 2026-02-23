@@ -973,5 +973,31 @@
     "sort_key": "2026-02-23T19:49:09+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break End",
+    "datetime": "23/02/2026 20:02:36 IST",
+    "date": "2026-02-23",
+    "time": "20:02:36",
+    "datetime_iso": "2026-02-23T20:02:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-23T20:02:36+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "23/02/2026 20:02:44 IST",
+    "date": "2026-02-23",
+    "time": "20:02:44",
+    "datetime_iso": "2026-02-23T20:02:44+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-23T20:02:44+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
