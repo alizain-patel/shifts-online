@@ -2026,5 +2026,18 @@
     "sort_key": "2026-02-25T14:13:24+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "25/02/2026 14:20:43 IST",
+    "date": "2026-02-25",
+    "time": "14:20:43",
+    "datetime_iso": "2026-02-25T14:20:43+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-25T14:20:43+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
