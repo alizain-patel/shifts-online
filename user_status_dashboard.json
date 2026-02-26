@@ -2845,5 +2845,18 @@
     "sort_key": "2026-02-26T18:32:15+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break End",
+    "datetime": "26/02/2026 18:59:08 IST",
+    "date": "2026-02-26",
+    "time": "18:59:08",
+    "datetime_iso": "2026-02-26T18:59:08+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-02-26T18:59:08+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
