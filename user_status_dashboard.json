@@ -559,19 +559,6 @@
     "is_at_approved_location": false
   },
   {
-    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
-    "name": "Alizain Patel",
-    "event": "On Leave",
-    "datetime": "02/03/2026 00:00:00 IST",
-    "date": "2026-03-02",
-    "time": "00:00:00",
-    "datetime_iso": "2026-03-02T00:00:00+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-03-02T00:00:00+05:30",
-    "note": "No punch in on Monday after Friday punch out",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
     "name": "Akash Gitaye",
     "event": "Punch In",
@@ -672,7 +659,7 @@
     "datetime_iso": "2026-03-02T11:26:14+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T11:26:14+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -919,7 +906,7 @@
     "datetime_iso": "2026-03-02T19:00:05+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T19:00:05+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -932,7 +919,7 @@
     "datetime_iso": "2026-03-02T19:08:30+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T19:08:30+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -945,7 +932,7 @@
     "datetime_iso": "2026-03-02T20:05:56+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T20:05:56+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -958,7 +945,7 @@
     "datetime_iso": "2026-03-02T20:09:04+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T20:09:04+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -971,7 +958,7 @@
     "datetime_iso": "2026-03-02T20:09:58+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T20:09:58+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -997,7 +984,7 @@
     "datetime_iso": "2026-03-02T20:11:02+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T20:11:02+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1010,7 +997,7 @@
     "datetime_iso": "2026-03-02T20:12:17+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T20:12:17+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -1036,7 +1023,7 @@
     "datetime_iso": "2026-03-02T21:03:03+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T21:03:03+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -1049,7 +1036,7 @@
     "datetime_iso": "2026-03-02T21:08:23+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T21:08:23+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -1062,7 +1049,7 @@
     "datetime_iso": "2026-03-02T22:01:45+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-02T22:01:45+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   }
 ]
