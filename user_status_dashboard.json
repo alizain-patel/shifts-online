@@ -1155,5 +1155,18 @@
     "sort_key": "2026-03-03T18:25:57+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch In",
+    "datetime": "03/03/2026 20:07:22 IST",
+    "date": "2026-03-03",
+    "time": "20:07:22",
+    "datetime_iso": "2026-03-03T20:07:22+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-03T20:07:22+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
