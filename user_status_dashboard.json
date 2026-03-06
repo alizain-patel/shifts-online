@@ -2169,5 +2169,18 @@
     "sort_key": "2026-03-06T06:46:33+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "06/03/2026 10:19:49 IST",
+    "date": "2026-03-06",
+    "time": "10:19:49",
+    "datetime_iso": "2026-03-06T10:19:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-06T10:19:49+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
