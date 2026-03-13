@@ -2598,5 +2598,44 @@
     "sort_key": "2026-03-13T16:03:06+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break Start",
+    "datetime": "13/03/2026 18:51:54 IST",
+    "date": "2026-03-13",
+    "time": "18:51:54",
+    "datetime_iso": "2026-03-13T18:51:54+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-13T18:51:54+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break Start",
+    "datetime": "13/03/2026 18:53:22 IST",
+    "date": "2026-03-13",
+    "time": "18:53:22",
+    "datetime_iso": "2026-03-13T18:53:22+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-13T18:53:22+05:30",
+    "note": "",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break Start",
+    "datetime": "13/03/2026 19:00:53 IST",
+    "date": "2026-03-13",
+    "time": "19:00:53",
+    "datetime_iso": "2026-03-13T19:00:53+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-13T19:00:53+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
