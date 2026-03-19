@@ -2169,5 +2169,31 @@
     "sort_key": "2026-03-19T13:22:09+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break End",
+    "datetime": "19/03/2026 13:38:54 IST",
+    "date": "2026-03-19",
+    "time": "13:38:54",
+    "datetime_iso": "2026-03-19T13:38:54+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-19T13:38:54+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "19/03/2026 13:39:05 IST",
+    "date": "2026-03-19",
+    "time": "13:39:05",
+    "datetime_iso": "2026-03-19T13:39:05+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-19T13:39:05+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
