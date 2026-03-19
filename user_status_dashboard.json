@@ -2013,5 +2013,18 @@
     "sort_key": "2026-03-18T20:33:24+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "19/03/2026 09:56:59 IST",
+    "date": "2026-03-19",
+    "time": "09:56:59",
+    "datetime_iso": "2026-03-19T09:56:59+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-19T09:56:59+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
