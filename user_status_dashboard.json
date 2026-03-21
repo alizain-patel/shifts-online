@@ -477,7 +477,7 @@
     "datetime_iso": "2026-03-21T06:35:29+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-21T06:35:29+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -490,7 +490,7 @@
     "datetime_iso": "2026-03-21T07:32:05+05:30",
     "timezone": "IST",
     "sort_key": "2026-03-21T07:32:05+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   }
 ]
