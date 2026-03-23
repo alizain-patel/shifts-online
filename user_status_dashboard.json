@@ -518,5 +518,18 @@
     "sort_key": "2026-03-21T07:32:05+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "23/03/2026 10:10:00 IST",
+    "date": "2026-03-23",
+    "time": "10:10:00",
+    "datetime_iso": "2026-03-23T10:10:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-23T10:10:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
