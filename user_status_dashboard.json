@@ -1675,5 +1675,70 @@
     "sort_key": "2026-03-25T13:39:49+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Break End",
+    "datetime": "25/03/2026 13:55:51 IST",
+    "date": "2026-03-25",
+    "time": "13:55:51",
+    "datetime_iso": "2026-03-25T13:55:51+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-25T13:55:51+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break Start",
+    "datetime": "25/03/2026 14:00:24 IST",
+    "date": "2026-03-25",
+    "time": "14:00:24",
+    "datetime_iso": "2026-03-25T14:00:24+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-25T14:00:24+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "25/03/2026 14:00:26 IST",
+    "date": "2026-03-25",
+    "time": "14:00:26",
+    "datetime_iso": "2026-03-25T14:00:26+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-25T14:00:26+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break Start",
+    "datetime": "25/03/2026 14:00:29 IST",
+    "date": "2026-03-25",
+    "time": "14:00:29",
+    "datetime_iso": "2026-03-25T14:00:29+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-25T14:00:29+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break Start",
+    "datetime": "25/03/2026 14:01:19 IST",
+    "date": "2026-03-25",
+    "time": "14:01:19",
+    "datetime_iso": "2026-03-25T14:01:19+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-25T14:01:19+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
