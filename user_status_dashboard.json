@@ -2208,5 +2208,18 @@
     "sort_key": "2026-03-26T11:05:47+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch In",
+    "datetime": "26/03/2026 11:30:17 IST",
+    "date": "2026-03-26",
+    "time": "11:30:17",
+    "datetime_iso": "2026-03-26T11:30:17+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-03-26T11:30:17+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
