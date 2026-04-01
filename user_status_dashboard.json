@@ -1987,5 +1987,18 @@
     "sort_key": "2026-04-01T15:49:06+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break Start",
+    "datetime": "01/04/2026 18:10:18 IST",
+    "date": "2026-04-01",
+    "time": "18:10:18",
+    "datetime_iso": "2026-04-01T18:10:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-01T18:10:18+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
