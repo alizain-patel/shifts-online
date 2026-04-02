@@ -2366,6 +2366,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "02/04/2026 16:00:00 IST",
+    "date": "2026-04-02",
+    "time": "16:00:00",
+    "datetime_iso": "2026-04-02T16:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-02T16:00:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
     "event": "Punch Out",
@@ -2388,6 +2401,45 @@
     "datetime_iso": "2026-04-02T19:44:57+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-02T19:44:57+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "02/04/2026 20:00:11 IST",
+    "date": "2026-04-02",
+    "time": "20:00:11",
+    "datetime_iso": "2026-04-02T20:00:11+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-02T20:00:11+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch Out",
+    "datetime": "02/04/2026 20:03:15 IST",
+    "date": "2026-04-02",
+    "time": "20:03:15",
+    "datetime_iso": "2026-04-02T20:03:15+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-02T20:03:15+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "02/04/2026 20:08:09 IST",
+    "date": "2026-04-02",
+    "time": "20:08:09",
+    "datetime_iso": "2026-04-02T20:08:09+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-02T20:08:09+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
   }
