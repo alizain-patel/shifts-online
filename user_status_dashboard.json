@@ -392,14 +392,14 @@
   {
     "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
     "name": "Gaurav Ghadi",
-    "event": "Punch Out",
-    "datetime": "06/04/2026 11:35:07 IST",
+    "event": "Punch In",
+    "datetime": "06/04/2026 11:35:13 IST",
     "date": "2026-04-06",
-    "time": "11:35:07",
-    "datetime_iso": "2026-04-06T11:35:07+05:30",
+    "time": "11:35:13",
+    "datetime_iso": "2026-04-06T11:35:13+05:30",
     "timezone": "IST",
-    "sort_key": "2026-04-06T11:35:07+05:30",
-    "note": "User has left for the day",
+    "sort_key": "2026-04-06T11:35:13+05:30",
+    "note": "",
     "is_at_approved_location": true
   }
 ]
