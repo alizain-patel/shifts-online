@@ -325,8 +325,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
-    "name": "Abhishek Arolkar",
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
     "event": "On Leave",
     "datetime": "06/04/2026 00:00:00 IST",
     "date": "2026-04-06",
@@ -351,8 +351,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
-    "name": "Akash Gitaye",
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
     "event": "On Leave",
     "datetime": "06/04/2026 00:00:00 IST",
     "date": "2026-04-06",
@@ -518,5 +518,57 @@
     "sort_key": "2026-04-06T14:22:34+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch In",
+    "datetime": "06/04/2026 14:36:53 IST",
+    "date": "2026-04-06",
+    "time": "14:36:53",
+    "datetime_iso": "2026-04-06T14:36:53+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-06T14:36:53+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break Start",
+    "datetime": "06/04/2026 14:37:21 IST",
+    "date": "2026-04-06",
+    "time": "14:37:21",
+    "datetime_iso": "2026-04-06T14:37:21+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-06T14:37:21+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break End",
+    "datetime": "06/04/2026 14:38:40 IST",
+    "date": "2026-04-06",
+    "time": "14:38:40",
+    "datetime_iso": "2026-04-06T14:38:40+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-06T14:38:40+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break End",
+    "datetime": "06/04/2026 14:39:36 IST",
+    "date": "2026-04-06",
+    "time": "14:39:36",
+    "datetime_iso": "2026-04-06T14:39:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-06T14:39:36+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
