@@ -1443,6 +1443,19 @@
     "is_at_approved_location": false
   },
   {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Break End",
+    "datetime": "08/04/2026 18:00:00 IST",
+    "date": "2026-04-08",
+    "time": "18:00:00",
+    "datetime_iso": "2026-04-08T18:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-08T18:00:00+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
     "event": "Break Start",
@@ -1480,19 +1493,6 @@
     "sort_key": "2026-04-08T19:52:58+05:30",
     "note": "",
     "is_at_approved_location": null
-  },
-  {
-    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
-    "name": "Suhas Kesari",
-    "event": "Break End",
-    "datetime": "08/04/2026 20:02:19 IST",
-    "date": "2026-04-08",
-    "time": "20:02:19",
-    "datetime_iso": "2026-04-08T20:02:19+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-04-08T20:02:19+05:30",
-    "note": "",
-    "is_at_approved_location": false
   },
   {
     "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
@@ -1985,6 +1985,19 @@
     "datetime_iso": "2026-04-09T20:44:24+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-09T20:44:24+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch Out",
+    "datetime": "09/04/2026 20:47:38 IST",
+    "date": "2026-04-09",
+    "time": "20:47:38",
+    "datetime_iso": "2026-04-09T20:47:38+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-09T20:47:38+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
   }
