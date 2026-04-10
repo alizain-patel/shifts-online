@@ -2429,5 +2429,44 @@
     "sort_key": "2026-04-10T20:15:34+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "10/04/2026 20:19:38 IST",
+    "date": "2026-04-10",
+    "time": "20:19:38",
+    "datetime_iso": "2026-04-10T20:19:38+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-10T20:19:38+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "10/04/2026 20:24:19 IST",
+    "date": "2026-04-10",
+    "time": "20:24:19",
+    "datetime_iso": "2026-04-10T20:24:19+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-10T20:24:19+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "10/04/2026 20:25:49 IST",
+    "date": "2026-04-10",
+    "time": "20:25:49",
+    "datetime_iso": "2026-04-10T20:25:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-10T20:25:49+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
