@@ -1,7 +1,8 @@
 # app.py — Live User Status Dashboard
 # Includes stale-session detection (>12h without Punch Out)
-# Uses GitHub Raw JSON + TTL cache
-# Date: 2026-01-06 (IST)
+# Correct window logic (includes full current day)
+# Date-aware, IST-safe
+# ------------------------------------------------------
 
 import os
 import io
@@ -9,14 +10,14 @@ import requests
 import pandas as pd
 import streamlit as st
 from time import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # -----------------------------
 # CONFIG
 # -----------------------------
 IST_TZ = "Asia/Kolkata"
 SHOW_WINDOW = True
-CACHE_TTL_SEC = int(os.getenv("CACHE_TTL_SEC", "600"))
+CACHE_TTL_SEC = int(os.getenv("CACHE_TTL_SEC", "600"))  # 10 min
 MAX_ONLINE_HOURS = 12
 
 # GitHub Raw URL (Streamlit Cloud → Secrets)
@@ -32,7 +33,7 @@ JSON_PATH = os.getenv("SHIFTS_JSON_PATH", "user_status_dashboard.json")
 # -----------------------------
 st.set_page_config(page_title="User Status Dashboard", layout="wide")
 
-# Manual cache clear (safe fallback if auto refresh not available)
+# Manual reload (safe fallback)
 if st.sidebar.button("Reload data"):
     st.cache_data.clear()
     st.rerun()
@@ -60,41 +61,48 @@ def load_local_json(path: str) -> pd.DataFrame:
         raise FileNotFoundError(f"JSON not found: {path}")
     return pd.read_json(path)
 
-
 # -----------------------------
 # HELPERS
 # -----------------------------
 def parse_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
-    if "datetime_iso" in df.columns:
-        dt = pd.to_datetime(df["datetime_iso"], errors="coerce", utc=True)
-        df["datetime"] = dt.dt.tz_convert(IST_TZ)
-    else:
+    if "datetime_iso" not in df.columns:
         raise KeyError("Expected datetime_iso column")
+
+    dt = pd.to_datetime(df["datetime_iso"], errors="coerce", utc=True)
+    df["datetime"] = dt.dt.tz_convert(IST_TZ)
     return df.dropna(subset=["datetime"]).copy()
 
 
 def apply_window(df: pd.DataFrame):
+    """
+    Friday -> Today window, inclusive of the *entire* current day
+    """
     now_ist = pd.Timestamp.now(tz=IST_TZ)
-    today_ist = now_ist.floor("D")
-    weekday = today_ist.weekday()  # Mon=0, Fri=4
+    today_start = now_ist.floor("D")
+    weekday = today_start.weekday()  # Mon=0, Fri=4
 
     days_back_to_friday = (weekday - 4) % 7
-    last_friday = today_ist - pd.to_timedelta(days_back_to_friday, unit="D")
+    last_friday = today_start - pd.Timedelta(days=days_back_to_friday)
 
-    if weekday == 4:  # today is Friday → previous Friday
-        last_friday = today_ist - pd.to_timedelta(7, unit="D")
+    if weekday == 4:  # today is Friday → go to previous Friday
+        last_friday = today_start - pd.Timedelta(days=7)
 
-    next_monday = last_friday + pd.to_timedelta(3, unit="D")
-    window_end = next_monday if weekday == 0 else today_ist
+    next_monday = last_friday + pd.Timedelta(days=3)
 
-    mask = (
-        df["datetime"].dt.tz_convert(IST_TZ) >= last_friday
-    ) & (
-        df["datetime"].dt.tz_convert(IST_TZ) <= window_end
+    # ✅ FIX: include full day
+    window_end = (
+        next_monday + pd.Timedelta(days=1)
+        if weekday == 0
+        else today_start + pd.Timedelta(days=1)
     )
 
-    return df.loc[mask], last_friday.date(), window_end.date()
+    mask = (
+        df["datetime"] >= last_friday
+    ) & (
+        df["datetime"] < window_end
+    )
 
+    return df.loc[mask], last_friday.date(), (window_end - pd.Timedelta(days=1)).date()
 
 # -----------------------------
 # LOAD DATA
@@ -103,10 +111,10 @@ try:
     if GITHUB_RAW_URL:
         bucket = int(time() // CACHE_TTL_SEC)
         raw_df = fetch_json_from_github(GITHUB_RAW_URL, bucket)
-        data_source_desc = "GitHub Raw"
+        data_source = "GitHub Raw"
     else:
         raw_df = load_local_json(JSON_PATH)
-        data_source_desc = "Local file"
+        data_source = "Local file"
 except Exception as e:
     st.error(f"Failed to load data: {e}")
     st.stop()
@@ -117,7 +125,7 @@ except Exception as e:
 df = parse_datetime_columns(raw_df)
 df = df.sort_values("datetime", ascending=False).copy()
 
-df["datetime_ist"] = df["datetime"].dt.tz_convert(IST_TZ)
+df["datetime_ist"] = df["datetime"]
 df["Date"] = df["datetime_ist"].dt.strftime("%d-%m-%Y")
 df["Time"] = df["datetime_ist"].dt.strftime("%H:%M:%S")
 
@@ -139,7 +147,7 @@ def map_display_status(row) -> str:
     note = str(row.get("note", "")).lower()
     user_id = row.get("user_id")
 
-    # 🔴 STALE SESSION CHECK (any active state >12h without Punch Out)
+    # 🔴 STALE SESSION CHECK (>12h, no Punch Out after)
     if evt in ACTIVE_EVENTS and pd.notna(dt):
         hours_open = (_now_ist - dt).total_seconds() / 3600
         last_out = last_punch_out.get(user_id)
@@ -149,32 +157,30 @@ def map_display_status(row) -> str:
         ):
             return f"🔴 no punch out ({int(hours_open)}h+)"
 
-    # NORMAL STATUS LOGIC
+    # NORMAL STATUS
     if evt == "Punch In":
         return "🟢 active"
-
     if evt == "Break Start":
         return "🟠 on break"
-
     if evt == "Break End":
         return "🟢 active"
-
     if evt == "Punch Out":
         if "left for the day" in note or dt.date() == _today_ist_date:
             return "🟡 left for the day"
-        else:
-            return "🔴 on leave"
-
+        return "🔴 on leave"
     if evt == "On Leave":
         return "🔴 on leave"
 
     return "⚪ unknown"
 
-
 df["status"] = df.apply(map_display_status, axis=1)
-df["Name & Status"] = df.apply(lambda r: f"{r.get('name','')} {r['status']}", axis=1)
+df["Name & Status"] = df.apply(
+    lambda r: f"{r.get('name','')} {r['status']}", axis=1
+)
 
-# Work Mode (UNCHANGED & WORKING)
+# -----------------------------
+# WORK MODE (KNOWN GOOD LOGIC)
+# -----------------------------
 def map_work_mode(val):
     if pd.isna(val) or val is None:
         return "Unknown"
@@ -191,7 +197,7 @@ df["Work mode"] = df["is_at_approved_location"].apply(map_work_mode)
 window_info = ""
 if SHOW_WINDOW:
     df, start_d, end_d = apply_window(df)
-    window_info = f" (window: {start_d.strftime('%d-%m-%Y')} → {end_d.strftime('%d-%m-%Y')})"
+    window_info = f" (window: {start_d:%d-%m-%Y} → {end_d:%d-%m-%Y})"
 
 # -----------------------------
 # VIEW MODE
@@ -234,8 +240,8 @@ if "sort_key" in raw_df.columns:
         .max()
     )
 else:
-    last_ist = df["datetime"].dt.tz_convert(IST_TZ).max()
+    last_ist = df["datetime_ist"].max()
 
 st.caption(
-    f"Data last event time (IST): **{last_ist}** · Data source: {data_source_desc}"
+    f"Data last event time (IST): **{last_ist}** · Data source: {data_source}"
 )
