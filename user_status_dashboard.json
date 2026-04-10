@@ -2195,5 +2195,31 @@
     "sort_key": "2026-04-10T14:05:25+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch Out",
+    "datetime": "10/04/2026 14:14:11 IST",
+    "date": "2026-04-10",
+    "time": "14:14:11",
+    "datetime_iso": "2026-04-10T14:14:11+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-10T14:14:11+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch In",
+    "datetime": "10/04/2026 14:16:45 IST",
+    "date": "2026-04-10",
+    "time": "14:16:45",
+    "datetime_iso": "2026-04-10T14:16:45+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-10T14:16:45+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
