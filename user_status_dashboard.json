@@ -1300,19 +1300,6 @@
     "is_at_approved_location": false
   },
   {
-    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
-    "name": "Manesh Chindarkar",
-    "event": "Break End",
-    "datetime": "14/04/2026 14:38:46 IST",
-    "date": "2026-04-14",
-    "time": "14:38:46",
-    "datetime_iso": "2026-04-14T14:38:46+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-04-14T14:38:46+05:30",
-    "note": "",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "Break End",
@@ -1324,6 +1311,19 @@
     "sort_key": "2026-04-14T14:38:46+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "14/04/2026 14:38:46 IST",
+    "date": "2026-04-14",
+    "time": "14:38:46",
+    "datetime_iso": "2026-04-14T14:38:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-14T14:38:46+05:30",
+    "note": "",
+    "is_at_approved_location": null
   },
   {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
@@ -1387,6 +1387,32 @@
     "datetime_iso": "2026-04-14T14:53:46+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-14T14:53:46+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "14/04/2026 15:18:36 IST",
+    "date": "2026-04-14",
+    "time": "15:18:36",
+    "datetime_iso": "2026-04-14T15:18:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-14T15:18:36+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "14/04/2026 15:23:56 IST",
+    "date": "2026-04-14",
+    "time": "15:23:56",
+    "datetime_iso": "2026-04-14T15:23:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-14T15:23:56+05:30",
     "note": "",
     "is_at_approved_location": true
   }
