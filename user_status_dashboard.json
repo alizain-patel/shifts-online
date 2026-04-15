@@ -1647,7 +1647,7 @@
     "datetime_iso": "2026-04-15T06:20:49+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T06:20:49+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -2063,7 +2063,7 @@
     "datetime_iso": "2026-04-15T19:57:11+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T19:57:11+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2089,7 +2089,7 @@
     "datetime_iso": "2026-04-15T20:08:50+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T20:08:50+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -2102,7 +2102,7 @@
     "datetime_iso": "2026-04-15T20:12:13+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T20:12:13+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2115,7 +2115,7 @@
     "datetime_iso": "2026-04-15T20:12:25+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T20:12:25+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2128,7 +2128,7 @@
     "datetime_iso": "2026-04-15T20:13:29+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T20:13:29+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2141,7 +2141,7 @@
     "datetime_iso": "2026-04-15T20:13:45+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T20:13:45+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2154,7 +2154,7 @@
     "datetime_iso": "2026-04-15T20:25:33+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T20:25:33+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -2180,7 +2180,7 @@
     "datetime_iso": "2026-04-15T21:49:42+05:30",
     "timezone": "IST",
     "sort_key": "2026-04-15T21:49:42+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   }
 ]
