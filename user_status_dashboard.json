@@ -1987,5 +1987,18 @@
     "sort_key": "2026-04-15T18:33:20+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Break Start",
+    "datetime": "15/04/2026 19:00:11 IST",
+    "date": "2026-04-15",
+    "time": "19:00:11",
+    "datetime_iso": "2026-04-15T19:00:11+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-15T19:00:11+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
