@@ -2988,5 +2988,57 @@
     "sort_key": "2026-04-24T20:03:08+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "24/04/2026 20:13:38 IST",
+    "date": "2026-04-24",
+    "time": "20:13:38",
+    "datetime_iso": "2026-04-24T20:13:38+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T20:13:38+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "24/04/2026 20:16:48 IST",
+    "date": "2026-04-24",
+    "time": "20:16:48",
+    "datetime_iso": "2026-04-24T20:16:48+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T20:16:48+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch Out",
+    "datetime": "24/04/2026 20:17:46 IST",
+    "date": "2026-04-24",
+    "time": "20:17:46",
+    "datetime_iso": "2026-04-24T20:17:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T20:17:46+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "24/04/2026 20:17:52 IST",
+    "date": "2026-04-24",
+    "time": "20:17:52",
+    "datetime_iso": "2026-04-24T20:17:52+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T20:17:52+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
