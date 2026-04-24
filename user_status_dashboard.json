@@ -2754,5 +2754,70 @@
     "sort_key": "2026-04-24T10:52:16+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch In",
+    "datetime": "24/04/2026 10:53:23 IST",
+    "date": "2026-04-24",
+    "time": "10:53:23",
+    "datetime_iso": "2026-04-24T10:53:23+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T10:53:23+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "24/04/2026 10:58:00 IST",
+    "date": "2026-04-24",
+    "time": "10:58:00",
+    "datetime_iso": "2026-04-24T10:58:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T10:58:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break Start",
+    "datetime": "24/04/2026 11:04:43 IST",
+    "date": "2026-04-24",
+    "time": "11:04:43",
+    "datetime_iso": "2026-04-24T11:04:43+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T11:04:43+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break End",
+    "datetime": "24/04/2026 11:04:45 IST",
+    "date": "2026-04-24",
+    "time": "11:04:45",
+    "datetime_iso": "2026-04-24T11:04:45+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T11:04:45+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "24/04/2026 11:04:49 IST",
+    "date": "2026-04-24",
+    "time": "11:04:49",
+    "datetime_iso": "2026-04-24T11:04:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-04-24T11:04:49+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
