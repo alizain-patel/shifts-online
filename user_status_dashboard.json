@@ -817,5 +817,18 @@
     "sort_key": "2026-05-12T11:15:08+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch In",
+    "datetime": "12/05/2026 11:30:49 IST",
+    "date": "2026-05-12",
+    "time": "11:30:49",
+    "datetime_iso": "2026-05-12T11:30:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-12T11:30:49+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
