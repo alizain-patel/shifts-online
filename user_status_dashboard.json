@@ -1662,5 +1662,31 @@
     "sort_key": "2026-05-13T20:29:30+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "13/05/2026 20:39:59 IST",
+    "date": "2026-05-13",
+    "time": "20:39:59",
+    "datetime_iso": "2026-05-13T20:39:59+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-13T20:39:59+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch Out",
+    "datetime": "13/05/2026 20:40:18 IST",
+    "date": "2026-05-13",
+    "time": "20:40:18",
+    "datetime_iso": "2026-05-13T20:40:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-13T20:40:18+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
