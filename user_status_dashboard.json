@@ -1664,6 +1664,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch Out",
+    "datetime": "13/05/2026 20:37:00 IST",
+    "date": "2026-05-13",
+    "time": "20:37:00",
+    "datetime_iso": "2026-05-13T20:37:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-13T20:37:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
     "name": "priti surve",
     "event": "Punch Out",
@@ -1972,6 +1985,45 @@
     "datetime_iso": "2026-05-14T20:09:59+05:30",
     "timezone": "IST",
     "sort_key": "2026-05-14T20:09:59+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break Start",
+    "datetime": "14/05/2026 20:34:30 IST",
+    "date": "2026-05-14",
+    "time": "20:34:30",
+    "datetime_iso": "2026-05-14T20:34:30+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-14T20:34:30+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "14/05/2026 20:34:32 IST",
+    "date": "2026-05-14",
+    "time": "20:34:32",
+    "datetime_iso": "2026-05-14T20:34:32+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-14T20:34:32+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "14/05/2026 20:34:35 IST",
+    "date": "2026-05-14",
+    "time": "20:34:35",
+    "datetime_iso": "2026-05-14T20:34:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-14T20:34:35+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
   }
