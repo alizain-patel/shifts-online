@@ -2260,5 +2260,31 @@
     "sort_key": "2026-05-15T14:31:41+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break Start",
+    "datetime": "15/05/2026 14:39:00 IST",
+    "date": "2026-05-15",
+    "time": "14:39:00",
+    "datetime_iso": "2026-05-15T14:39:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-15T14:39:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break Start",
+    "datetime": "15/05/2026 14:39:29 IST",
+    "date": "2026-05-15",
+    "time": "14:39:29",
+    "datetime_iso": "2026-05-15T14:39:29+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-15T14:39:29+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
