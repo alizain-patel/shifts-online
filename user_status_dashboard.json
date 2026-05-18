@@ -442,19 +442,6 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
-    "name": "Vinayak Mandlik",
-    "event": "On Leave",
-    "datetime": "18/05/2026 00:00:00 IST",
-    "date": "2026-05-18",
-    "time": "00:00:00",
-    "datetime_iso": "2026-05-18T00:00:00+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-05-18T00:00:00+05:30",
-    "note": "No punch in on Monday after Friday punch out",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "Punch In",
@@ -570,5 +557,18 @@
     "sort_key": "2026-05-18T11:29:46+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "cbcded84-e050-4569-98c0-10fddbefd357",
+    "name": "Vinayak Mandlik",
+    "event": "Punch In",
+    "datetime": "18/05/2026 12:34:34 IST",
+    "date": "2026-05-18",
+    "time": "12:34:34",
+    "datetime_iso": "2026-05-18T12:34:34+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-18T12:34:34+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
