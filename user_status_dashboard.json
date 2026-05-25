@@ -388,5 +388,18 @@
     "sort_key": "2026-05-25T10:12:16+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch In",
+    "datetime": "25/05/2026 10:34:44 IST",
+    "date": "2026-05-25",
+    "time": "10:34:44",
+    "datetime_iso": "2026-05-25T10:34:44+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-25T10:34:44+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
