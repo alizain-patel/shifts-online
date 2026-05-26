@@ -1246,5 +1246,18 @@
     "sort_key": "2026-05-26T18:44:41+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break End",
+    "datetime": "26/05/2026 19:11:09 IST",
+    "date": "2026-05-26",
+    "time": "19:11:09",
+    "datetime_iso": "2026-05-26T19:11:09+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-26T19:11:09+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
