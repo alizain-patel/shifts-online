@@ -2182,5 +2182,18 @@
     "sort_key": "2026-05-28T18:09:39+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "28/05/2026 19:03:35 IST",
+    "date": "2026-05-28",
+    "time": "19:03:35",
+    "datetime_iso": "2026-05-28T19:03:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-28T19:03:35+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
