@@ -2533,5 +2533,18 @@
     "sort_key": "2026-05-29T15:42:03+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break Start",
+    "datetime": "29/05/2026 17:38:29 IST",
+    "date": "2026-05-29",
+    "time": "17:38:29",
+    "datetime_iso": "2026-05-29T17:38:29+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-05-29T17:38:29+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
