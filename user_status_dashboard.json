@@ -1402,5 +1402,18 @@
     "sort_key": "2026-06-02T19:07:02+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "02/06/2026 19:13:03 IST",
+    "date": "2026-06-02",
+    "time": "19:13:03",
+    "datetime_iso": "2026-06-02T19:13:03+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T19:13:03+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
