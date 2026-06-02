@@ -1454,5 +1454,70 @@
     "sort_key": "2026-06-02T20:00:40+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break Start",
+    "datetime": "02/06/2026 20:05:10 IST",
+    "date": "2026-06-02",
+    "time": "20:05:10",
+    "datetime_iso": "2026-06-02T20:05:10+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T20:05:10+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break End",
+    "datetime": "02/06/2026 20:05:14 IST",
+    "date": "2026-06-02",
+    "time": "20:05:14",
+    "datetime_iso": "2026-06-02T20:05:14+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T20:05:14+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "02/06/2026 20:05:33 IST",
+    "date": "2026-06-02",
+    "time": "20:05:33",
+    "datetime_iso": "2026-06-02T20:05:33+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T20:05:33+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "02/06/2026 20:08:39 IST",
+    "date": "2026-06-02",
+    "time": "20:08:39",
+    "datetime_iso": "2026-06-02T20:08:39+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T20:08:39+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break End",
+    "datetime": "02/06/2026 20:11:26 IST",
+    "date": "2026-06-02",
+    "time": "20:11:26",
+    "datetime_iso": "2026-06-02T20:11:26+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T20:11:26+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
