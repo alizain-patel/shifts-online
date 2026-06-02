@@ -1415,5 +1415,31 @@
     "sort_key": "2026-06-02T19:13:03+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "02/06/2026 19:25:10 IST",
+    "date": "2026-06-02",
+    "time": "19:25:10",
+    "datetime_iso": "2026-06-02T19:25:10+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T19:25:10+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break Start",
+    "datetime": "02/06/2026 19:28:21 IST",
+    "date": "2026-06-02",
+    "time": "19:28:21",
+    "datetime_iso": "2026-06-02T19:28:21+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T19:28:21+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
