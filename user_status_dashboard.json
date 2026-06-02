@@ -1441,5 +1441,18 @@
     "sort_key": "2026-06-02T19:28:21+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "02/06/2026 20:00:40 IST",
+    "date": "2026-06-02",
+    "time": "20:00:40",
+    "datetime_iso": "2026-06-02T20:00:40+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-02T20:00:40+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
