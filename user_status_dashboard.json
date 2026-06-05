@@ -3365,5 +3365,18 @@
     "sort_key": "2026-06-05T17:54:03+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "05/06/2026 18:07:00 IST",
+    "date": "2026-06-05",
+    "time": "18:07:00",
+    "datetime_iso": "2026-06-05T18:07:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-05T18:07:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
