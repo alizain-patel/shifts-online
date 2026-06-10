@@ -2416,5 +2416,31 @@
     "sort_key": "2026-06-10T20:47:04+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch Out",
+    "datetime": "10/06/2026 21:27:07 IST",
+    "date": "2026-06-10",
+    "time": "21:27:07",
+    "datetime_iso": "2026-06-10T21:27:07+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-10T21:27:07+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "0d7bf5d8-f3f7-4cc7-895b-97822642e90c",
+    "name": "Abhishek Arolkar",
+    "event": "Punch In",
+    "datetime": "10/06/2026 21:27:12 IST",
+    "date": "2026-06-10",
+    "time": "21:27:12",
+    "datetime_iso": "2026-06-10T21:27:12+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-10T21:27:12+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
