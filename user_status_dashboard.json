@@ -3534,5 +3534,31 @@
     "sort_key": "2026-06-12T20:16:33+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "12/06/2026 20:29:05 IST",
+    "date": "2026-06-12",
+    "time": "20:29:05",
+    "datetime_iso": "2026-06-12T20:29:05+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-12T20:29:05+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch Out",
+    "datetime": "12/06/2026 20:29:36 IST",
+    "date": "2026-06-12",
+    "time": "20:29:36",
+    "datetime_iso": "2026-06-12T20:29:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-12T20:29:36+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
   }
 ]
