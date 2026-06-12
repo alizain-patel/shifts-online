@@ -2522,8 +2522,8 @@
     "is_at_approved_location": true
   },
   {
-    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
-    "name": "Shawn Nadar",
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
     "event": "Punch In",
     "datetime": "11/06/2026 11:00:14 IST",
     "date": "2026-06-11",
@@ -2535,8 +2535,8 @@
     "is_at_approved_location": false
   },
   {
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "name": "Shubham Jadhav",
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
     "event": "Punch In",
     "datetime": "11/06/2026 11:00:14 IST",
     "date": "2026-06-11",
@@ -3350,6 +3350,32 @@
     "datetime_iso": "2026-06-12T17:56:05+05:30",
     "timezone": "IST",
     "sort_key": "2026-06-12T17:56:05+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break Start",
+    "datetime": "12/06/2026 18:15:39 IST",
+    "date": "2026-06-12",
+    "time": "18:15:39",
+    "datetime_iso": "2026-06-12T18:15:39+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-12T18:15:39+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "12/06/2026 18:19:07 IST",
+    "date": "2026-06-12",
+    "time": "18:19:07",
+    "datetime_iso": "2026-06-12T18:19:07+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-12T18:19:07+05:30",
     "note": "",
     "is_at_approved_location": true
   }
