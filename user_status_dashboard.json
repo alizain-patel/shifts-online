@@ -1415,5 +1415,18 @@
     "sort_key": "2026-06-16T20:32:36+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "16/06/2026 21:08:55 IST",
+    "date": "2026-06-16",
+    "time": "21:08:55",
+    "datetime_iso": "2026-06-16T21:08:55+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-16T21:08:55+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
