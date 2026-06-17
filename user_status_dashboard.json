@@ -1417,6 +1417,19 @@
     "is_at_approved_location": null
   },
   {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "16/06/2026 21:05:00 IST",
+    "date": "2026-06-16",
+    "time": "21:05:00",
+    "datetime_iso": "2026-06-16T21:05:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-16T21:05:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
     "event": "Punch Out",
@@ -1532,5 +1545,18 @@
     "sort_key": "2026-06-17T11:29:51+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch In",
+    "datetime": "17/06/2026 11:39:38 IST",
+    "date": "2026-06-17",
+    "time": "11:39:38",
+    "datetime_iso": "2026-06-17T11:39:38+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-17T11:39:38+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
