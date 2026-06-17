@@ -1480,5 +1480,18 @@
     "sort_key": "2026-06-17T10:47:38+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch In",
+    "datetime": "17/06/2026 10:56:27 IST",
+    "date": "2026-06-17",
+    "time": "10:56:27",
+    "datetime_iso": "2026-06-17T10:56:27+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-17T10:56:27+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
