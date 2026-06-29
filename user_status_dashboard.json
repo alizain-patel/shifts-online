@@ -546,6 +546,19 @@
     "is_at_approved_location": null
   },
   {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "29/06/2026 10:00:00 IST",
+    "date": "2026-06-29",
+    "time": "10:00:00",
+    "datetime_iso": "2026-06-29T10:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-29T10:00:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
     "name": "Shubham Jadhav",
     "event": "Punch In",
@@ -691,19 +704,6 @@
   {
     "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
     "name": "Akash Gitaye",
-    "event": "Punch In",
-    "datetime": "29/06/2026 13:39:40 IST",
-    "date": "2026-06-29",
-    "time": "13:39:40",
-    "datetime_iso": "2026-06-29T13:39:40+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-06-29T13:39:40+05:30",
-    "note": "",
-    "is_at_approved_location": true
-  },
-  {
-    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
-    "name": "Akash Gitaye",
     "event": "Break Start",
     "datetime": "29/06/2026 13:39:44 IST",
     "date": "2026-06-29",
@@ -752,5 +752,44 @@
     "sort_key": "2026-06-29T14:21:27+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "29/06/2026 14:30:00 IST",
+    "date": "2026-06-29",
+    "time": "14:30:00",
+    "datetime_iso": "2026-06-29T14:30:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-29T14:30:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break End",
+    "datetime": "29/06/2026 14:39:45 IST",
+    "date": "2026-06-29",
+    "time": "14:39:45",
+    "datetime_iso": "2026-06-29T14:39:45+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-29T14:39:45+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break Start",
+    "datetime": "29/06/2026 14:45:58 IST",
+    "date": "2026-06-29",
+    "time": "14:45:58",
+    "datetime_iso": "2026-06-29T14:45:58+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-29T14:45:58+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
