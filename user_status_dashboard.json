@@ -726,5 +726,18 @@
     "sort_key": "2026-06-29T13:42:04+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break Start",
+    "datetime": "29/06/2026 13:54:08 IST",
+    "date": "2026-06-29",
+    "time": "13:54:08",
+    "datetime_iso": "2026-06-29T13:54:08+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-29T13:54:08+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
