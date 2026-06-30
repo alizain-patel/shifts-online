@@ -1428,5 +1428,18 @@
     "sort_key": "2026-06-30T19:12:16+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch Out",
+    "datetime": "30/06/2026 19:57:01 IST",
+    "date": "2026-06-30",
+    "time": "19:57:01",
+    "datetime_iso": "2026-06-30T19:57:01+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-06-30T19:57:01+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
