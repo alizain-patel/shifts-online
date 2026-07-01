@@ -1649,5 +1649,44 @@
     "sort_key": "2026-07-01T11:03:27+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch In",
+    "datetime": "01/07/2026 11:08:03 IST",
+    "date": "2026-07-01",
+    "time": "11:08:03",
+    "datetime_iso": "2026-07-01T11:08:03+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-01T11:08:03+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "01/07/2026 11:14:29 IST",
+    "date": "2026-07-01",
+    "time": "11:14:29",
+    "datetime_iso": "2026-07-01T11:14:29+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-01T11:14:29+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "01/07/2026 11:14:35 IST",
+    "date": "2026-07-01",
+    "time": "11:14:35",
+    "datetime_iso": "2026-07-01T11:14:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-01T11:14:35+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
