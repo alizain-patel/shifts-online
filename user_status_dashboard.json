@@ -1584,5 +1584,18 @@
     "sort_key": "2026-07-08T11:29:49+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break Start",
+    "datetime": "08/07/2026 13:44:04 IST",
+    "date": "2026-07-08",
+    "time": "13:44:04",
+    "datetime_iso": "2026-07-08T13:44:04+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-08T13:44:04+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
