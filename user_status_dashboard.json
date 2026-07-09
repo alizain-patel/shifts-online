@@ -2039,5 +2039,31 @@
     "sort_key": "2026-07-09T11:02:25+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "09/07/2026 11:14:57 IST",
+    "date": "2026-07-09",
+    "time": "11:14:57",
+    "datetime_iso": "2026-07-09T11:14:57+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-09T11:14:57+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
+    "name": "Gaurav Ghadi",
+    "event": "Punch In",
+    "datetime": "09/07/2026 11:23:09 IST",
+    "date": "2026-07-09",
+    "time": "11:23:09",
+    "datetime_iso": "2026-07-09T11:23:09+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-09T11:23:09+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
