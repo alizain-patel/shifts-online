@@ -156,32 +156,6 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
-    "name": "priti surve",
-    "event": "Punch In",
-    "datetime": "10/07/2026 11:45:38 IST",
-    "date": "2026-07-10",
-    "time": "11:45:38",
-    "datetime_iso": "2026-07-10T11:45:38+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-07-10T11:45:38+05:30",
-    "note": "",
-    "is_at_approved_location": true
-  },
-  {
-    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
-    "name": "priti surve",
-    "event": "Break Start",
-    "datetime": "10/07/2026 11:45:43 IST",
-    "date": "2026-07-10",
-    "time": "11:45:43",
-    "datetime_iso": "2026-07-10T11:45:43+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-07-10T11:45:43+05:30",
-    "note": "",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
     "name": "Manesh Chindarkar",
     "event": "Break Start",
@@ -516,6 +490,19 @@
     "datetime_iso": "2026-07-13T11:09:52+05:30",
     "timezone": "IST",
     "sort_key": "2026-07-13T11:09:52+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "13/07/2026 11:28:00 IST",
+    "date": "2026-07-13",
+    "time": "11:28:00",
+    "datetime_iso": "2026-07-13T11:28:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-13T11:28:00+05:30",
     "note": "",
     "is_at_approved_location": true
   }
