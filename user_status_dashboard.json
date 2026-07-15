@@ -1792,5 +1792,31 @@
     "sort_key": "2026-07-15T18:40:20+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "15/07/2026 19:11:56 IST",
+    "date": "2026-07-15",
+    "time": "19:11:56",
+    "datetime_iso": "2026-07-15T19:11:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-15T19:11:56+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "15/07/2026 19:12:00 IST",
+    "date": "2026-07-15",
+    "time": "19:12:00",
+    "datetime_iso": "2026-07-15T19:12:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-15T19:12:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
