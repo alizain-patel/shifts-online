@@ -2520,5 +2520,31 @@
     "sort_key": "2026-07-17T10:00:36+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "17/07/2026 10:36:41 IST",
+    "date": "2026-07-17",
+    "time": "10:36:41",
+    "datetime_iso": "2026-07-17T10:36:41+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-17T10:36:41+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "17/07/2026 10:36:47 IST",
+    "date": "2026-07-17",
+    "time": "10:36:47",
+    "datetime_iso": "2026-07-17T10:36:47+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-17T10:36:47+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
