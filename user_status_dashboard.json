@@ -3014,5 +3014,18 @@
     "sort_key": "2026-07-17T20:39:06+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Punch Out",
+    "datetime": "17/07/2026 21:01:20 IST",
+    "date": "2026-07-17",
+    "time": "21:01:20",
+    "datetime_iso": "2026-07-17T21:01:20+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-17T21:01:20+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
