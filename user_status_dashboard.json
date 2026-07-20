@@ -609,5 +609,18 @@
     "sort_key": "2026-07-20T11:12:07+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch In",
+    "datetime": "20/07/2026 11:20:03 IST",
+    "date": "2026-07-20",
+    "time": "11:20:03",
+    "datetime_iso": "2026-07-20T11:20:03+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-20T11:20:03+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
