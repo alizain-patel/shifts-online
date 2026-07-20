@@ -520,19 +520,6 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
-    "name": "Harpreet Singh",
-    "event": "On Leave",
-    "datetime": "20/07/2026 00:00:00 IST",
-    "date": "2026-07-20",
-    "time": "00:00:00",
-    "datetime_iso": "2026-07-20T00:00:00+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-07-20T00:00:00+05:30",
-    "note": "No punch in on Monday after Friday punch out",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "On Leave",
@@ -561,6 +548,19 @@
   {
     "user_id": "5d2d7843-9744-4fb5-948b-73cc554a92dc",
     "name": "Gaurav Ghadi",
+    "event": "On Leave",
+    "datetime": "20/07/2026 00:00:00 IST",
+    "date": "2026-07-20",
+    "time": "00:00:00",
+    "datetime_iso": "2026-07-20T00:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-20T00:00:00+05:30",
+    "note": "No punch in on Monday after Friday punch out",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
     "event": "On Leave",
     "datetime": "20/07/2026 00:00:00 IST",
     "date": "2026-07-20",
