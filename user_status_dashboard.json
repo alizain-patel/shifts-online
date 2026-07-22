@@ -1740,5 +1740,44 @@
     "sort_key": "2026-07-22T12:05:54+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "22/07/2026 13:55:39 IST",
+    "date": "2026-07-22",
+    "time": "13:55:39",
+    "datetime_iso": "2026-07-22T13:55:39+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-22T13:55:39+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break Start",
+    "datetime": "22/07/2026 13:55:51 IST",
+    "date": "2026-07-22",
+    "time": "13:55:51",
+    "datetime_iso": "2026-07-22T13:55:51+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-22T13:55:51+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break Start",
+    "datetime": "22/07/2026 13:57:12 IST",
+    "date": "2026-07-22",
+    "time": "13:57:12",
+    "datetime_iso": "2026-07-22T13:57:12+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-22T13:57:12+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
