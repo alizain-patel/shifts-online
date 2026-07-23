@@ -2481,5 +2481,18 @@
     "sort_key": "2026-07-23T17:42:36+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Break Start",
+    "datetime": "23/07/2026 17:46:18 IST",
+    "date": "2026-07-23",
+    "time": "17:46:18",
+    "datetime_iso": "2026-07-23T17:46:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-23T17:46:18+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
