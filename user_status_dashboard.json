@@ -3092,5 +3092,31 @@
     "sort_key": "2026-07-24T19:47:38+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "24/07/2026 20:00:54 IST",
+    "date": "2026-07-24",
+    "time": "20:00:54",
+    "datetime_iso": "2026-07-24T20:00:54+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-24T20:00:54+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "24/07/2026 20:03:58 IST",
+    "date": "2026-07-24",
+    "time": "20:03:58",
+    "datetime_iso": "2026-07-24T20:03:58+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-24T20:03:58+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
