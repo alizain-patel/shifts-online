@@ -3014,5 +3014,31 @@
     "sort_key": "2026-07-24T17:43:46+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch In",
+    "datetime": "24/07/2026 17:48:05 IST",
+    "date": "2026-07-24",
+    "time": "17:48:05",
+    "datetime_iso": "2026-07-24T17:48:05+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-24T17:48:05+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Break Start",
+    "datetime": "24/07/2026 17:48:08 IST",
+    "date": "2026-07-24",
+    "time": "17:48:08",
+    "datetime_iso": "2026-07-24T17:48:08+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-24T17:48:08+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
