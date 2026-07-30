@@ -2169,5 +2169,83 @@
     "sort_key": "2026-07-30T10:50:24+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch In",
+    "datetime": "30/07/2026 10:54:18 IST",
+    "date": "2026-07-30",
+    "time": "10:54:18",
+    "datetime_iso": "2026-07-30T10:54:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-30T10:54:18+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "30/07/2026 10:54:56 IST",
+    "date": "2026-07-30",
+    "time": "10:54:56",
+    "datetime_iso": "2026-07-30T10:54:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-30T10:54:56+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break End",
+    "datetime": "30/07/2026 10:58:52 IST",
+    "date": "2026-07-30",
+    "time": "10:58:52",
+    "datetime_iso": "2026-07-30T10:58:52+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-30T10:58:52+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "30/07/2026 10:58:59 IST",
+    "date": "2026-07-30",
+    "time": "10:58:59",
+    "datetime_iso": "2026-07-30T10:58:59+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-30T10:58:59+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "30/07/2026 10:59:06 IST",
+    "date": "2026-07-30",
+    "time": "10:59:06",
+    "datetime_iso": "2026-07-30T10:59:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-30T10:59:06+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch In",
+    "datetime": "30/07/2026 11:00:55 IST",
+    "date": "2026-07-30",
+    "time": "11:00:55",
+    "datetime_iso": "2026-07-30T11:00:55+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-30T11:00:55+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
