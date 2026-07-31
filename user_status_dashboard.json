@@ -2832,5 +2832,18 @@
     "sort_key": "2026-07-31T11:06:01+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch In",
+    "datetime": "31/07/2026 11:15:59 IST",
+    "date": "2026-07-31",
+    "time": "11:15:59",
+    "datetime_iso": "2026-07-31T11:15:59+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-07-31T11:15:59+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
