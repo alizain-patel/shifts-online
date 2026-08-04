@@ -1168,5 +1168,18 @@
     "sort_key": "2026-08-04T11:54:36+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch In",
+    "datetime": "04/08/2026 12:14:15 IST",
+    "date": "2026-08-04",
+    "time": "12:14:15",
+    "datetime_iso": "2026-08-04T12:14:15+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-04T12:14:15+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
