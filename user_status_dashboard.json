@@ -2468,5 +2468,18 @@
     "sort_key": "2026-08-06T20:04:49+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 20:14:46 IST",
+    "date": "2026-08-06",
+    "time": "20:14:46",
+    "datetime_iso": "2026-08-06T20:14:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:14:46+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
   }
 ]
