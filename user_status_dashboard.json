@@ -2403,5 +2403,70 @@
     "sort_key": "2026-08-06T19:08:13+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 19:57:35 IST",
+    "date": "2026-08-06",
+    "time": "19:57:35",
+    "datetime_iso": "2026-08-06T19:57:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T19:57:35+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 20:02:00 IST",
+    "date": "2026-08-06",
+    "time": "20:02:00",
+    "datetime_iso": "2026-08-06T20:02:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:02:00+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 20:02:30 IST",
+    "date": "2026-08-06",
+    "time": "20:02:30",
+    "datetime_iso": "2026-08-06T20:02:30+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:02:30+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 20:03:06 IST",
+    "date": "2026-08-06",
+    "time": "20:03:06",
+    "datetime_iso": "2026-08-06T20:03:06+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:03:06+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch In",
+    "datetime": "06/08/2026 20:04:49 IST",
+    "date": "2026-08-06",
+    "time": "20:04:49",
+    "datetime_iso": "2026-08-06T20:04:49+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:04:49+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
