@@ -1768,6 +1768,19 @@
     "is_at_approved_location": true
   },
   {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break Start",
+    "datetime": "05/08/2026 13:48:00 IST",
+    "date": "2026-08-05",
+    "time": "13:48:00",
+    "datetime_iso": "2026-08-05T13:48:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-05T13:48:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "Break End",
@@ -1816,6 +1829,19 @@
     "datetime_iso": "2026-08-05T14:13:25+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-05T14:13:25+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Break End",
+    "datetime": "05/08/2026 14:25:00 IST",
+    "date": "2026-08-05",
+    "time": "14:25:00",
+    "datetime_iso": "2026-08-05T14:25:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-05T14:25:00+05:30",
     "note": "",
     "is_at_approved_location": true
   },
@@ -1974,6 +2000,19 @@
     "sort_key": "2026-08-05T20:09:41+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch Out",
+    "datetime": "05/08/2026 20:14:00 IST",
+    "date": "2026-08-05",
+    "time": "20:14:00",
+    "datetime_iso": "2026-08-05T20:14:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-05T20:14:00+05:30",
+    "note": "",
+    "is_at_approved_location": false
   },
   {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
@@ -2210,19 +2249,6 @@
     "is_at_approved_location": true
   },
   {
-    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
-    "name": "Alizain Patel",
-    "event": "Break Start",
-    "datetime": "06/08/2026 13:48:35 IST",
-    "date": "2026-08-06",
-    "time": "13:48:35",
-    "datetime_iso": "2026-08-06T13:48:35+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-08-06T13:48:35+05:30",
-    "note": "",
-    "is_at_approved_location": true
-  },
-  {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
     "event": "Break End",
@@ -2245,19 +2271,6 @@
     "datetime_iso": "2026-08-06T14:42:22+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-06T14:42:22+05:30",
-    "note": "",
-    "is_at_approved_location": true
-  },
-  {
-    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
-    "name": "Alizain Patel",
-    "event": "Break End",
-    "datetime": "06/08/2026 14:43:27 IST",
-    "date": "2026-08-06",
-    "time": "14:43:27",
-    "datetime_iso": "2026-08-06T14:43:27+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-08-06T14:43:27+05:30",
     "note": "",
     "is_at_approved_location": true
   },
@@ -2483,19 +2496,6 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
-    "name": "Alizain Patel",
-    "event": "Punch Out",
-    "datetime": "06/08/2026 20:14:46 IST",
-    "date": "2026-08-06",
-    "time": "20:14:46",
-    "datetime_iso": "2026-08-06T20:14:46+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-08-06T20:14:46+05:30",
-    "note": "User has left for the day",
-    "is_at_approved_location": false
-  },
-  {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
     "event": "Punch Out",
@@ -2507,5 +2507,18 @@
     "sort_key": "2026-08-06T20:31:00+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 20:53:17 IST",
+    "date": "2026-08-06",
+    "time": "20:53:17",
+    "datetime_iso": "2026-08-06T20:53:17+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:53:17+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
