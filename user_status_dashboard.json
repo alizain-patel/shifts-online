@@ -2368,15 +2368,15 @@
   {
     "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
     "name": "Shawn Nadar",
-    "event": "Punch Out",
-    "datetime": "06/08/2026 18:31:13 IST",
+    "event": "Break Start",
+    "datetime": "06/08/2026 18:31:00 IST",
     "date": "2026-08-06",
-    "time": "18:31:13",
-    "datetime_iso": "2026-08-06T18:31:13+05:30",
+    "time": "18:31:00",
+    "datetime_iso": "2026-08-06T18:31:00+05:30",
     "timezone": "IST",
-    "sort_key": "2026-08-06T18:31:13+05:30",
-    "note": "User has left for the day",
-    "is_at_approved_location": false
+    "sort_key": "2026-08-06T18:31:00+05:30",
+    "note": "",
+    "is_at_approved_location": null
   },
   {
     "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
@@ -2403,6 +2403,19 @@
     "sort_key": "2026-08-06T19:08:13+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break End",
+    "datetime": "06/08/2026 19:30:00 IST",
+    "date": "2026-08-06",
+    "time": "19:30:00",
+    "datetime_iso": "2026-08-06T19:30:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T19:30:00+05:30",
+    "note": "",
+    "is_at_approved_location": null
   },
   {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
@@ -2479,6 +2492,19 @@
     "datetime_iso": "2026-08-06T20:14:46+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-06T20:14:46+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Punch Out",
+    "datetime": "06/08/2026 20:31:00 IST",
+    "date": "2026-08-06",
+    "time": "20:31:00",
+    "datetime_iso": "2026-08-06T20:31:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-06T20:31:00+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": false
   }
