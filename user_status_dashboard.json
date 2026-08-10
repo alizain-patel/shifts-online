@@ -351,6 +351,19 @@
     "is_at_approved_location": false
   },
   {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "07/08/2026 19:00:00 IST",
+    "date": "2026-08-07",
+    "time": "19:00:00",
+    "datetime_iso": "2026-08-07T19:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-07T19:00:00+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
     "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
     "name": "Akash Gitaye",
     "event": "Punch Out",
@@ -505,5 +518,31 @@
     "sort_key": "2026-08-08T07:02:48+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "10/08/2026 09:56:56 IST",
+    "date": "2026-08-10",
+    "time": "09:56:56",
+    "datetime_iso": "2026-08-10T09:56:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-10T09:56:56+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch In",
+    "datetime": "10/08/2026 10:00:36 IST",
+    "date": "2026-08-10",
+    "time": "10:00:36",
+    "datetime_iso": "2026-08-10T10:00:36+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-10T10:00:36+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
