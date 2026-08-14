@@ -1963,6 +1963,19 @@
     "is_at_approved_location": null
   },
   {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch In",
+    "datetime": "13/08/2026 10:00:00 IST",
+    "date": "2026-08-13",
+    "time": "10:00:00",
+    "datetime_iso": "2026-08-13T10:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-13T10:00:00+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
     "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
     "name": "Akash Gitaye",
     "event": "Punch In",
@@ -2199,19 +2212,6 @@
   {
     "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
     "name": "Shubham Jadhav",
-    "event": "Punch In",
-    "datetime": "13/08/2026 17:00:59 IST",
-    "date": "2026-08-13",
-    "time": "17:00:59",
-    "datetime_iso": "2026-08-13T17:00:59+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-08-13T17:00:59+05:30",
-    "note": "",
-    "is_at_approved_location": false
-  },
-  {
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "name": "Shubham Jadhav",
     "event": "Break Start",
     "datetime": "13/08/2026 17:01:03 IST",
     "date": "2026-08-13",
@@ -2273,6 +2273,19 @@
     "sort_key": "2026-08-13T18:42:29+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch Out",
+    "datetime": "13/08/2026 19:16:00 IST",
+    "date": "2026-08-13",
+    "time": "19:16:00",
+    "datetime_iso": "2026-08-13T19:16:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-13T19:16:00+05:30",
+    "note": "",
+    "is_at_approved_location": false
   },
   {
     "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
@@ -2403,5 +2416,57 @@
     "sort_key": "2026-08-14T06:36:17+05:30",
     "note": "User has left for the day",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch In",
+    "datetime": "14/08/2026 10:02:19 IST",
+    "date": "2026-08-14",
+    "time": "10:02:19",
+    "datetime_iso": "2026-08-14T10:02:19+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-14T10:02:19+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Break End",
+    "datetime": "14/08/2026 10:04:35 IST",
+    "date": "2026-08-14",
+    "time": "10:04:35",
+    "datetime_iso": "2026-08-14T10:04:35+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-14T10:04:35+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "14/08/2026 10:04:42 IST",
+    "date": "2026-08-14",
+    "time": "10:04:42",
+    "datetime_iso": "2026-08-14T10:04:42+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-14T10:04:42+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "14/08/2026 10:04:56 IST",
+    "date": "2026-08-14",
+    "time": "10:04:56",
+    "datetime_iso": "2026-08-14T10:04:56+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-14T10:04:56+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
