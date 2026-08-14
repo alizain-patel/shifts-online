@@ -2637,5 +2637,18 @@
     "sort_key": "2026-08-14T14:26:41+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Break End",
+    "datetime": "14/08/2026 15:09:08 IST",
+    "date": "2026-08-14",
+    "time": "15:09:08",
+    "datetime_iso": "2026-08-14T15:09:08+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-14T15:09:08+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
