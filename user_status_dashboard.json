@@ -440,5 +440,18 @@
     "sort_key": "2026-08-14T22:40:41+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch In",
+    "datetime": "15/08/2026 06:29:46 IST",
+    "date": "2026-08-15",
+    "time": "06:29:46",
+    "datetime_iso": "2026-08-15T06:29:46+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-15T06:29:46+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
