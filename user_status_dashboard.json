@@ -1519,5 +1519,31 @@
     "sort_key": "2026-08-19T10:05:22+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e634f02e-1486-4ec5-9530-a92c2dc93ef8",
+    "name": "Alizain Patel",
+    "event": "Punch In",
+    "datetime": "19/08/2026 10:51:51 IST",
+    "date": "2026-08-19",
+    "time": "10:51:51",
+    "datetime_iso": "2026-08-19T10:51:51+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-19T10:51:51+05:30",
+    "note": "",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "19/08/2026 10:55:21 IST",
+    "date": "2026-08-19",
+    "time": "10:55:21",
+    "datetime_iso": "2026-08-19T10:55:21+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-19T10:55:21+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
