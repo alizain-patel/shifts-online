@@ -1946,7 +1946,7 @@
     "datetime_iso": "2026-08-20T06:57:30+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T06:57:30+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": null
   },
   {
@@ -1959,7 +1959,7 @@
     "datetime_iso": "2026-08-20T07:24:18+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T07:24:18+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -2284,7 +2284,7 @@
     "datetime_iso": "2026-08-20T19:14:05+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T19:14:05+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -2310,7 +2310,7 @@
     "datetime_iso": "2026-08-20T19:45:34+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T19:45:34+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2323,7 +2323,7 @@
     "datetime_iso": "2026-08-20T20:02:10+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T20:02:10+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2336,7 +2336,7 @@
     "datetime_iso": "2026-08-20T20:03:59+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T20:03:59+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2362,7 +2362,7 @@
     "datetime_iso": "2026-08-20T20:29:54+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T20:29:54+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": true
   },
   {
@@ -2375,7 +2375,7 @@
     "datetime_iso": "2026-08-20T20:36:49+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T20:36:49+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
   },
   {
@@ -2388,7 +2388,20 @@
     "datetime_iso": "2026-08-20T20:46:15+05:30",
     "timezone": "IST",
     "sort_key": "2026-08-20T20:46:15+05:30",
-    "note": "User has left for the day",
+    "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
+    "event": "Punch Out",
+    "datetime": "20/08/2026 23:55:15 IST",
+    "date": "2026-08-20",
+    "time": "23:55:15",
+    "datetime_iso": "2026-08-20T23:55:15+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-20T23:55:15+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
