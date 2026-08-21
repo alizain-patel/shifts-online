@@ -2403,5 +2403,18 @@
     "sort_key": "2026-08-20T23:55:15+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "a64a0206-f046-4b8d-9eae-0eeba21fa2b2",
+    "name": "Harpreet Singh",
+    "event": "Punch Out",
+    "datetime": "21/08/2026 05:20:18 IST",
+    "date": "2026-08-21",
+    "time": "05:20:18",
+    "datetime_iso": "2026-08-21T05:20:18+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-21T05:20:18+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
   }
 ]
