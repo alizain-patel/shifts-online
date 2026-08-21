@@ -2546,5 +2546,31 @@
     "sort_key": "2026-08-21T14:07:50+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Break End",
+    "datetime": "21/08/2026 16:20:50 IST",
+    "date": "2026-08-21",
+    "time": "16:20:50",
+    "datetime_iso": "2026-08-21T16:20:50+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-21T16:20:50+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch Out",
+    "datetime": "21/08/2026 16:20:53 IST",
+    "date": "2026-08-21",
+    "time": "16:20:53",
+    "datetime_iso": "2026-08-21T16:20:53+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-21T16:20:53+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
   }
 ]
