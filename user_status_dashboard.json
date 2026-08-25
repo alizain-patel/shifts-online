@@ -1103,5 +1103,31 @@
     "sort_key": "2026-08-25T15:27:39+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f42e59a6-745d-4efd-acc7-95946783d281",
+    "name": "priti surve",
+    "event": "Break End",
+    "datetime": "25/08/2026 15:43:05 IST",
+    "date": "2026-08-25",
+    "time": "15:43:05",
+    "datetime_iso": "2026-08-25T15:43:05+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-25T15:43:05+05:30",
+    "note": "",
+    "is_at_approved_location": false
+  },
+  {
+    "user_id": "7e559b4c-660d-4e63-a8b2-0c223c968ce3",
+    "name": "Joshua Dsouza",
+    "event": "Break End",
+    "datetime": "25/08/2026 15:48:00 IST",
+    "date": "2026-08-25",
+    "time": "15:48:00",
+    "datetime_iso": "2026-08-25T15:48:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-08-25T15:48:00+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
