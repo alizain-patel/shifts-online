@@ -661,5 +661,31 @@
     "sort_key": "2026-09-29T10:00:10+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "29/09/2026 10:42:53 IST",
+    "date": "2026-09-29",
+    "time": "10:42:53",
+    "datetime_iso": "2026-09-29T10:42:53+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-09-29T10:42:53+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch In",
+    "datetime": "29/09/2026 10:42:57 IST",
+    "date": "2026-09-29",
+    "time": "10:42:57",
+    "datetime_iso": "2026-09-29T10:42:57+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-09-29T10:42:57+05:30",
+    "note": "",
+    "is_at_approved_location": null
   }
 ]
