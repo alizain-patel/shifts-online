@@ -1233,5 +1233,18 @@
     "sort_key": "2026-09-30T15:30:05+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "e28c464b-50b3-41ad-8632-3322ce0f5eed",
+    "name": "Shawn Nadar",
+    "event": "Break Start",
+    "datetime": "30/09/2026 16:15:16 IST",
+    "date": "2026-09-30",
+    "time": "16:15:16",
+    "datetime_iso": "2026-09-30T16:15:16+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-09-30T16:15:16+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
