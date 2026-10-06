@@ -583,5 +583,31 @@
     "sort_key": "2026-10-06T10:46:17+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "ba1c916b-8e81-48d9-8ffe-0dfc63cee87f",
+    "name": "Manesh Chindarkar",
+    "event": "Punch In",
+    "datetime": "06/10/2026 10:57:33 IST",
+    "date": "2026-10-06",
+    "time": "10:57:33",
+    "datetime_iso": "2026-10-06T10:57:33+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-10-06T10:57:33+05:30",
+    "note": "",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
+    "name": "Dev Pitalekar",
+    "event": "Punch In",
+    "datetime": "06/10/2026 10:58:03 IST",
+    "date": "2026-10-06",
+    "time": "10:58:03",
+    "datetime_iso": "2026-10-06T10:58:03+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-10-06T10:58:03+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
