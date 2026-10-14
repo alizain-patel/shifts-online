@@ -1402,5 +1402,18 @@
     "sort_key": "2026-10-14T11:44:44+05:30",
     "note": "",
     "is_at_approved_location": null
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "Punch In",
+    "datetime": "14/10/2026 12:29:50 IST",
+    "date": "2026-10-14",
+    "time": "12:29:50",
+    "datetime_iso": "2026-10-14T12:29:50+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-10-14T12:29:50+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
