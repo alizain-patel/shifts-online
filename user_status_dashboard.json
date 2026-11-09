@@ -351,34 +351,8 @@
     "is_at_approved_location": null
   },
   {
-    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
-    "name": "Mayur Divekar",
-    "event": "On Leave",
-    "datetime": "09/11/2026 00:00:00 IST",
-    "date": "2026-11-09",
-    "time": "00:00:00",
-    "datetime_iso": "2026-11-09T00:00:00+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-11-09T00:00:00+05:30",
-    "note": "No punch in on Monday after Friday punch out",
-    "is_at_approved_location": null
-  },
-  {
     "user_id": "fa098cf2-4cd9-4e93-9124-a28164156181",
     "name": "Dev Pitalekar",
-    "event": "On Leave",
-    "datetime": "09/11/2026 00:00:00 IST",
-    "date": "2026-11-09",
-    "time": "00:00:00",
-    "datetime_iso": "2026-11-09T00:00:00+05:30",
-    "timezone": "IST",
-    "sort_key": "2026-11-09T00:00:00+05:30",
-    "note": "No punch in on Monday after Friday punch out",
-    "is_at_approved_location": null
-  },
-  {
-    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
-    "name": "Shubham Jadhav",
     "event": "On Leave",
     "datetime": "09/11/2026 00:00:00 IST",
     "date": "2026-11-09",
@@ -418,6 +392,32 @@
   {
     "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
     "name": "Shrutik Shinde",
+    "event": "On Leave",
+    "datetime": "09/11/2026 00:00:00 IST",
+    "date": "2026-11-09",
+    "time": "00:00:00",
+    "datetime_iso": "2026-11-09T00:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-11-09T00:00:00+05:30",
+    "note": "No punch in on Monday after Friday punch out",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "27b0e2c7-9bdf-44a8-b930-8b3eba44d402",
+    "name": "Shubham Jadhav",
+    "event": "On Leave",
+    "datetime": "09/11/2026 00:00:00 IST",
+    "date": "2026-11-09",
+    "time": "00:00:00",
+    "datetime_iso": "2026-11-09T00:00:00+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-11-09T00:00:00+05:30",
+    "note": "No punch in on Monday after Friday punch out",
+    "is_at_approved_location": null
+  },
+  {
+    "user_id": "8b67200f-f49b-47e3-ba26-5f38e2c99501",
+    "name": "Mayur Divekar",
     "event": "On Leave",
     "datetime": "09/11/2026 00:00:00 IST",
     "date": "2026-11-09",
