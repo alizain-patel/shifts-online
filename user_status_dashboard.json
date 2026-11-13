@@ -1337,5 +1337,31 @@
     "sort_key": "2026-11-13T18:37:38+05:30",
     "note": "",
     "is_at_approved_location": false
+  },
+  {
+    "user_id": "a53a173f-9a7c-4c4b-875d-7c8edb5b6b7e",
+    "name": "Akash Gitaye",
+    "event": "Punch Out",
+    "datetime": "13/11/2026 19:21:53 IST",
+    "date": "2026-11-13",
+    "time": "19:21:53",
+    "datetime_iso": "2026-11-13T19:21:53+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-11-13T19:21:53+05:30",
+    "note": "User has left for the day",
+    "is_at_approved_location": true
+  },
+  {
+    "user_id": "53234bff-130a-44e9-b9a0-b1cfdb963c6f",
+    "name": "Suhas Kesari",
+    "event": "Break End",
+    "datetime": "13/11/2026 19:26:13 IST",
+    "date": "2026-11-13",
+    "time": "19:26:13",
+    "datetime_iso": "2026-11-13T19:26:13+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-11-13T19:26:13+05:30",
+    "note": "",
+    "is_at_approved_location": false
   }
 ]
