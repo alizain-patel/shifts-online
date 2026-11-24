@@ -583,5 +583,18 @@
     "sort_key": "2026-11-24T10:31:26+05:30",
     "note": "",
     "is_at_approved_location": true
+  },
+  {
+    "user_id": "f3086f25-93ee-4ef1-89c9-f0958f4e2147",
+    "name": "Shrutik Shinde",
+    "event": "Punch In",
+    "datetime": "24/11/2026 10:45:32 IST",
+    "date": "2026-11-24",
+    "time": "10:45:32",
+    "datetime_iso": "2026-11-24T10:45:32+05:30",
+    "timezone": "IST",
+    "sort_key": "2026-11-24T10:45:32+05:30",
+    "note": "",
+    "is_at_approved_location": true
   }
 ]
